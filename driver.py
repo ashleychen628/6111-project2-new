@@ -111,7 +111,7 @@ Loading necessary libraries; This should take a minute or so ...
                 print(f"Webpage length (num characters): {len(webpage_text)}")
             # print(webpage_text)
             if self.model == "-spanbert":
-                er = ExtractRelations(self.r)
+                er = ExtractRelations(self.r, self.t)
                 er.extract_entities_spacy(webpage_text)
                 
 
