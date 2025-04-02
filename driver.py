@@ -27,6 +27,7 @@ class InfoExtraction:
         self.tuple_num = k
         self.X = set()
         self.iteration = 0
+        self.chosen_tuples = []
         relation_map = {
             1: "Schools_Attended",
             2: "Work_For",
@@ -55,86 +56,94 @@ class InfoExtraction:
   
     def start(self):
         """Start the searching process. """
-        print(f"""____
-Parameters:
-Client key      = {self.google_api_key}
-Engine key      = {self.google_engine_id}
-Gemini key      = {self.google_gemini_api_key}
-Method          = {self.model}
-Relation        = {self.r}
-Threshold       = {self.threshold}
-Query           = {self.query}
-# of Tuples     = {self.tuple_num}
+        # keep iteratign until number of tuples reached k
+        while len(self.chosen_tuples) < self.tuple_num:
+            if self.iteration > 0:
+                self.update_query()
+            print(f"""____
+    Parameters:
+    Client key      = {self.google_api_key}
+    Engine key      = {self.google_engine_id}
+    Gemini key      = {self.google_gemini_api_key}
+    Method          = {self.model}
+    Relation        = {self.r}
+    Threshold       = {self.threshold}
+    Query           = {self.query}
+    # of Tuples     = {self.tuple_num}
 
-Loading necessary libraries; This should take a minute or so ...
-========== Iteration: {self.iteration} - Query: {self.query} ==========
-""")
-        unique_tuples = set()
-        
-        # Step 1: Get Top 10 URLs from Google Custom Search
-        urls = self.google_search()
-        if not urls:
-            print("No results retrieved. Exiting...")
-            return
-        
-        all_tuples = []
+    Loading necessary libraries; This should take a minute or so ...
+    ========== Iteration: {self.iteration} - Query: {self.query} ==========
+    """)
+            unique_tuples = set()
+            
+            # Step 1: Get Top 10 URLs from Google Custom Search
+            urls = self.google_search()
+            if not urls:
+                print("No results retrieved. Exiting...")
+                return
+            
+            all_tuples = []
 
-        for idx, result in enumerate(urls):
-            if idx > 0:
-                break
-            url = result["url"]
-            print(f"\nURL ({idx+1} / {len(urls)}): {url}")
+            for idx, result in enumerate(urls):
+                # if idx > 0:
+                #     break
+                url = result["url"]
+                print(f"\nURL ({idx+1} / {len(urls)}): {url}")
 
-            # Step 2: Fetch and clean webpage content
-            webpage_text = download_and_clean_html(url)
-            if not webpage_text:
-                print("Unable to fetch URL. Skipping...")
-                continue
+                # Step 2: Fetch and clean webpage content
+                webpage_text = download_and_clean_html(url)
+                if not webpage_text:
+                    print("Unable to fetch URL. Skipping...")
+                    continue
 
-            if len(webpage_text) > 10000:
-                webpage_text = webpage_text[:10000]
-                print(f"Truncated to 10,000 characters")
-            else:
-                print(f"Webpage length (num characters): {len(webpage_text)}")
-            # print(webpage_text)
-            if self.model == "-spanbert":
-                # self.use_spanbert()
-                er = ExtractRelations(self.r, self.threshold)
-                self.chosen_tuples += er.extract_entities_spacy(webpage_text)
-        
-
-            if self.model == "-gemini":
-                # Ensure the text is a string and not a list
-                if isinstance(webpage_text, list):
-                    webpage_text = ' '.join(webpage_text)
+                if len(webpage_text) > 10000:
+                    webpage_text = webpage_text[:10000]
+                    print(f"Truncated to 10,000 characters")
+                else:
+                    print(f"Webpage length (num characters): {len(webpage_text)}")
+                # print(webpage_text)
+                if self.model == "-spanbert":
+                    # self.use_spanbert()
+                    er = ExtractRelations(self.r, self.threshold)
+                    self.chosen_tuples += er.extract_entities_spacy(webpage_text)
                 
-                webpage_tuples = self.extract_relations_gemini(webpage_text)
-            
-                print(f"Tuples found for this URL: {len(webpage_tuples)}")
-                all_tuples.extend(webpage_tuples)
+                if len(self.chosen_tuples) > self.tuple_num:
+                    self.print_final_output()
 
-                # Add only unique tuples
-                for tuple_item in webpage_tuples:
-                    # Convert tuple to a hashable type (lowercase for case-insensitive comparison)
-                    unique_tuple = tuple(str(item).lower() for item in tuple_item)
-                    unique_tuples.add(unique_tuple)
+            self.iteration += 1
+
+        #     if self.model == "-gemini":
+        #         # Ensure the text is a string and not a list
+        #         if isinstance(webpage_text, list):
+        #             webpage_text = ' '.join(webpage_text)
+                
+        #         webpage_tuples = self.extract_relations_gemini(webpage_text)
             
-            if len(all_tuples) >= self.tuple_num:
-                break
+        #         print(f"Tuples found for this URL: {len(webpage_tuples)}")
+        #         all_tuples.extend(webpage_tuples)
+
+        #         # Add only unique tuples
+        #         for tuple_item in webpage_tuples:
+        #             # Convert tuple to a hashable type (lowercase for case-insensitive comparison)
+        #             unique_tuple = tuple(str(item).lower() for item in tuple_item)
+        #             unique_tuples.add(unique_tuple)
+            
+        #     if len(all_tuples) >= self.tuple_num:
+        #         break
         
-        print("\nExtracted Tuples:")
-        final_tuples = []
-        for unique_tuple in unique_tuples:
-            # Convert back to original representation
-            original_tuple = tuple(unique_tuple)
-            final_tuples.append(original_tuple)
-            print(original_tuple)
+        # print("\nExtracted Tuples:")
+        # final_tuples = []
+        # for unique_tuple in unique_tuples:
+        #     # Convert back to original representation
+        #     original_tuple = tuple(unique_tuple)
+        #     final_tuples.append(original_tuple)
+        #     print(original_tuple)
             
-            # Stop if we've reached the desired number of tuples
-            if len(final_tuples) == self.tuple_num:
-                break
+        #     # Stop if we've reached the desired number of tuples
+        #     if len(final_tuples) == self.tuple_num:
+        #         break
 
-        return final_tuples
+        # return final_tuples
 
     def google_search(self):
         """Query the Google API to get the top 10 result. """
@@ -167,6 +176,48 @@ Loading necessary libraries; This should take a minute or so ...
         else:
             print("API Error:", response.status_code, response.text)
             return None
+
+    def print_final_output(self):
+        """Print the final output, confidence in descending order. """
+        print(f"\n{'='*18} ALL RELATIONS for {RELATION_MAP[self.r]} ( {len(self.chosen_tuples)} ) {'='*18}")
+        
+        # Sort by confidence descending
+        for tup in sorted(self.chosen_tuples, key=lambda x: x["confidence"], reverse=True):
+            print(f"Confidence: {tup['confidence']:.7f} \t| Subject: {tup['subject']} \t| Object: {tup['object']}")
+        
+        print(f"Total # of iterations = {self.iteration}")
+
+    def update_query(self):
+        """Choose new queries from chosen tuple to append old query. """
+        if not hasattr(self, "used_queries"):
+        self.used_queries = set()
+
+        best_tuple = None
+        best_confidence = -1
+
+        for tup in self.chosen_tuples:
+            key = f"{tup['subject']} {tup['object']}"
+            if key in self.used_queries:
+                continue  # Skip already used tuples
+
+            if self.model == "-spanbert":
+                # Pick highest-confidence unused tuple
+                if tup["confidence"] > best_confidence:
+                    best_confidence = tup["confidence"]
+                    best_tuple = tup
+            # else:
+            #     # For -gemini or other models, just pick the first unused
+            #     best_tuple = tup
+            #     break
+
+        if best_tuple:
+            new_query = f"{best_tuple['subject']} {best_tuple['object']}"
+            self.used_queries.add(new_query)
+            self.query = new_query
+        else:
+            # No valid unused tuples left — mark for stopping
+            print("No new high-confidence unused tuples available. Stopping.")
+            exit()  # Or return a status code if you prefer cleaner exits
 
     # def use_spanbert(self):
     #     er = ExtractRelations(self.r, self.threshold)
