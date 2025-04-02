@@ -4,15 +4,8 @@ import json
 from crawl_website import download_and_clean_html
 from extract_relations import ExtractRelations
 
-# import spacy
-# from SpanBERT.spanbert import SpanBERT
-# from SpanBERT.spacy_help_functions import get_entities, create_entity_pairs, extract_relations
-
-# import sys
-# import os
-
-# Add the project root (6111-project2) to sys.path
-# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import time
+import google.generativeai as palm
 
 RELATION_MAP = {
     1: "per:schools_attended",
@@ -20,11 +13,6 @@ RELATION_MAP = {
     3: "per:cities_of_residence",
     4: "org:top_members/employees"
 }
-
-# spanbert = SpanBERT("SpanBERT/pretrained_spanbert")
-
-import time
-import google.generativeai as palm
 
 class InfoExtraction:
     def __init__(self, model, google_api_key, google_engine_id, google_gemini_api_key, r, t, q, k):
@@ -34,9 +22,9 @@ class InfoExtraction:
         self.google_engine_id = google_engine_id
         self.google_gemini_api_key = google_gemini_api_key
 
-        self.t = t
-        self.q = q
-        self.k = k
+        self.threshold = t 
+        self.query = q 
+        self.tuple_num = k
         self.X = set()
         self.iteration = 0
         relation_map = {
@@ -74,16 +62,15 @@ Engine key      = {self.google_engine_id}
 Gemini key      = {self.google_gemini_api_key}
 Method          = {self.model}
 Relation        = {self.r}
-Threshold       = {self.t}
-Query           = {self.q}
-# of Tuples     = {self.k}
+Threshold       = {self.threshold}
+Query           = {self.query}
+# of Tuples     = {self.tuple_num}
 
 Loading necessary libraries; This should take a minute or so ...
-========== Iteration: {self.iteration} - Query: {self.q} ==========
+========== Iteration: {self.iteration} - Query: {self.query} ==========
 """)
         unique_tuples = set()
         
-        # print(f"=========== Iteration: {self.iteration} - Query: {self.q} ===========")
         # Step 1: Get Top 10 URLs from Google Custom Search
         urls = self.google_search()
         if not urls:
@@ -111,9 +98,10 @@ Loading necessary libraries; This should take a minute or so ...
                 print(f"Webpage length (num characters): {len(webpage_text)}")
             # print(webpage_text)
             if self.model == "-spanbert":
-                er = ExtractRelations(self.r, self.t)
-                er.extract_entities_spacy(webpage_text)
-                
+                # self.use_spanbert()
+                er = ExtractRelations(self.r, self.threshold)
+                self.chosen_tuples += er.extract_entities_spacy(webpage_text)
+        
 
             if self.model == "-gemini":
                 # Ensure the text is a string and not a list
@@ -131,7 +119,7 @@ Loading necessary libraries; This should take a minute or so ...
                     unique_tuple = tuple(str(item).lower() for item in tuple_item)
                     unique_tuples.add(unique_tuple)
             
-            if len(all_tuples) >= self.k:
+            if len(all_tuples) >= self.tuple_num:
                 break
         
         print("\nExtracted Tuples:")
@@ -143,7 +131,7 @@ Loading necessary libraries; This should take a minute or so ...
             print(original_tuple)
             
             # Stop if we've reached the desired number of tuples
-            if len(final_tuples) == self.k:
+            if len(final_tuples) == self.tuple_num:
                 break
 
         return final_tuples
@@ -153,7 +141,7 @@ Loading necessary libraries; This should take a minute or so ...
         num_results=10
 
         url = "https://www.googleapis.com/customsearch/v1"
-        params = {"key": self.google_api_key, "cx": self.google_engine_id, "q": self.q, "num": num_results}
+        params = {"key": self.google_api_key, "cx": self.google_engine_id, "q": self.query, "num": num_results}
 
         response = requests.get(url, params=params)
         
@@ -179,6 +167,13 @@ Loading necessary libraries; This should take a minute or so ...
         else:
             print("API Error:", response.status_code, response.text)
             return None
+
+    # def use_spanbert(self):
+    #     er = ExtractRelations(self.r, self.threshold)
+    #     self.chosen_tuples += er.extract_entities_spacy(webpage_text)
+        
+    #     if len(self.chosen_tuples) < self.
+
 
     def extract_sentences(self, text):
         """Process webpage text and extract sentences using spaCy."""
@@ -293,7 +288,7 @@ Loading necessary libraries; This should take a minute or so ...
                     extracted_tuples.append(relation_tuple)
                 
                 # Stop if we've reached the desired number of tuples
-                if len(extracted_tuples) >= self.k:
+                if len(extracted_tuples) >= self.tuple_num:
                     break
         
         print(f"Total extracted tuples: {len(extracted_tuples)}")

@@ -106,6 +106,7 @@ class ExtractRelations:
                             self.chosen_tuples.append({
                                 "subject": subj[0],
                                 "object": obj[0],
+                                "confidence": confidence
                             })
                     else:
                         print("\t\tConfidence is lower than threshold confidence. Ignoring this.")
@@ -113,3 +114,4 @@ class ExtractRelations:
 
         print(f"\n\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences")
         print(f"\n\tRelations extracted from this website: {len(self.chosen_tuples)} (Overall: {len(self.relation_map)})")
+        return self.chosen_tuples
