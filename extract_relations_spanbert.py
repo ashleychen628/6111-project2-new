@@ -5,7 +5,7 @@ from spacy_help_functions import get_entities, create_entity_pairs, extract_rela
 spanbert = SpanBERT("./pretrained_spanbert")
 nlp = spacy.load("en_core_web_lg") 
 
-class ExtractRelations:
+class ExtractRelationsSpanbert:
     def __init__(self, r, t):
         self.relation = r
         self.threshold = t
@@ -21,9 +21,15 @@ class ExtractRelations:
                                         "STATE_OR_PROVINCE", 
                                         "COUNTRY"
                                     ]
+        self.relation_mapping = {
+                1: ("per:schools_attended", "PERSON", "ORGANIZATION"),
+                2: ("per:employee_of", "PERSON", "ORGANIZATION"),
+                3: ("per:cities_of_residence", "PERSON", ["LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"]),
+                4: ("org:top_members/employees", "ORGANIZATION", "PERSON")
+            }
                   
     
-    def extract_entities_spacy(self, raw_text):
+    def extract_relations_spanbert(self, raw_text):
         """Process webpage text and extract sentences using spaCy."""
         doc = nlp(raw_text)
 
@@ -42,7 +48,7 @@ class ExtractRelations:
             
             # create entity pairs
             sentence_entity_pairs = create_entity_pairs(sentence, self.entities_of_interest)
-            # Inside your class method
+
             for ep in sentence_entity_pairs:
                 subj, obj = ep[1], ep[2]
 
@@ -67,14 +73,14 @@ class ExtractRelations:
             else:
                 relation_predictions = spanbert.predict(self.candidate_pairs)  # get predictions: list of (relation, confidence) pairs
 
-            relation_mapping = {
-                1: ("per:schools_attended", "PERSON", "ORGANIZATION"),
-                2: ("per:employee_of", "PERSON", "ORGANIZATION"),
-                3: ("per:cities_of_residence", "PERSON", ["LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"]),
-                4: ("org:top_members/employees", "ORGANIZATION", "PERSON")
-            }
+            # relation_mapping = {
+            #     1: ("per:schools_attended", "PERSON", "ORGANIZATION"),
+            #     2: ("per:employee_of", "PERSON", "ORGANIZATION"),
+            #     3: ("per:cities_of_residence", "PERSON", ["LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"]),
+            #     4: ("org:top_members/employees", "ORGANIZATION", "PERSON")
+            # }
 
-            expected_label, expected_subj_type, expected_obj_type = relation_mapping[self.relation]
+            expected_label, expected_subj_type, expected_obj_type = self.relation_mapping[self.relation]
 
             for ex, pred in zip(self.candidate_pairs, relation_predictions):
                 relation_label, confidence = pred
@@ -103,14 +109,18 @@ class ExtractRelations:
                             if token_tuple not in self.seen_token_spans:
                                 self.seen_token_spans.add(token_tuple)
                                 extracted_annotations += 1
+                            query_key = f"{subj} {obj}"
                             self.chosen_tuples.append({
                                 "subject": subj[0],
                                 "object": obj[0],
-                                "confidence": confidence
+                                "confidence": confidence,
+                                "key": key
                             })
                     else:
                         print("\t\tConfidence is lower than threshold confidence. Ignoring this.")
                         print("\t\t==========")
+
+            self.candidate_pairs = []
 
         print(f"\n\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences")
         print(f"\n\tRelations extracted from this website: {len(self.chosen_tuples)} (Overall: {len(self.relation_map)})")

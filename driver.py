@@ -2,8 +2,10 @@ import requests
 import json
 
 from crawl_website import download_and_clean_html
-from extract_relations import ExtractRelations
+from extract_relations_spanbert import ExtractRelationsSpanbert
+from extract_relations_gemini import ExtractRelationsGemini
 
+import spacy
 import time
 import google.generativeai as palm
 
@@ -27,6 +29,8 @@ class InfoExtraction:
         self.tuple_num = k
         self.X = set()
         self.iteration = 0
+        self.used_queries = set()
+
         self.chosen_tuples = []
         relation_map = {
             1: "Schools_Attended",
@@ -49,10 +53,11 @@ class InfoExtraction:
             "Top_Member_Employees": ("PERSON", "ORG")
         }
 
-        # self.nlp = spacy.load("en_core_web_lg") 
+        self.nlp = spacy.load("en_core_web_lg") 
         # self.spanbert = SpanBERT("SpanBERT/pretrained_spanbert")
         self.entities_of_interest = ["ORGANIZATION", "PERSON", "LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"]
         self.target_relation = RELATION_MAP[self.r]
+        
   
     def start(self):
         """Start the searching process. """
@@ -104,29 +109,34 @@ class InfoExtraction:
                 # print(webpage_text)
                 if self.model == "-spanbert":
                     # self.use_spanbert()
-                    er = ExtractRelations(self.r, self.threshold)
-                    self.chosen_tuples += er.extract_entities_spacy(webpage_text)
+                    er = ExtractRelationsSpanbert(self.r, self.threshold)
+                    self.chosen_tuples += er.extract_relations_spanbert(webpage_text)
+                
+                if self.model == "-gemini":
+                    # Ensure the text is a string and not a list
+                    er_gemini = ExtractRelationsGemini(self.r, self.threshold, self.google_gemini_api_key)
+                    self.chosen_tuples += er_gemini.extract_relations_gemini(webpage_text)
+
+                    if isinstance(webpage_text, list):
+                        webpage_text = ' '.join(webpage_text)
+                    
+                    webpage_tuples = self.extract_relations_gemini(webpage_text)
+                
+                    print(f"Tuples found for this URL: {len(webpage_tuples)}")
+                    all_tuples.extend(webpage_tuples)
+
+                    # Add only unique tuples
+                    for tuple_item in webpage_tuples:
+                        # Convert tuple to a hashable type (lowercase for case-insensitive comparison)
+                        unique_tuple = tuple(str(item).lower() for item in tuple_item)
+                        unique_tuples.add(unique_tuple)
                 
                 if len(self.chosen_tuples) > self.tuple_num:
                     self.print_final_output()
 
             self.iteration += 1
 
-        #     if self.model == "-gemini":
-        #         # Ensure the text is a string and not a list
-        #         if isinstance(webpage_text, list):
-        #             webpage_text = ' '.join(webpage_text)
-                
-        #         webpage_tuples = self.extract_relations_gemini(webpage_text)
-            
-        #         print(f"Tuples found for this URL: {len(webpage_tuples)}")
-        #         all_tuples.extend(webpage_tuples)
 
-        #         # Add only unique tuples
-        #         for tuple_item in webpage_tuples:
-        #             # Convert tuple to a hashable type (lowercase for case-insensitive comparison)
-        #             unique_tuple = tuple(str(item).lower() for item in tuple_item)
-        #             unique_tuples.add(unique_tuple)
             
         #     if len(all_tuples) >= self.tuple_num:
         #         break
@@ -189,35 +199,27 @@ class InfoExtraction:
 
     def update_query(self):
         """Choose new queries from chosen tuple to append old query. """
-        if not hasattr(self, "used_queries"):
-        self.used_queries = set()
 
-        best_tuple = None
-        best_confidence = -1
-
-        for tup in self.chosen_tuples:
-            key = f"{tup['subject']} {tup['object']}"
-            if key in self.used_queries:
-                continue  # Skip already used tuples
-
-            if self.model == "-spanbert":
-                # Pick highest-confidence unused tuple
-                if tup["confidence"] > best_confidence:
-                    best_confidence = tup["confidence"]
-                    best_tuple = tup
-            # else:
-            #     # For -gemini or other models, just pick the first unused
-            #     best_tuple = tup
-            #     break
+        if self.model == "-spanbert":
+            # Pick the highest-confidence unused tuple
+            best_tuple = max(
+                (tup for tup in self.chosen_tuples if tup["key"] not in self.used_queries),
+                key=lambda x: x["confidence"],
+                default=None
+            )
+        else:
+            # For Gemini, pick any unused tuple
+            best_tuple = next(
+                (tup for tup in self.chosen_tuples if tup["key"] not in self.used_queries),
+                None
+            )
 
         if best_tuple:
-            new_query = f"{best_tuple['subject']} {best_tuple['object']}"
-            self.used_queries.add(new_query)
-            self.query = new_query
+            self.used_queries.add(best_tuple["key"])
+            self.query = best_tuple["key"]
         else:
-            # No valid unused tuples left — mark for stopping
-            print("No new high-confidence unused tuples available. Stopping.")
-            exit()  # Or return a status code if you prefer cleaner exits
+            print("No new unused tuples available. Stopping.")
+            exit()
 
     # def use_spanbert(self):
     #     er = ExtractRelations(self.r, self.threshold)
