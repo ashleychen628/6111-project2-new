@@ -13,14 +13,14 @@ class ExtractRelationsSpanbert:
         self.chosen_tuples = []
         self.relation_map = {}
         self.seen_token_spans = set()
-        self.entities_of_interest = [
-                                        "PERSON", 
-                                        "ORGANIZATION", 
-                                        "LOCATION", 
-                                        "CITY", 
-                                        "STATE_OR_PROVINCE", 
-                                        "COUNTRY"
-                                    ]
+
+        self.entities_of_interest = {
+          1: ["PERSON", "ORGANIZATION"], # Schools_Attended
+          2: ["PERSON", "ORGANIZATION"], # Work_For 
+          3: ["PERSON", "LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"], # Live_In
+          4: ["ORGANIZATION", "PERSON"] # Top_Member_Employees
+        }
+
         self.relation_mapping = {
                 1: ("per:schools_attended", "PERSON", "ORGANIZATION"),
                 2: ("per:employee_of", "PERSON", "ORGANIZATION"),
@@ -44,10 +44,10 @@ class ExtractRelationsSpanbert:
             if (idx + 1) % 5 == 0:
                 print(f"\n\tProcessed {idx + 1} / {len(sentences)} sentences")
 
-            ents = get_entities(sentence, self.entities_of_interest)
+            ents = get_entities(sentence, self.entities_of_interest[self.relation])
             
             # create entity pairs
-            sentence_entity_pairs = create_entity_pairs(sentence, self.entities_of_interest)
+            sentence_entity_pairs = create_entity_pairs(sentence, self.entities_of_interest[self.relation])
 
             for ep in sentence_entity_pairs:
                 subj, obj = ep[1], ep[2]

@@ -90,8 +90,8 @@ class InfoExtraction:
             all_tuples = []
 
             for idx, result in enumerate(urls):
-                # if idx > 0:
-                #     break
+                if idx > 0:
+                    break
                 url = result["url"]
                 print(f"\nURL ({idx+1} / {len(urls)}): {url}")
 
