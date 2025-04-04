@@ -20,6 +20,12 @@ def download_and_clean_html(url):
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, "html.parser")
 
+        # Replace all <br> tags with a literal period + space
+        for br in soup.find_all("br"):
+            if br.parent:
+                br.insert_after(". ")  # insert after instead of replace
+                br.decompose()         # remove the <br> tag itself
+
         selected_tags = soup.find_all(string=True)
 
         if not selected_tags:
@@ -27,10 +33,8 @@ def download_and_clean_html(url):
             return ""
         
         # text = " ".join(tag.get_text(separator=" ") for tag in selected_tags if tag.get_text())
-        text = soup.get_text(separator=' ', strip=True)
         # text = " ".join(soup.stripped_strings)
-
-
+        text = soup.get_text(separator=' ', strip=True)
         text = text.replace('\xa0', '')
         text = re.sub(r'\s+([.,;:!?])', r'\1', text)
         text = re.sub(r'\(\s+', '(', text)

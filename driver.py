@@ -108,8 +108,8 @@ class InfoExtraction:
                 else:
                     print(f"Webpage length (num characters): {len(webpage_text)}")
                 # print(webpage_text)
+
                 if self.model == "-spanbert":
-                    # self.use_spanbert()
                     er = ExtractRelationsSpanbert(self.r, self.threshold, self.seen_keys)
                     chosen_tuples, seen_keys = er.extract_relations_spanbert(webpage_text)
                     self.chosen_tuples += chosen_tuples
@@ -122,43 +122,9 @@ class InfoExtraction:
                     self.chosen_tuples += chosen_tuples
                     self.seen_keys.update(seen_keys)
 
-                    # if isinstance(webpage_text, list):
-                    #     webpage_text = ' '.join(webpage_text)
-                    
-                    # webpage_tuples = self.extract_relations_gemini(webpage_text)
-                
-                    # print(f"Tuples found for this URL: {len(webpage_tuples)}")
-                    # all_tuples.extend(webpage_tuples)
-
-                    # # Add only unique tuples
-                    # for tuple_item in webpage_tuples:
-                    #     # Convert tuple to a hashable type (lowercase for case-insensitive comparison)
-                    #     unique_tuple = tuple(str(item).lower() for item in tuple_item)
-                    #     unique_tuples.add(unique_tuple)
-                
-            if len(self.chosen_tuples) > self.tuple_num:
-                self.print_final_output()
+            self.print_final_output()
 
             self.iteration += 1
-
-
-            
-        #     if len(all_tuples) >= self.tuple_num:
-        #         break
-        
-        # print("\nExtracted Tuples:")
-        # final_tuples = []
-        # for unique_tuple in unique_tuples:
-        #     # Convert back to original representation
-        #     original_tuple = tuple(unique_tuple)
-        #     final_tuples.append(original_tuple)
-        #     print(original_tuple)
-            
-        #     # Stop if we've reached the desired number of tuples
-        #     if len(final_tuples) == self.tuple_num:
-        #         break
-
-        # return final_tuples
 
     def google_search(self):
         """Query the Google API to get the top 10 result. """
@@ -205,8 +171,9 @@ class InfoExtraction:
         if self.model == "-gemini":
             for tup in self.chosen_tuples:
                 print(f"Subject: {tup['subject']} \t| Object: {tup['object']}")
-
-        print(f"Total # of iterations = {self.iteration + 1}")
+        
+        if len(self.chosen_tuples) > self.tuple_num:
+            print(f"Total # of iterations = {self.iteration + 1}")
 
     def update_query(self):
         """Choose new queries from chosen tuple to append old query. """
@@ -227,7 +194,7 @@ class InfoExtraction:
 
         if best_tuple:
             self.used_queries.add(best_tuple["key"])
-            self.query = best_tuple["key"]
+            self.query = " ".join(best_tuple["key"])
         else:
             print("No new unused tuples available. Stopping.")
             exit()

@@ -37,38 +37,49 @@ class ExtractRelationsSpanbert:
         print("Annotating the webpage using spacy...")
 
         sentences = list(doc.sents)
+        # print(sentences)
         extracted_annotations = 0
 
         print(f"Extracted {len(list(doc.sents))} sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...")
         
         for idx, sentence in enumerate(sentences):
-
+            self.candidate_pairs = []
             if (idx + 1) % 5 == 0:
                 print(f"\n\tProcessed {idx + 1} / {len(sentences)} sentences")
-
+            # print(f"index: {idx + 1}, sentence: {sentence} \n")
             ents = get_entities(sentence, self.entities_of_interest[self.relation])
             
             # create entity pairs
             sentence_entity_pairs = create_entity_pairs(sentence, self.entities_of_interest[self.relation])
 
             for ep in sentence_entity_pairs:
-                subj, obj = ep[1], ep[2]
+                tokens, subj, obj = ep[0], ep[1], ep[2]
 
-                if self.relation == 1 and subj[1] == "PERSON" and obj[1] == "ORGANIZATION":
-                    # Schools_Attended
-                    self.candidate_pairs.append({"tokens": ep[0], "subj": subj, "obj": obj})
-                
-                elif self.relation == 2 and subj[1] == "PERSON" and obj[1] == "ORGANIZATION":
-                    # Work_For
-                    self.candidate_pairs.append({"tokens": ep[0], "subj": subj, "obj": obj})
-                
-                elif self.relation == 3 and subj[1] == "PERSON" and obj[1] in ["LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"]:
-                    # Live_In
-                    self.candidate_pairs.append({"tokens": ep[0], "subj": subj, "obj": obj})
-                
-                elif self.relation == 4 and subj[1] == "ORGANIZATION" and obj[1] == "PERSON":
-                    # Top_Member_Employees
-                    self.candidate_pairs.append({"tokens": ep[0], "subj": subj, "obj": obj})
+                if self.relation == 1:  # Schools_Attended
+                    if (subj[1], obj[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
+                    elif (obj[1], subj[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+
+                elif self.relation == 2:  # Work_For
+                    if (subj[1], obj[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
+                    elif (obj[1], subj[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+
+                elif self.relation == 3:  # Live_In
+                    valid_locs = {"LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"}
+                    if subj[1] == "PERSON" and obj[1] in valid_locs:
+                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
+                    elif obj[1] == "PERSON" and subj[1] in valid_locs:
+                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+
+                elif self.relation == 4:  # Top_Member_Employees
+                    if (subj[1], obj[1]) == ("ORGANIZATION", "PERSON"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
+                    elif (obj[1], subj[1]) == ("ORGANIZATION", "PERSON"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+
             
             if len(self.candidate_pairs) == 0:
                 continue
@@ -78,11 +89,12 @@ class ExtractRelationsSpanbert:
             expected_label, expected_subj_type, expected_obj_type = self.relation_mapping[self.relation]
 
             for ex, pred in zip(self.candidate_pairs, relation_predictions):
+
                 relation_label, confidence = pred
                 subj, obj = ex['subj'], ex['obj']
                 tokens = ex['tokens']
                 key = (subj[0], obj[0])
-                
+
                 if relation_label == expected_label and \
                 (subj[1] == expected_subj_type and (obj[1] in expected_obj_type if isinstance(expected_obj_type, list) else obj[1] == expected_obj_type)):
                     if key not in self.relation_map or confidence > self.relation_map[key][0]:
@@ -91,7 +103,6 @@ class ExtractRelationsSpanbert:
                         continue
                     
                     print("\n\t\t=== Extracted Relation ===")
-                    # print(f"the relation_label is: {relation_label}")
                     print(f"\t\tInput tokens: {tokens}")
                     print(f"\t\tOutput Confidence: {confidence:.7f} ; Subject: {subj[0]} ; Object: {obj[0]} ;")
 
@@ -100,7 +111,6 @@ class ExtractRelationsSpanbert:
                         if token_tuple not in self.seen_token_spans:
                             self.seen_token_spans.add(token_tuple)
                             extracted_annotations += 1
-                        query_key = f"{subj} {obj}"
 
                         if key not in self.seen_keys:
                             print("\t\tAdding to set of extracted relations")
@@ -112,13 +122,11 @@ class ExtractRelationsSpanbert:
                             })
                             self.seen_keys.add(key)
                         else:
-                            print("Duplicate with lower confidence than existing record. Ignoring this.")
+                            print("\t\tDuplicate with lower confidence than existing record. Ignoring this.")
                         print("\t\t==========")
                     else:
                         print("\t\tConfidence is lower than threshold confidence. Ignoring this.")
                         print("\t\t==========")
-
-            self.candidate_pairs = []
 
         print(f"\n\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences")
         print(f"\n\tRelations extracted from this website: {len(self.chosen_tuples)} (Overall: {len(self.relation_map)})")
