@@ -1,0 +1,33 @@
+Loading pre-trained spanBERT from ./pretrained_spanbert
+____
+    Parameters:
+    Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+    Engine key      = 84f98f408aba949e8
+    Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+    Method          = -gemini
+    Relation        = 1
+    Threshold       = 0.7
+    Query           = sergey brin stanford
+    # of Tuples     = 10
+
+    Loading necessary libraries; This should take a minute or so ...
+    
+____
+            ========== Iteration: 0 - Query: sergey brin stanford ==========
+            
+======================
+
+URL (1 / 10): https://en.wikipedia.org/wiki/Sergey_Brin
+Fetching text from url ...
+Trimming webpage content from 42277 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 79 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 79 sentences
+
+	Processed 10 / 79 sentences
+
+	Processed 15 / 79 sentences
+
+	Processed 20 / 79 sentences

@@ -1,0 +1,1 @@
+Loading pre-trained spanBERT from ./pretrained_spanbert

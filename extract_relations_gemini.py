@@ -82,6 +82,7 @@ class ExtractRelationsGemini:
         self.relation_map = {}
         self.seen_sentence = set()
         self.seen_keys = seen_keys
+        self.possible_tuples_num = 0
 
         
         relation_map = {
@@ -118,6 +119,7 @@ class ExtractRelationsGemini:
         print(f"Extracted {len(list(doc.sents))} sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...")
         
         for idx, sentence in enumerate(sentences):
+            self.candidate_pairs = []
             if (idx + 1) % 5 == 0:
                 print(f"\n\tProcessed {idx + 1} / {len(sentences)} sentences")
 
@@ -125,25 +127,34 @@ class ExtractRelationsGemini:
             
             # create entity pairs
             sentence_entity_pairs = create_entity_pairs(sentence, self.entities_of_interest[self.relation])
-
+        
             for ep in sentence_entity_pairs:
-                subj, obj = ep[1], ep[2]
+                tokens, subj, obj = ep[0], ep[1], ep[2]
 
-                if self.relation == 1 and subj[1] == "PERSON" and obj[1] == "ORGANIZATION":
-                    # Schools_Attended
-                    self.candidate_pairs.append({"tokens": ep[0], "subj": subj, "obj": obj})
-                
-                elif self.relation == 2 and subj[1] == "PERSON" and obj[1] == "ORGANIZATION":
-                    # Work_For
-                    self.candidate_pairs.append({"tokens": ep[0], "subj": subj, "obj": obj})
-                
-                elif self.relation == 3 and subj[1] == "PERSON" and obj[1] in ["LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"]:
-                    # Live_In
-                    self.candidate_pairs.append({"tokens": ep[0], "subj": subj, "obj": obj})
-                
-                elif self.relation == 4 and subj[1] == "ORGANIZATION" and obj[1] == "PERSON":
-                    # Top_Member_Employees
-                    self.candidate_pairs.append({"tokens": ep[0], "subj": subj, "obj": obj})
+                if self.relation == 1:  # Schools_Attended
+                    if (subj[1], obj[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
+                    elif (obj[1], subj[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+
+                elif self.relation == 2:  # Work_For
+                    if (subj[1], obj[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
+                    elif (obj[1], subj[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+
+                elif self.relation == 3:  # Live_In
+                    valid_locs = {"LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"}
+                    if subj[1] == "PERSON" and obj[1] in valid_locs:
+                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
+                    elif obj[1] == "PERSON" and subj[1] in valid_locs:
+                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+
+                elif self.relation == 4:  # Top_Member_Employees
+                    if (subj[1], obj[1]) == ("ORGANIZATION", "PERSON"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
+                    elif (obj[1], subj[1]) == ("ORGANIZATION", "PERSON"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
             
             if len(self.candidate_pairs) == 0:
                 continue
@@ -157,32 +168,31 @@ class ExtractRelationsGemini:
                     if relation_tuple is not None:
                         subj, obj = relation_tuple
                         key = (subj, obj)
-
-                        if key in self.seen_keys:
-                            continue
-
-                        if sentence not in self.seen_sentence:
-                            self.seen_sentence.add(sentence)
-                            extracted_annotations += 1
-
-                        self.chosen_tuples.append({
-                            "subject": subj,
-                            "object": obj,
-                            "confidence": 1,
-                            "key": key
-                        })
-                        self.seen_keys.add(key)
-
+                        self.possible_tuples_num += 1
                         print("\n\t\t=== Extracted Relation ===")
                         print(f"\t\tSentence:: {sentence}")
                         print(f"\t\tSubject: {subj} ; Object: {obj} ;")
-                        print(f"\t\tAdding to set of extracted relations")
+
+                        if key not in self.seen_keys:
+                            if sentence not in self.seen_sentence:
+                                self.seen_sentence.add(sentence)
+                                extracted_annotations += 1
+
+                            self.chosen_tuples.append({
+                                "subject": subj,
+                                "object": obj,
+                                "confidence": 1,
+                                "key": key
+                            })
+                            self.seen_keys.add(key)
+                            print(f"\t\tAdding to set of extracted relations")
+                        else:
+                            print(f"\t\tDuplicate. Ignoring this.")
+
                         print("\t\t==========")
 
-            self.candidate_pairs = []
-
         print(f"\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences \n")
-        print(f"\tRelations extracted from this website: {len(self.chosen_tuples)} (Overall: {len(self.relation_map)}) \n")
+        print(f"\tRelations extracted from this website: {len(self.chosen_tuples)} (Overall: {self.possible_tuples_num}) \n")
         return self.chosen_tuples, self.seen_keys
     
 

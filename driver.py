@@ -63,23 +63,25 @@ class InfoExtraction:
     def start(self):
         """Start the searching process. """
         # keep iteratign until number of tuples reached k
+        print(f"""____
+Parameters:
+Client key      = {self.google_api_key}
+Engine key      = {self.google_engine_id}
+Gemini key      = {self.google_gemini_api_key}
+Method          = {self.model}
+Relation        = {self.r}
+Threshold       = {self.threshold}
+Query           = {self.query}
+# of Tuples     = {self.tuple_num}
+Loading necessary libraries; This should take a minute or so ...)
+""")
         while len(self.chosen_tuples) < self.tuple_num:
             if self.iteration > 0:
                 self.update_query()
-            print(f"""____
-    Parameters:
-    Client key      = {self.google_api_key}
-    Engine key      = {self.google_engine_id}
-    Gemini key      = {self.google_gemini_api_key}
-    Method          = {self.model}
-    Relation        = {self.r}
-    Threshold       = {self.threshold}
-    Query           = {self.query}
-    # of Tuples     = {self.tuple_num}
 
-    Loading necessary libraries; This should take a minute or so ...
-    ========== Iteration: {self.iteration} - Query: {self.query} ==========
-    """)
+            print(f"""
+            ========== Iteration: {self.iteration} - Query: {self.query} ==========
+            """)
             unique_tuples = set()
             
             # Step 1: Get Top 10 URLs from Google Custom Search
@@ -118,7 +120,7 @@ class InfoExtraction:
                 if self.model == "-gemini":
                     # Ensure the text is a string and not a list
                     er_gemini = ExtractRelationsGemini(self.r, self.threshold, self.google_gemini_api_key, self.seen_keys)
-                    chosen_tuples, seen_keys = er.extract_relations_gemini(webpage_text)
+                    chosen_tuples, seen_keys = er_gemini.extract_relations_gemini(webpage_text)
                     self.chosen_tuples += chosen_tuples
                     self.seen_keys.update(seen_keys)
 
@@ -138,8 +140,6 @@ class InfoExtraction:
         if response.status_code == 200:
             results = response.json()
             search_results = []
-
-            print("Google Search Results:\n======================")
             
             idx = 0
             for item in results.get("items", []):
@@ -152,7 +152,6 @@ class InfoExtraction:
 
                 idx = idx + 1
                     
-            print("======================")
             return search_results
         else:
             print("API Error:", response.status_code, response.text)
