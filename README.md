@@ -1,4 +1,4 @@
-# 6111-project1
+# 6111-project2
 
 # Query Expansion with Relevance Feedback
 
