@@ -6,12 +6,13 @@ spanbert = SpanBERT("./pretrained_spanbert")
 nlp = spacy.load("en_core_web_lg") 
 
 class ExtractRelationsSpanbert:
-    def __init__(self, r, t):
+    def __init__(self, r, t, seen_keys):
         self.relation = r
         self.threshold = t
         self.candidate_pairs = []
         self.chosen_tuples = []
         self.relation_map = {}
+        self.seen_keys = seen_keys
         self.seen_token_spans = set()
 
         self.entities_of_interest = {
@@ -41,6 +42,7 @@ class ExtractRelationsSpanbert:
         print(f"Extracted {len(list(doc.sents))} sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...")
         
         for idx, sentence in enumerate(sentences):
+
             if (idx + 1) % 5 == 0:
                 print(f"\n\tProcessed {idx + 1} / {len(sentences)} sentences")
 
@@ -73,13 +75,6 @@ class ExtractRelationsSpanbert:
             else:
                 relation_predictions = spanbert.predict(self.candidate_pairs)  # get predictions: list of (relation, confidence) pairs
 
-            # relation_mapping = {
-            #     1: ("per:schools_attended", "PERSON", "ORGANIZATION"),
-            #     2: ("per:employee_of", "PERSON", "ORGANIZATION"),
-            #     3: ("per:cities_of_residence", "PERSON", ["LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"]),
-            #     4: ("org:top_members/employees", "ORGANIZATION", "PERSON")
-            # }
-
             expected_label, expected_subj_type, expected_obj_type = self.relation_mapping[self.relation]
 
             for ex, pred in zip(self.candidate_pairs, relation_predictions):
@@ -96,26 +91,29 @@ class ExtractRelationsSpanbert:
                         continue
                     
                     print("\n\t\t=== Extracted Relation ===")
-                    print(f"the relation_label is: {relation_label}")
+                    # print(f"the relation_label is: {relation_label}")
                     print(f"\t\tInput tokens: {tokens}")
                     print(f"\t\tOutput Confidence: {confidence:.7f} ; Subject: {subj[0]} ; Object: {obj[0]} ;")
-                    self.relation_map[key] = (confidence, relation_label, tokens)
+
                     if confidence >= self.threshold:
-                        print("\t\tAdding to set of extracted relations")
-                        print(relation_label)
-                        print("\t\t==========")
-                        
                         token_tuple = tuple(tokens)
                         if token_tuple not in self.seen_token_spans:
                             self.seen_token_spans.add(token_tuple)
                             extracted_annotations += 1
                         query_key = f"{subj} {obj}"
-                        self.chosen_tuples.append({
-                            "subject": subj[0],
-                            "object": obj[0],
-                            "confidence": confidence,
-                            "key": key
-                        })
+
+                        if key not in self.seen_keys:
+                            print("\t\tAdding to set of extracted relations")
+                            self.chosen_tuples.append({
+                                "subject": subj[0],
+                                "object": obj[0],
+                                "confidence": confidence,
+                                "key": key
+                            })
+                            self.seen_keys.add(key)
+                        else:
+                            print("Duplicate with lower confidence than existing record. Ignoring this.")
+                        print("\t\t==========")
                     else:
                         print("\t\tConfidence is lower than threshold confidence. Ignoring this.")
                         print("\t\t==========")
@@ -124,4 +122,5 @@ class ExtractRelationsSpanbert:
 
         print(f"\n\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences")
         print(f"\n\tRelations extracted from this website: {len(self.chosen_tuples)} (Overall: {len(self.relation_map)})")
-        return self.chosen_tuples
+
+        return self.chosen_tuples, self.seen_keys

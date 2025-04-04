@@ -73,7 +73,7 @@ RELATION_DESCRIPTIONS = {
 }
 
 class ExtractRelationsGemini:
-    def __init__(self, r, t, google_gemini_api_key):
+    def __init__(self, r, t, google_gemini_api_key, seen_keys):
         self.relation = r
         self.threshold = t
         self.google_gemini_api_key = google_gemini_api_key
@@ -81,7 +81,7 @@ class ExtractRelationsGemini:
         self.chosen_tuples = []
         self.relation_map = {}
         self.seen_sentence = set()
-        self.seen_keys = set()
+        self.seen_keys = seen_keys
 
         
         relation_map = {
@@ -183,7 +183,7 @@ class ExtractRelationsGemini:
 
         print(f"\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences \n")
         print(f"\tRelations extracted from this website: {len(self.chosen_tuples)} (Overall: {len(self.relation_map)}) \n")
-        return self.chosen_tuples
+        return self.chosen_tuples, self.seen_keys
     
 
     def call_gemini_api(self, sentence):
@@ -228,9 +228,9 @@ class ExtractRelationsGemini:
             'The value of this json has to be exactly the same as it appears in the sentence.\n'
             'Only extract if all of the following conditions are satisfied:\n\n'
             f'- The relation is "{self.relation_name}".\n'
-            f'- The subject is {spec[subject_type]}.\n'
-            f'- The object is a proper noun that refers to {spec[object_type]}.\n'
-            f'- The object must {spec[object_constraints]}.\n'
+            f'- The subject is {spec["subject_type"]}.\n'
+            f'- The object is a proper noun that refers to {spec["object_type"]}.\n'
+            f'- The object must {spec["object_constraints"]}.\n'
             f'- Both subject and object must be nouns, and clearly connected by the "{self.relation_name}" relation.\n'
             '- Both subject and object must appear explicitly and unambiguously in the sentence.\n'
             f'- The relation must clearly indicate that {spec["relation_description"]}.'

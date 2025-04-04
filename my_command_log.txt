@@ -1,0 +1,381 @@
+    1  git clone git@ashleychen628:ashleychen628/6111-project2.git
+    2  python3 -m venv env
+    3  cd 6111-project2/
+    4  python3 -m venv env
+    5  source env/bin/activate
+    6  pip install -r requirements.txt
+    7  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "Milky Way"
+    8  pip3 install numpy
+    9  pip freeze > requirements.txt
+   10  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "Milky Way"
+   11  pip3 install scikit-learn
+   12  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "Milky Way"
+   13  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "one love"
+   14  ls
+   15  cd ..
+   16  ls
+   17  cd mt3634/
+   18  ls
+   19  cd mt3634/
+   20  ssh-keygen -t rsa -b 4096 -C "ashley.cdy628@gmail.com" -f ~/.ssh/ashleychen628
+   21  cat ~/.ssh/ashleychen628.pub
+   22  Host ashleychen628
+   23  ~/.ssh/config
+   24  vim ~/.ssh/config
+   25  source env/bin/activate
+   26  ls
+   27  cd 6111-project2/
+   28  source env/bin/activate
+   29  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "per se"
+   30  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "wojcicki"
+   31  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "milky way"
+   32  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "michael jordan california"
+   33  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "one love"
+   34  git status
+   35  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "one love"
+   36  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "per se"
+   37  git status
+   38  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "per se"
+   39  ./run AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 0.9 "wojcicki"
+   40  cd ..
+   41  deactivate
+   42  sudo apt update
+   43  sudo apt install python3
+   44  sudo apt install python3-venv
+   45  sudo apt install -y python3-pip
+   46  cd 6111-project2/
+   47  python3 -m venv dbproj
+   48  sudo mv ~/dbproj /opt/
+   49  sudo mv dbproj /opt/
+   50  sudo mv /dbproj /opt/
+   51  cd ..
+   52  python3 -m venv dbproj
+   53  sudo mv ~/dbproj /opt/
+   54  ls -l /opt/dbproj
+   55  source dbproj/bin/activate
+   56  cd /opt
+   57  source dbproj/bin/activate
+   58  source /home/mt3634/dbproj/bin/activate
+   59  cd /usr/lib/python3/dist-packages
+   60  sudo ln -s apt_pkg.cpython-36m-x86_64-linux-gnu.so apt_pkg.so
+   61  cd ~
+   62  sudo pip3 install --upgrade google-api-python-client
+   63  pip3 install --upgrade google-api-python-client
+   64  pip3 install beautifulsoup4
+   65  sudo apt-get update
+   66  pip3 install -U pip setuptools wheel
+   67  pip3 install -U spacy
+   68  python3 -m spacy download en_core_web_lg
+   69  pip install -q -U google-generativeai
+   70  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 “sergey brin stanford” 10
+   71  ls
+   72  cd 6111-project2/
+   73  ls
+   74  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 “sergey brin stanford” 10
+   75  pip install -r requirements.txt
+   76  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 “sergey brin stanford” 10
+   77  pip3 install sklearn
+   78  pip3 install scikit-learn
+   79  pip freeze > requirements.txt
+   80  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 “sergey brin stanford” 10
+   81  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 "0.7" "sergey brin stanford" 10
+   82  cd ..
+   83  ls
+   84  cd /opt/
+   85  ls
+   86  cd ..
+   87  ls
+   88  cd home
+   89  cd dc3861/
+   90  cd 6111-project2/
+   91  source /opt/dbproj/activate
+   92  cd /opt/
+   93  ls
+   94  cd ..
+   95  cd home/
+   96  ls
+   97  cd dc3861/
+   98  cd 6111-project2/
+   99  source /opt/dbproj/bin/activate
+  100  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 “sergey brin stanford” 10
+  101  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  102  git clone https://github.com/Shreyas200188/SpanBERT
+  103  cd SpanBERT
+  104  pip3 install -r requirements.txt
+  105  cd ..
+  106  git status
+  107  git branch
+  108  git checkout -b "ashley-dev-spanbert"
+  109  git status
+  110  git add .
+  111  git rm --cached -r SpanBERT
+  112  rm -rf .git/modules/SpanBERT  # Remove any submodule metadata if needed
+  113  git rm --cached -r SpanBERT
+  114  cd SpanBERT/
+  115  git status
+  116  cd ..
+  117  git rm -rf --cached SpanBERT
+  118  git submodule add https://github.com/Shreyas200188/SpanBERT
+  119  git submodule update --init --recursive
+  120  echo "SpanBERT/" >> .gitignore
+  121  git add .gitignore
+  122  git commit -m "Ignore SpanBERT folder"
+  123  git config --global user.email "ashley.cdy628@gmail.com"
+  124  git config --global user.name "ashleychen628"
+  125  git commit -m "Ignore SpanBERT folder"
+  126  git status
+  127  git add .
+  128  git status
+  129  git push -u origin ashley-dev-spanbert
+  130  git status
+  131  git branch
+  132  git status
+  133  ls
+  134  cd 6111-project2/
+  135  git status
+  136  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  137  source /opt/dbproj/bin/activate
+  138  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  139  cd SpanBERT/
+  140  pip install -r requirements.txt
+  141  bash download_finetuned.sh
+  142  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  143  cd ..
+  144  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  145  deactivate
+  146  source ~/dbproj/bin/activate
+  147  source /opt/dbproj/bin/activate
+  148  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  149  pip uninstall torch torchvision -y
+  150  cd SpanBERT/
+  151  pip install -r requirements.txt
+  152  cd ..
+  153  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  154  git status
+  155  git add .
+  156  git status
+  157  cd SpanBERT/
+  158  git add .
+  159  git status
+  160  touch .gitignore
+  161  git status
+  162  git add .
+  163  git status
+  164  git commit -m "Modified SpanBERT files"
+  165  cd ..
+  166  git status
+  167  git add SpanBERT/
+  168  git status
+  169  git commit -m "Updated SpanBERT submodule commit"
+  170  git status
+  171  git push -u origin ashley-dev-spanbert
+  172  git status
+  173  git fetch origin
+  174  git checkout main
+  175  git pull
+  176  git status
+  177  git checkout ashley-dev-spanbert
+  178  git status
+  179  git merge origin/main
+  180  git status
+  181  git push -u origin ashley-dev-spanbert
+  182  source /opt/dbproj/bin/activate
+  183  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  184  git status
+  185  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  186  git status
+  187  git add .
+  188  git commit -m "fixed raw text issue"
+  189  git push -u origin ashley-dev-spanbert
+  190  git status
+  191  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  192  mv SpanBERT ~/SpanBERT
+  193  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  194  cd ..
+  195  ls
+  196  cd SpanBERT/
+  197  bash download_finetuned.sh
+  198  ls
+  199  cd pretrained_spanbert/
+  200  ls
+  201  cd ../..
+  202  cd 6111-project2/
+  203  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  204  cd ..
+  205  git clone https://github.com/Shreyas200188/SpanBERT
+  206  ls
+  207  mv SpanBERT 6111-project2/
+  208  ls
+  209  git clone https://github.com/Shreyas200188/SpanBERT
+  210  cd SpanBERT
+  211  source /opt/dbproj/bin/activate
+  212  bash download_finetuned.sh
+  213  git remote remove origin
+  214  git remote add origin git@github.com:ashleychen628/6111-project2-new.git
+  215  git push -u origin main
+  216  git branch
+  217  git branch -m main
+  218  git push -u origin main
+  219  cat ~/.ssh/ashleychen628.pub
+  220  git remote remove origin
+  221  git remote add origin https://github.com/ashleychen628/6111-project2-new.git
+  222  git push -u origin main
+  223  git push -u origin main --force
+  224  git reset --hard HEAD~1
+  225  git push origin main --force
+  226  git status
+  227  git remote remove origin
+  228  rm -rf .git
+  229  git status
+  230  git init
+  231  git branch
+  232  git add .
+  233  git commit -m "Initial commit"
+  234  git remote add origin https://github.com/ashleychen628/6111-project2-new.git
+  235  git branch -M main
+  236  git push -u origin main --force
+  237  git reset --mixed HEAD~1
+  238  git reset --soft HEAD~1
+  239  git reset --hard HEAD~1
+  240  git status
+  241  ls
+  242  rm pretrained_spanbert
+  243  cd ..
+  244  ls
+  245  rm -rf SpanBERT/
+  246  ls
+  247  git clone https://github.com/Shreyas200188/SpanBERT
+  248  cd SpanBERT/
+  249  rm -rf .git
+  250  git init
+  251  git add .
+  252  git commit -m "Initial commit"
+  253  git remote add origin https://github.com/ashleychen628/6111-project2-new.git
+  254  git branch -M main
+  255  git push -u origin main
+  256  git pull
+  257  git status
+  258  git push -u origin main
+  259  git fetch
+  260  git status
+  261  git push -u origin main --force
+  262  cd ..
+  263  mv 6111-project2/src spanBERT
+  264  ls
+  265  mv spanBERT/src 6111-project2
+  266  cd spanBERT/
+  267  ls
+  268  cd ..
+  269  mv spanBERT 6111-project2/src
+  270  cp -r 6111-project2/src SpanBERT/src
+  271  ls
+  272  cd s
+  273  cd SpanBERT/
+  274  ls
+  275  source /opt/dbproj/bin/activate
+  276  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  277  cd SpanBERT/
+  278  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  279  bash download_finetuned.sh
+  280  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  281  git status
+  282  touch .gitignore
+  283  git status
+  284  git add .
+  285  git status
+  286  git add .
+  287  git commit -m "extract"
+  288  git branch
+  289  git push -u origin main
+  290  git status
+  291  cd SpanBERT/
+  292  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  293  git branch
+  294  git status
+  295  git add .
+  296  git commit -m "changed spanbert part"
+  297  git push -u origin main
+  298  git status
+  299  source /opt/dbproj/bin/activate
+  300  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  301  cd SpanBERT/
+  302  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  303  git status
+  304  git branch
+  305  git add .
+  306  git commit -m "completed extract relations"
+  307  git push -u origin main
+  308  source /opt/dbproj/bin/activate
+  309  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  310  cd SpanBERT/
+  311  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  312  git status
+  313  git add .
+  314  git commit -m "need to clean the driver"
+  315  git push -u origin main
+  316  git checkout -b spanbert
+  317  git status
+  318  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  319  git status
+  320  git branch
+  321  git add .
+  322  git commit -m "updating driver"
+  323  git push -u origin spanbert
+  324  git status
+  325  git push -u origin spanbert
+  326  cd SpanBERT/
+  327  source /opt/dbproj/bin/activate
+  328  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  329  source /opt/dbproj/bin/activate
+  330  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  331  cd SpanBERT/
+  332  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  333  cd SpanBERT/
+  334  source /opt/dbproj/bin/activate
+  335  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  336  cd SpanBERT/
+  337  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  338  python3 project2.py -gemini AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  339  git branch
+  340  git status
+  341  git add .
+  342  git commit -m "spanbert changing entities of interest"
+  343  git push -u origin spanbert
+  344  git status
+  345  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyAoD3NHVYZZuO-Z0bxiAiRv07B1ASzL23I 1 0.7 "sergey brin stanford" 10
+  346  python3 project2.py -gemini AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  347  git branch
+  348  git status
+  349  git checkout -b gemini
+  350  git status
+  351  git add .
+  352  git commit -m "writing gemini"
+  353  git push -u origin gemini
+  354  git status
+  355  git checkout main
+  356  git status
+  357  git fetch
+  358  git status
+  359  git checkout gemini
+  360  python3 project2.py -gemini AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  361  source /opt/dbproj/bin/activate
+  362  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  363  cd SpanBERT/
+  364  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  365  python3 project2.py -gemini AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  366  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  367  python3 project2.py -gemini AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  368  source /opt/dbproj/bin/activate
+  369  python3 project2.py -gemini AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  370  cd SpanBERT/
+  371  python3 project2.py -gemini AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  372  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  373  python3 project2.py -gemini AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  374  git status
+  375  git add .
+  376  git commit -m "almost finished gemini"
+  377  git push -u origin gemini
+  378  git status
+  379  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 2 0.7 "sundar pichai google" 30
+  380  python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+  381  history > my_command_log.txt

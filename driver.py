@@ -30,6 +30,7 @@ class InfoExtraction:
         self.X = set()
         self.iteration = 0
         self.used_queries = set()
+        self.seen_keys = set()
 
         self.chosen_tuples = []
         relation_map = {
@@ -109,13 +110,17 @@ class InfoExtraction:
                 # print(webpage_text)
                 if self.model == "-spanbert":
                     # self.use_spanbert()
-                    er = ExtractRelationsSpanbert(self.r, self.threshold)
-                    self.chosen_tuples += er.extract_relations_spanbert(webpage_text)
+                    er = ExtractRelationsSpanbert(self.r, self.threshold, self.seen_keys)
+                    chosen_tuples, seen_keys = er.extract_relations_spanbert(webpage_text)
+                    self.chosen_tuples += chosen_tuples
+                    self.seen_keys.update(seen_keys)
                 
                 if self.model == "-gemini":
                     # Ensure the text is a string and not a list
-                    er_gemini = ExtractRelationsGemini(self.r, self.threshold, self.google_gemini_api_key)
-                    self.chosen_tuples += er_gemini.extract_relations_gemini(webpage_text)
+                    er_gemini = ExtractRelationsGemini(self.r, self.threshold, self.google_gemini_api_key, self.seen_keys)
+                    chosen_tuples, seen_keys = er.extract_relations_gemini(webpage_text)
+                    self.chosen_tuples += chosen_tuples
+                    self.seen_keys.update(seen_keys)
 
                     # if isinstance(webpage_text, list):
                     #     webpage_text = ' '.join(webpage_text)
