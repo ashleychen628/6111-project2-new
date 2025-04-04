@@ -1,109 +1,148 @@
-# spaCy-SpanBERT: Relation Extraction from Web Documents
+# 6111-project1
 
-This repository integrates spaCy with pre-trained SpanBERT. It is a fork from [SpanBERT](https://github.com/facebookresearch/SpanBERT) by Facebook Research, which contains code and models for the paper: [SpanBERT: Improving Pre-training by Representing and Predicting Spans](https://arxiv.org/abs/1907.10529).
+# Query Expansion with Relevance Feedback
 
-We have adapted the SpanBERT scripts to support relation extraction from general documents beyond the TACRED dataset. We extract entities using spaCy and classify relations using SpanBERT. This code has been used for the purpose of the Advanced Database Systems Course at Columbia University.
+#### Names: Danyao Chen
+#### UNI: dc3861
 
-## Install Requirements
-Note: these instructions match the instructions on the class webpage. Feel free to follow those if more convenient.
+## **Project Overview**
+This project implements an **information retrieval system** that improves Google search results using **relevance feedback and query expansion**. The system refines user queries iteratively by incorporating **TF-IDF-based keyword selection** and **Vector Space Model (VSM) ordering** to enhance search precision.
 
-Do the following within your CS6111 VM instance.
+The method follows an **interactive relevance feedback loop**, where:
+1. The user issues an **initial query**.
+2. The system retrieves the **top 10 results** using the **Google Custom Search API**.
+3. The user **marks relevant results**.
+4. The system **expands the query** by selecting **two important words** from relevant results using **TF-IDF ranking**.
+5. The **expanded query is reordered** using **cosine similarity** to prioritize relevant terms.
+6. The process repeats until the **desired precision@10** is met or no further improvements can be made.
 
-1. First, install Python 3.9:
-```bash
-sudo apt update
-sudo apt install python3.9
-sudo apt install python3.9-venv
+## **Code Structure**
+```
+|-- crawl_website.py
+|-- driver.py
+|-- extract_relations_gemini.py
+|-- extract_relations_spanbert.py
+|-- project2.py
 ```
 
-2. Then, create a virtual environment running Python 3.9:
+## **Run the Project**
+```sh
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
 
-```bash
-python3.9 -m venv dbproj
+// after creating your virtual environment
+python3 -m venv env
+source env/bin/activate
+(env) pip install -r requirements.txt
+
+// after activate your env
+(env) python3 project2.py [-spanbert|-gemini] <google api key> <google engine id> <google gemini api key> <r> <t> <q> <k>
+// example
+(env) python3 project2.py -gemini AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
+(env) python3 project2.py -spanbert AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw 84f98f408aba949e8 AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao 1 0.7 "sergey brin stanford" 10
 ```
+### **Our Google API key and Google Engine ID**
+- "api_key": "AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw"
+- "cx_id": "84f98f408aba949e8"
+- "google gemini api key": "AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao"
 
-3. To ensure correct installation of Python 3.9 within your virtual environment:
-```bash
-source dbproj/bin/activate
-python --version
-```
-The above should return 'Python 3.9.5'
+## **Methodology**
+This project implements **two key query expansion techniques**:
 
-4. Within your new virtual environment, install requirements and download spacy's en_core_web_lg:
-```bash
-sudo apt-get update
-pip3 install -U pip setuptools wheel
-pip3 install -U spacy
-python3 -m spacy download en_core_web_lg
-```
+### **1. TF-IDF-Based Keyword Selection**
+- Extracts **important words** from the **user-marked relevant search results**.
+- Uses **TF-IDF scores** to rank words by importance.
+- Selects **top 2 words** that are not already in the query.
 
-## Download Pre-Trained SpanBERT (Fine-Tuned in TACRED)
-SpanBERT has the same model configuration as [BERT](https://github.com/google-research/bert) but it differs in
-both the masking scheme and the training objectives.
+#### Libraries Used for TF-IDF calculation
+- sklearn.feature_extraction.text.TfidfVectorizer – Converts text into TF-IDF vectors for information retrieval.
+- sklearn.metrics.pairwise.cosine_similarity – Computes cosine similarity to reorder query terms based on relevance.
+  
+### **2. Query Reordering using Vector Space Model (VSM)**
+- Computes **cosine similarity** between query words and relevant document vectors.
+- Reorders the **expanded query** to **prioritize more relevant terms**.
+- Ensures the **original query words always remain at the front** to preserve intent.
 
-* Architecture: 24-layer, 1024-hidden, 16-heads, 340M parameters
-* Fine-tuning Dataset: [TACRED](https://nlp.stanford.edu/projects/tacred/) ([42 relation types](https://github.com/gkaramanolakis/SpanBERT/blob/master/relations.txt))
+#### Other External Libraries Used
+The following external libraries are used in this project:
+- collections (Standard Library)
+  Used for efficient data structures such as defaultdict, Counter, and deque, which help in handling data organization and frequency counting.
+- re (Standard Library)
+  Used for regular expression operations, enabling pattern matching and text manipulation.
+- glob (Standard Library)
+  Used for file path matching with wildcard patterns, facilitating batch processing of files in directories.
+- numpy (Third-Party Library)
+  A powerful numerical computing library used for array manipulation, mathematical operations, and efficient data processing.
 
-5. To download the fine-tuned SpanBERT model run: 
+## **Query-Modification Method**
 
-```bash
-git clone https://github.com/larakaracasu/SpanBERT
-cd SpanBERT
-pip3 install -r requirements.txt
-bash download_finetuned.sh
-```
+Our query-modification method is designed to iteratively improve search queries by identifying and incorporating the most relevant keywords while preserving an optimal query structure. This ensures that each refinement leads to better search results, increasing precision with every round.
 
-## Run Spacy-SpanBERT 
-The code below shows how to extract relations between entities of interest from raw text: 
+### 1. Selecting New Keywords
 
-```python
-raw_text = "Bill Gates stepped down as chairman of Microsoft in February 2014 and assumed a new post as technology adviser to support the newly appointed CEO Satya Nadella."
+Each round of query expansion selects two new words that are highly relevant to the search intent. The process is as follows:
 
-entities_of_interest = ["ORGANIZATION", "PERSON", "LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"]
+#### Step 1: Extracting Key Terms from Relevant Documents
 
-# Load spacy model
-import spacy
-nlp = spacy.load("en_core_web_lg")  
+- The system collects snippets from the search results that the user has marked as **relevant**.
+- These snippets are **cleaned and preprocessed**:
+  - Removing special characters, punctuation, and numbers.
+  - Converting text to lowercase (`casefold()`).
+  - Removing **stopwords** from a predefined list (`proj1-stop.txt`).
+- After preprocessing, each snippet is treated as a **document** for term analysis.
 
-# Apply spacy model to raw text (to split to sentences, tokenize, extract entities etc.)
-doc = nlp(raw_text)  
+#### Step 2: Computing Word Importance Using TF-IDF
 
-# Load pre-trained SpanBERT model
-from spanbert import SpanBERT 
-spanbert = SpanBERT("./pretrained_spanbert")  
+- A **TF-IDF vectorizer** is used to **compute the importance** of words in the cleaned snippets.
+- The **TF-IDF score** represents how important a word is in the given context.
+- Words with **higher TF-IDF scores** across all relevant snippets are considered **more informative**.
 
-# Extract relations
-from spacy_help_functions import extract_relations
-relations = extract_relations(doc, spanbert, entities_of_interest)
-print("Relations: {}".format(dict(relations)))
-# Relations: {('Bill Gates', 'per:employee_of', 'Microsoft'): 1.0, ('Microsoft', 'org:top_members/employees', 'Bill Gates'): 0.992, ('Satya Nadella', 'per:employee_of', 'Microsoft'): 0.9844}
-```
+#### Step 3: Filtering and Selecting the Top 2 Words
 
-You can directly run this example via the example_relations.py file.
+- The **top TF-IDF words** are sorted in **descending order of importance**.
+- Words **already present** in the original query are ignored to avoid redundancy.
+- The system selects the **first two words** that are **not already in the query**.
+- If there are fewer than two valid words, it selects as many as possible.
 
-## Directly Apply SpanBERT (without using spaCy)
+---
 
-```python
-from spanbert import SpanBERT
-bert = SpanBERT(pretrained_dir="./pretrained_spanbert")
-```
-Input is a list of dicts, where each dict contains the sentence tokens ('tokens'), the subject entity information ('subj'), and object entity information ('obj'). Entity information is provided as a tuple: (\<Entity Name\>, \<Entity Type\>, (\<Start Location\>, \<End Location\>))
+### 2. Determining Query Word Order
 
-```python
-examples = [
-        {'tokens': ['Bill', 'Gates', 'stepped', 'down', 'as', 'chairman', 'of', 'Microsoft'], 'subj': ('Bill Gates', 'PERSON', (0,1)), "obj": ('Microsoft', 'ORGANIZATION', (7,7))},
-        {'tokens': ['Bill', 'Gates', 'stepped', 'down', 'as', 'chairman', 'of', 'Microsoft'], 'subj': ('Microsoft', 'ORGANIZATION', (7,7)), 'obj': ('Bill Gates', 'PERSON', (0,1))},
-        {'tokens': ['Zuckerberg', 'began', 'classes', 'at', 'Harvard', 'in', '2002'], 'subj': ('Zuckerberg', 'PERSON', (0,0)), 'obj': ('Harvard', 'ORGANIZATION', (4,4))}
-        ]
-preds = bert.predict(examples)
-```
+After selecting the most relevant words, the query is **expanded and reordered** for better ranking and retrieval performance. The following steps are used:
 
-Output is a list of the same length as the input list, which contains the SpanBERT predictions and confidence scores
+#### Step 1: Expanding the Query
 
-```python
-print("Output: ", preds)
-# Output: [('per:employee_of', 0.99), ('org:top_members/employees', 0.98), ('per:schools_attended', 0.98)]
-```
+- The new keywords are added to the current query to form an **expanded query**.
+- The updated query consists of:
 
-## Contact
-If you have any questions, please contact Lara Karacasu `<lk2859@columbia.edu>` (CS6111 TA).
+  ```
+  original query + new top 2 words
+  ```
+
+- This ensures that the expanded query retains its **original intent** while incorporating relevant new terms.
+
+#### Step 2: Reordering Using Cosine Similarity
+
+- The expanded query is **vectorized** using the same **TF-IDF model**.
+- The **cosine similarity** between the query vector and the TF-IDF vectors of the relevant documents is computed.
+- This similarity score determines how well each word in the query **aligns with the relevant results**.
+
+#### Step 3: Sorting Words Based on Relevance
+
+- Words in the expanded query are **reordered** based on their average cosine similarity scores.
+- Words that have **higher similarity** to relevant documents are placed **earlier in the query**.
+- This ensures that **more relevant terms appear first**, improving search engine ranking.
+
+---
+
+### 3. Summary
+
+- **TF-IDF scoring** is used to extract **the two most relevant** new words.
+- The **original query is preserved**, and new words are **added in a structured way**.
+- **Cosine similarity reordering** ensures that **more relevant terms appear first**.
+- This method ensures that the query **gradually improves over multiple iterations**, leading to higher precision and better retrieval results.
+
+## **Future Improvements**
+- Implement Rocchio Algorithm to weight relevant and non-relevant terms.
+- Experiment with Word Embeddings (Word2Vec/BERT) for better query expansion.
+- Integrate stopword removal & stemming for improved term selection.
