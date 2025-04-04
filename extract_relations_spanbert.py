@@ -101,21 +101,21 @@ class ExtractRelationsSpanbert:
                     print(f"\t\tOutput Confidence: {confidence:.7f} ; Subject: {subj[0]} ; Object: {obj[0]} ;")
                     self.relation_map[key] = (confidence, relation_label, tokens)
                     if confidence >= self.threshold:
-                            print("\t\tAdding to set of extracted relations")
-                            print(relation_label)
-                            print("\t\t==========")
-                            
-                            token_tuple = tuple(tokens)
-                            if token_tuple not in self.seen_token_spans:
-                                self.seen_token_spans.add(token_tuple)
-                                extracted_annotations += 1
-                            query_key = f"{subj} {obj}"
-                            self.chosen_tuples.append({
-                                "subject": subj[0],
-                                "object": obj[0],
-                                "confidence": confidence,
-                                "key": key
-                            })
+                        print("\t\tAdding to set of extracted relations")
+                        print(relation_label)
+                        print("\t\t==========")
+                        
+                        token_tuple = tuple(tokens)
+                        if token_tuple not in self.seen_token_spans:
+                            self.seen_token_spans.add(token_tuple)
+                            extracted_annotations += 1
+                        query_key = f"{subj} {obj}"
+                        self.chosen_tuples.append({
+                            "subject": subj[0],
+                            "object": obj[0],
+                            "confidence": confidence,
+                            "key": key
+                        })
                     else:
                         print("\t\tConfidence is lower than threshold confidence. Ignoring this.")
                         print("\t\t==========")
