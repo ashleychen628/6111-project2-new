@@ -14,6 +14,9 @@ class ExtractRelationsSpanbert:
         self.relation_map = {}
         self.seen_keys = seen_keys
         self.seen_token_spans = set()
+        self.extracted_count = 0
+        self.duplicate_count = 0
+        self.overall = 0
 
         self.entities_of_interest = {
           1: ["PERSON", "ORGANIZATION"], # Schools_Attended
@@ -53,32 +56,36 @@ class ExtractRelationsSpanbert:
             sentence_entity_pairs = create_entity_pairs(sentence, self.entities_of_interest[self.relation])
 
             for ep in sentence_entity_pairs:
-                tokens, subj, obj = ep[0], ep[1], ep[2]
-
+                tokens, entity1, entity2 = ep[0], ep[1], ep[2]
+                
                 if self.relation == 1:  # Schools_Attended
-                    if (subj[1], obj[1]) == ("PERSON", "ORGANIZATION"):
-                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
-                    elif (obj[1], subj[1]) == ("PERSON", "ORGANIZATION"):
-                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+                    if (entity1[1], entity2[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": entity1, "obj": entity2})
+                    elif (entity2[1], entity1[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": entity2, "obj": entity1})
 
                 elif self.relation == 2:  # Work_For
-                    if (subj[1], obj[1]) == ("PERSON", "ORGANIZATION"):
-                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
-                    elif (obj[1], subj[1]) == ("PERSON", "ORGANIZATION"):
-                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+                    if (entity1[1], entity2[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": entity1, "obj": entity2})
+                    elif (entity2[1], entity1[1]) == ("PERSON", "ORGANIZATION"):
+                        self.candidate_pairs.append({"tokens": tokens, "subj": entity2, "obj": entity1})
 
                 elif self.relation == 3:  # Live_In
                     valid_locs = {"LOCATION", "CITY", "STATE_OR_PROVINCE", "COUNTRY"}
-                    if subj[1] == "PERSON" and obj[1] in valid_locs:
-                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
-                    elif obj[1] == "PERSON" and subj[1] in valid_locs:
-                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+                    if entity1[1] == "PERSON" and entity2[1] in valid_locs:
+                        self.candidate_pairs.append({"tokens": tokens, "subj": entity1, "obj": entity2})
+                    elif entity2[1] == "PERSON" and entity1[1] in valid_locs:
+                        self.candidate_pairs.append({"tokens": tokens, "subj": entity2, "obj": entity1})
 
                 elif self.relation == 4:  # Top_Member_Employees
-                    if (subj[1], obj[1]) == ("ORGANIZATION", "PERSON"):
-                        self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
-                    elif (obj[1], subj[1]) == ("ORGANIZATION", "PERSON"):
-                        self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
+                    # print(f"tokens: {tokens}")
+                    # print(f"entity 1: {ep[1]}, entity 2: {ep[2]}")
+                    if (entity1[1], entity2[1]) == ("ORGANIZATION", "PERSON"):
+                        # print(f"first ep1: {ep[1]}, ep2: {ep[2]}")
+                        self.candidate_pairs.append({"tokens": tokens, "subj": entity1, "obj": entity2})
+                    elif (entity2[1], entity1[1]) == ("ORGANIZATION", "PERSON"):
+                        # print(f"second ep1: {ep[1]}, ep2: {ep[2]}")
+                        self.candidate_pairs.append({"tokens": tokens, "subj": entity2, "obj": entity1})
 
             
             if len(self.candidate_pairs) == 0:
@@ -97,22 +104,32 @@ class ExtractRelationsSpanbert:
 
                 if relation_label == expected_label and \
                 (subj[1] == expected_subj_type and (obj[1] in expected_obj_type if isinstance(expected_obj_type, list) else obj[1] == expected_obj_type)):
+                    # print("selected: ")
+                    # print(key)
+                #     print(tokens)
+                # else:
+                #     print(f"not selected, relation: {relation_label}")
+                    
                     if key not in self.relation_map or confidence > self.relation_map[key][0]:
+                        self.overall += 1
                         self.relation_map[key] = (confidence, relation_label, tokens)
                     else:
                         continue
-                    
+
                     print("\n\t\t=== Extracted Relation ===")
                     print(f"\t\tInput tokens: {tokens}")
                     print(f"\t\tOutput Confidence: {confidence:.7f} ; Subject: {subj[0]} ; Object: {obj[0]} ;")
+                    
 
                     if confidence >= self.threshold:
+                        
                         token_tuple = tuple(tokens)
                         if token_tuple not in self.seen_token_spans:
                             self.seen_token_spans.add(token_tuple)
                             extracted_annotations += 1
 
-                        if key not in self.seen_keys:
+                        if key not in self.seen_keys or confidence > self.relation_map[key][0]:
+                            
                             print("\t\tAdding to set of extracted relations")
                             self.chosen_tuples.append({
                                 "subject": subj[0],
@@ -122,13 +139,18 @@ class ExtractRelationsSpanbert:
                             })
                             self.seen_keys.add(key)
                         else:
+                            self.duplicate_count += 1
                             print("\t\tDuplicate with lower confidence than existing record. Ignoring this.")
                         print("\t\t==========")
                     else:
                         print("\t\tConfidence is lower than threshold confidence. Ignoring this.")
                         print("\t\t==========")
+                  
+
+                # else:
+                #     print(f"relation is: {relation_label}, key is {key}")
 
         print(f"\n\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences")
-        print(f"\n\tRelations extracted from this website: {len(self.chosen_tuples)} (Overall: {len(self.relation_map)})")
+        print(f"\n\tRelations extracted from this website: {self.overall - self.deplicate} (Overall: {self.overall})")
 
         return self.chosen_tuples, self.seen_keys
