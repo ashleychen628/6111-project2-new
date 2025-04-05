@@ -7,11 +7,14 @@ Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
 Method          = -spanbert
 Relation        = 2
 Threshold       = 0.7
-Query           = microsoft bill gates
+Query           = bill gates microsoft
 # of Tuples     = 10
 Loading necessary libraries; This should take a minute or so ...)
-========== Iteration: 0 - Query: microsoft bill gates ==========
-            
+
+
+========== Iteration: 0 - Query: bill gates microsoft ==========
+
+
 URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
 Fetching text from url ...
 Trimming webpage content from 146847 to 10000 characters
@@ -137,7 +140,15 @@ URL (3 / 10): https://www.gatesnotes.com/
 Fetching text from url ...
 Unable to fetch URL. Skipping...
 
-URL (4 / 10): https://www.facebook.com/BillGates/
+URL (4 / 10): https://x.com/billgates
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (5 / 10): https://www.linkedin.com/in/williamhgates
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (6 / 10): https://www.facebook.com/BillGates/
 Fetching text from url ...
 Webpage length (num characters): 10
 Annotating the webpage using spacy...
@@ -147,19 +158,11 @@ Extracted 1 sentences. Processing each sentence one by one to check for presence
 
 	Relations extracted from this website: 0 (Overall: 0)
 
-URL (5 / 10): https://x.com/billgates
-Fetching text from url ...
-Unable to fetch URL. Skipping...
-
-URL (6 / 10): https://www.linkedin.com/in/williamhgates
-Fetching text from url ...
-Unable to fetch URL. Skipping...
-
 URL (7 / 10): https://news.microsoft.com/2020/03/13/microsoft-announces-change-to-its-board-of-directors/
 Fetching text from url ...
 Unable to fetch URL. Skipping...
 
-URL (8 / 10): https://www.youtube.com/user/thegatesnotes
+URL (8 / 10): https://www.youtube.com/billgates
 Fetching text from url ...
 Webpage length (num characters): 185
 Annotating the webpage using spacy...
@@ -169,7 +172,11 @@ Extracted 3 sentences. Processing each sentence one by one to check for presence
 
 	Relations extracted from this website: 0 (Overall: 0)
 
-URL (9 / 10): https://www.microsoft.com/
+URL (9 / 10): https://news.microsoft.com/2006/06/15/microsoft-announces-plans-for-july-2008-transition-for-bill-gates/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (10 / 10): https://www.microsoft.com/
 Fetching text from url ...
 Webpage length (num characters): 2098
 Annotating the webpage using spacy...
@@ -178,16 +185,6 @@ Extracted 7 sentences. Processing each sentence one by one to check for presence
 	Processed 5 / 7 sentences
 
 	Extracted annotations for  0  out of total  7  sentences
-
-	Relations extracted from this website: 0 (Overall: 0)
-
-URL (10 / 10): https://answers.microsoft.com/en-us/windows/forum/all/a-short-letter-to-bill-gates/59fdd4d0-6330-40da-9e66-fa6c29836454
-Fetching text from url ...
-Webpage length (num characters): 11
-Annotating the webpage using spacy...
-Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-
-	Extracted annotations for  0  out of total  1  sentences
 
 	Relations extracted from this website: 0 (Overall: 0)
 

@@ -80,8 +80,8 @@ Loading necessary libraries; This should take a minute or so ...)
                 self.update_query()
 
             print(f"""
-            ========== Iteration: {self.iteration} - Query: {self.query} ==========
-            """)
+========== Iteration: {self.iteration} - Query: {self.query} ==========
+""")
             unique_tuples = set()
             
             # Step 1: Get Top 10 URLs from Google Custom Search
@@ -171,7 +171,7 @@ Loading necessary libraries; This should take a minute or so ...)
             for tup in self.chosen_tuples:
                 print(f"Subject: {tup['subject']} \t| Object: {tup['object']}")
         
-        if len(self.chosen_tuples) > self.tuple_num:
+        if len(self.chosen_tuples) >= self.tuple_num:
             print(f"Total # of iterations = {self.iteration + 1}")
 
     def update_query(self):

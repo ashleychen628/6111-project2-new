@@ -10,7 +10,7 @@ class ExtractRelationsSpanbert:
         self.relation = r
         self.threshold = t
         self.candidate_pairs = []
-        self.chosen_tuples = []
+        self.chosen_tuples = {}
         self.relation_map = {}
         self.seen_keys = seen_keys
         self.seen_token_spans = set()
@@ -104,53 +104,44 @@ class ExtractRelationsSpanbert:
 
                 if relation_label == expected_label and \
                 (subj[1] == expected_subj_type and (obj[1] in expected_obj_type if isinstance(expected_obj_type, list) else obj[1] == expected_obj_type)):
-                    # print("selected: ")
-                    # print(key)
-                #     print(tokens)
-                # else:
-                #     print(f"not selected, relation: {relation_label}")
-                    
+
                     if key not in self.relation_map or confidence > self.relation_map[key][0]:
                         self.overall += 1
-                        self.relation_map[key] = (confidence, relation_label, tokens)
-                    else:
-                        continue
+                        # relation_map keeps keys below and over threshold that are not duplicate
+                        self.relation_map[key] = (confidence, relation_label, tokens, subj[0], obj[0])
 
-                    print("\n\t\t=== Extracted Relation ===")
-                    print(f"\t\tInput tokens: {tokens}")
-                    print(f"\t\tOutput Confidence: {confidence:.7f} ; Subject: {subj[0]} ; Object: {obj[0]} ;")
-                    
+                        print("\n\t\t=== Extracted Relation ===")
+                        print(f"\t\tInput tokens: {tokens}")
+                        print(f"\t\tOutput Confidence: {confidence:.7f} ; Subject: {subj[0]} ; Object: {obj[0]} ;")
 
-                    if confidence >= self.threshold:
-                        
                         token_tuple = tuple(tokens)
                         if token_tuple not in self.seen_token_spans:
                             self.seen_token_spans.add(token_tuple)
                             extracted_annotations += 1
 
-                        if key not in self.seen_keys or confidence > self.relation_map[key][0]:
-                            
-                            print("\t\tAdding to set of extracted relations")
-                            self.chosen_tuples.append({
-                                "subject": subj[0],
-                                "object": obj[0],
-                                "confidence": confidence,
-                                "key": key
-                            })
-                            self.seen_keys.add(key)
+                        if confidence >= self.threshold:
+
+                            if key not in self.seen_keys or confidence > self.chosen_tuples[key]["confidence"]:
+                                print("\t\tAdding to set of extracted relations")
+                                self.chosen_tuples[key] = {
+                                  "subject": subj[0],
+                                  "object": obj[0],
+                                  "confidence": confidence,
+                                  "key": key
+                                }
+                                self.seen_keys.add(key)
+                            else:
+                                self.duplicate_count += 1
+                                print("\t\tDuplicate with lower confidence than existing record. Ignoring this.")
+                            print("\t\t==========")
                         else:
                             self.duplicate_count += 1
-                            print("\t\tDuplicate with lower confidence than existing record. Ignoring this.")
-                        print("\t\t==========")
-                    else:
-                        print("\t\tConfidence is lower than threshold confidence. Ignoring this.")
-                        print("\t\t==========")
-                  
-
-                # else:
-                #     print(f"relation is: {relation_label}, key is {key}")
-
+                            print("\t\tConfidence is lower than threshold confidence. Ignoring this.")
+                            print("\t\t==========")
+                      
         print(f"\n\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences")
-        print(f"\n\tRelations extracted from this website: {self.overall - self.deplicate} (Overall: {self.overall})")
+        print(f"\n\tRelations extracted from this website: {self.overall - self.duplicate_count} (Overall: {self.overall})")
 
-        return self.chosen_tuples, self.seen_keys
+        return_tuples = list(self.chosen_tuples.values())
+
+        return return_tuples, self.seen_keys

@@ -1,1 +1,206 @@
 Loading pre-trained spanBERT from ./pretrained_spanbert
+____
+Parameters:
+Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+Engine key      = 84f98f408aba949e8
+Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+Method          = -spanbert
+Relation        = 2
+Threshold       = 0.7
+Query           = microsoft bill gates
+# of Tuples     = 10
+Loading necessary libraries; This should take a minute or so ...)
+========== Iteration: 0 - Query: microsoft bill gates ==========
+            
+URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
+Fetching text from url ...
+Trimming webpage content from 146847 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 59 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 59 sentences
+
+	Processed 10 / 59 sentences
+
+	Processed 15 / 59 sentences
+
+	Processed 20 / 59 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '\u200b', '\u200b', '(']
+		Output Confidence: 0.8602089 ; Subject: Melinda ; Object: TerraPower ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '\u200b', '\u200b', '(']
+		Output Confidence: 0.6415539 ; Subject: ​ ; Object: TerraPower ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '\u200b', '\u200b', '(']
+		Output Confidence: 0.9805891 ; Subject: Melinda ; Object: Breakthrough Energy ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '\u200b', '\u200b', '(']
+		Output Confidence: 0.9338053 ; Subject: ​ ; Object: Breakthrough Energy ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '\u200b', '\u200b', '(']
+		Output Confidence: 0.9953920 ; Subject: Melinda ; Object: Gates Ventures Technology ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '\u200b', '\u200b', '(']
+		Output Confidence: 0.9934272 ; Subject: ​ ; Object: Gates Ventures Technology ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 25 / 59 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-']
+		Output Confidence: 0.5283093 ; Subject: Bill Gates Personal Awards ; Object: Philanthropy Political ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+		Output Confidence: 0.5203043 ; Subject: Bill Gates Personal Awards ; Object: Microsoft ;
+		Confidence is lower than threshold confidence. Ignoring this.
+		==========
+
+	Processed 30 / 59 sentences
+
+	Processed 35 / 59 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['He', 'stepped', 'down', 'as', 'chairman', 'of', 'the', 'board', 'in', '2014', 'and', 'became', 'technology', 'adviser', 'to', 'CEO', 'Satya', 'Nadella', 'and', 'other', 'Microsoft', 'leaders', ',']
+		Output Confidence: 0.9967619 ; Subject: Satya Nadella ; Object: Microsoft ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 40 / 59 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',']
+		Output Confidence: 0.9917772 ; Subject: Gates ; Object: BEN, Cascade Investment ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+		Output Confidence: 0.9827051 ; Subject: Gates ; Object: TerraPower, ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+		Output Confidence: 0.9920854 ; Subject: Gates ; Object: Gates Ventures ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+		Output Confidence: 0.9914350 ; Subject: Gates ; Object: Breakthrough Energy ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['he', 'and', 'Warren', 'Buffett', 'founded', 'the', 'Giving', 'Pledge', ',']
+		Output Confidence: 0.9743865 ; Subject: Warren Buffett ; Object: the Giving Pledge ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 45 / 59 sentences
+
+	Processed 50 / 59 sentences
+
+	Processed 55 / 59 sentences
+
+	Extracted annotations for  6  out of total  59  sentences
+
+	Relations extracted from this website: 11 (Overall: 14)
+
+URL (2 / 10): https://www.instagram.com/thisisbillgates/?hl=en
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (3 / 10): https://www.gatesnotes.com/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (4 / 10): https://www.facebook.com/BillGates/
+Fetching text from url ...
+Webpage length (num characters): 10
+Annotating the webpage using spacy...
+Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Extracted annotations for  0  out of total  1  sentences
+
+	Relations extracted from this website: 0 (Overall: 0)
+
+URL (5 / 10): https://x.com/billgates
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (6 / 10): https://www.linkedin.com/in/williamhgates
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (7 / 10): https://news.microsoft.com/2020/03/13/microsoft-announces-change-to-its-board-of-directors/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (8 / 10): https://www.youtube.com/user/thegatesnotes
+Fetching text from url ...
+Webpage length (num characters): 185
+Annotating the webpage using spacy...
+Extracted 3 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Extracted annotations for  0  out of total  3  sentences
+
+	Relations extracted from this website: 0 (Overall: 0)
+
+URL (9 / 10): https://www.microsoft.com/
+Fetching text from url ...
+Webpage length (num characters): 2098
+Annotating the webpage using spacy...
+Extracted 7 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 7 sentences
+
+	Extracted annotations for  0  out of total  7  sentences
+
+	Relations extracted from this website: 0 (Overall: 0)
+
+URL (10 / 10): https://answers.microsoft.com/en-us/windows/forum/all/a-short-letter-to-bill-gates/59fdd4d0-6330-40da-9e66-fa6c29836454
+Fetching text from url ...
+Webpage length (num characters): 11
+Annotating the webpage using spacy...
+Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Extracted annotations for  0  out of total  1  sentences
+
+	Relations extracted from this website: 0 (Overall: 0)
+
+================== ALL RELATIONS for per:employee_of ( 11 ) ==================
+Confidence: 0.9967619 	| Subject: Satya Nadella 	| Object: Microsoft
+Confidence: 0.9953920 	| Subject: Melinda 	| Object: Gates Ventures Technology
+Confidence: 0.9934272 	| Subject: ​ 	| Object: Gates Ventures Technology
+Confidence: 0.9920854 	| Subject: Gates 	| Object: Gates Ventures
+Confidence: 0.9917772 	| Subject: Gates 	| Object: BEN, Cascade Investment
+Confidence: 0.9914350 	| Subject: Gates 	| Object: Breakthrough Energy
+Confidence: 0.9827051 	| Subject: Gates 	| Object: TerraPower,
+Confidence: 0.9805891 	| Subject: Melinda 	| Object: Breakthrough Energy
+Confidence: 0.9743865 	| Subject: Warren Buffett 	| Object: the Giving Pledge
+Confidence: 0.9338053 	| Subject: ​ 	| Object: Breakthrough Energy
+Confidence: 0.8602089 	| Subject: Melinda 	| Object: TerraPower
+Total # of iterations = 1

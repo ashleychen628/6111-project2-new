@@ -1,0 +1,372 @@
+Loading pre-trained spanBERT from ./pretrained_spanbert
+____
+Parameters:
+Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+Engine key      = 84f98f408aba949e8
+Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+Method          = -gemini
+Relation        = 2
+Threshold       = 0.0
+Query           = bill gates microsoft
+# of Tuples     = 10
+Loading necessary libraries; This should take a minute or so ...)
+
+
+========== Iteration: 0 - Query: bill gates microsoft ==========
+
+
+URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
+Fetching text from url ...
+Trimming webpage content from 146844 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 60 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 60 sentences
+
+	Processed 10 / 60 sentences
+
+	Processed 15 / 60 sentences
+
+	Processed 20 / 60 sentences
+
+	Processed 25 / 60 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Bill Gates Personal Awards and honors Philanthropy Political positions Public image Residence Companies Traf - O - Data Microsoft history timeline criticism BENlabs Cascade Investment TerraPower Gates Ventures Charitable organizations Bill &
+		Subject: Bill Gates ; Object: Microsoft ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Bill Gates Personal Awards and honors Philanthropy Political positions Public image Residence Companies Traf - O - Data Microsoft history timeline criticism BENlabs Cascade Investment TerraPower Gates Ventures Charitable organizations Bill &
+		Subject: Bill Gates ; Object: BENlabs Cascade ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Bill Gates Personal Awards and honors Philanthropy Political positions Public image Residence Companies Traf - O - Data Microsoft history timeline criticism BENlabs Cascade Investment TerraPower Gates Ventures Charitable organizations Bill &
+		Subject: Bill Gates ; Object: TerraPower Gates Ventures Charitable ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Bill Gates Personal Awards and honors Philanthropy Political positions Public image Residence Companies Traf - O - Data Microsoft history timeline criticism BENlabs Cascade Investment TerraPower Gates Ventures Charitable organizations Bill & Melinda Gates Foundation Match for Africa
+		Subject: Bill Gates ; Object: Bill & Melinda Gates Foundation ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: founded the software company Microsoft in 1975 with his childhood friend Paul Allen .
+		Subject: Paul Allen ; Object: Microsoft ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 30 / 60 sentences
+
+	Processed 35 / 60 sentences
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 42
+}
+]
+Sleeping for 42 seconds due to rate limit...
+
+	Processed 40 / 60 sentences
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...
+
+		=== Extracted Relation ===
+		Sentence:: Gates is founder and chairman of several other companies , including BEN , Cascade Investment ,
+		Subject: Gates ; Object: BEN, Cascade Investment ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Gates is founder and chairman of several other companies , including BEN , Cascade Investment , TerraPower , Gates Ventures ,
+		Subject: Gates ; Object: TerraPower ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Gates is founder and chairman of several other companies , including BEN , Cascade Investment , TerraPower , Gates Ventures ,
+		Subject: Gates ; Object: Gates Ventures ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Gates is founder and chairman of several other companies , including BEN , Cascade Investment , TerraPower , Gates Ventures , and Breakthrough Energy .
+		Subject: Gates ; Object: Breakthrough Energy ;
+		Adding to set of extracted relations
+		==========
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 33
+}
+]
+Sleeping for 33 seconds due to rate limit...
+
+	Processed 45 / 60 sentences
+
+	Processed 50 / 60 sentences
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...
+
+	Processed 55 / 60 sentences
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 54
+}
+]
+Sleeping for 54 seconds due to rate limit...
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...
+
+	Processed 60 / 60 sentences
+	Extracted annotations for  6  out of total  60  sentences 
+
+	Relations extracted from this website: 9 (Overall: 9) 
+
+
+URL (2 / 10): https://www.instagram.com/thisisbillgates/?hl=en
+Fetching text from url ...
+Webpage length (num characters): 9
+Annotating the webpage using spacy...
+Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Extracted annotations for  0  out of total  1  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (3 / 10): https://www.gatesnotes.com/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (4 / 10): https://x.com/billgates
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (5 / 10): https://www.linkedin.com/in/williamhgates
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (6 / 10): https://www.facebook.com/BillGates/
+Fetching text from url ...
+Webpage length (num characters): 587
+Annotating the webpage using spacy...
+Extracted 7 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 7 sentences
+	Extracted annotations for  0  out of total  7  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (7 / 10): https://news.microsoft.com/2020/03/13/microsoft-announces-change-to-its-board-of-directors/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (8 / 10): https://www.youtube.com/billgates
+Fetching text from url ...
+Webpage length (num characters): 185
+Annotating the webpage using spacy...
+Extracted 3 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Extracted annotations for  0  out of total  3  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (9 / 10): https://news.microsoft.com/2006/06/15/microsoft-announces-plans-for-july-2008-transition-for-bill-gates/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (10 / 10): https://www.microsoft.com/
+Fetching text from url ...
+Webpage length (num characters): 2098
+Annotating the webpage using spacy...
+Extracted 7 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 7 sentences
+	Extracted annotations for  0  out of total  7  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+================== ALL RELATIONS for per:employee_of ( 9 ) ==================
+Subject: Bill Gates 	| Object: Microsoft
+Subject: Bill Gates 	| Object: BENlabs Cascade
+Subject: Bill Gates 	| Object: TerraPower Gates Ventures Charitable
+Subject: Bill Gates 	| Object: Bill & Melinda Gates Foundation
+Subject: Paul Allen 	| Object: Microsoft
+Subject: Gates 	| Object: BEN, Cascade Investment
+Subject: Gates 	| Object: TerraPower
+Subject: Gates 	| Object: Gates Ventures
+Subject: Gates 	| Object: Breakthrough Energy
+
+========== Iteration: 1 - Query: Bill Gates Microsoft ==========
+
+
+URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
+Fetching text from url ...
+Trimming webpage content from 146844 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 60 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 60 sentences
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 50
+}
+]
+Sleeping for 50 seconds due to rate limit...
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 54
+}
+]
+Sleeping for 54 seconds due to rate limit...
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...
+
+	Processed 10 / 60 sentences
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 54
+}
+]
+Sleeping for 54 seconds due to rate limit...
+
+	Processed 15 / 60 sentences
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...
+Error calling Gemini API: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. [violations {
+}
+, links {
+  description: "Learn more about Gemini API quotas"
+  url: "https://ai.google.dev/gemini-api/docs/rate-limits"
+}
+, retry_delay {
+  seconds: 55
+}
+]
+Sleeping for 55 seconds due to rate limit...

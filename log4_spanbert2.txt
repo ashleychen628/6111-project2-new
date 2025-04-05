@@ -1,48 +1,46 @@
 Loading pre-trained spanBERT from ./pretrained_spanbert
 ____
-    Parameters:
-    Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
-    Engine key      = 84f98f408aba949e8
-    Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
-    Method          = -spanbert
-    Relation        = 4
-    Threshold       = 0.7
-    Query           = microsoft bill gates
-    # of Tuples     = 10
+Parameters:
+Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+Engine key      = 84f98f408aba949e8
+Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+Method          = -spanbert
+Relation        = 4
+Threshold       = 0.7
+Query           = microsoft bill gates
+# of Tuples     = 10
+Loading necessary libraries; This should take a minute or so ...)
 
-    Loading necessary libraries; This should take a minute or so ...
-    ========== Iteration: 0 - Query: microsoft bill gates ==========
-    
-Google Search Results:
-======================
-======================
+
+========== Iteration: 0 - Query: microsoft bill gates ==========
+
 
 URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
 Fetching text from url ...
-Trimming webpage content from 146847 to 10000 characters
+Trimming webpage content from 146844 to 10000 characters
 Webpage length (num characters): 10000
 Annotating the webpage using spacy...
-Extracted 59 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+Extracted 60 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
 
-	Processed 5 / 59 sentences
+	Processed 5 / 60 sentences
 
-	Processed 10 / 59 sentences
+	Processed 10 / 60 sentences
 
-	Processed 15 / 59 sentences
+	Processed 15 / 60 sentences
 
-	Processed 20 / 59 sentences
+	Processed 20 / 60 sentences
 
 		=== Extracted Relation ===
-		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '\u200b', '\u200b', '(']
-		Output Confidence: 0.8157005 ; Subject: Gates Ventures Technology ; Object: Melinda ;
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+		Output Confidence: 0.7858930 ; Subject: Gates Ventures Technology ; Object: Melinda ;
 		Adding to set of extracted relations
 		==========
 
-	Processed 25 / 59 sentences
+	Processed 25 / 60 sentences
 
-	Processed 30 / 59 sentences
+	Processed 30 / 60 sentences
 
-	Processed 35 / 59 sentences
+	Processed 35 / 60 sentences
 
 		=== Extracted Relation ===
 		Input tokens: ['He', 'stepped', 'down', 'as', 'chairman', 'of', 'the', 'board', 'in', '2014', 'and', 'became', 'technology', 'adviser', 'to', 'CEO', 'Satya', 'Nadella', 'and', 'other', 'Microsoft', 'leaders', ',']
@@ -50,21 +48,29 @@ Extracted 59 sentences. Processing each sentence one by one to check for presenc
 		Adding to set of extracted relations
 		==========
 
-	Processed 40 / 59 sentences
+	Processed 40 / 60 sentences
 
-	Processed 45 / 59 sentences
+	Processed 45 / 60 sentences
 
-	Processed 50 / 59 sentences
+	Processed 50 / 60 sentences
 
-	Processed 55 / 59 sentences
+	Processed 55 / 60 sentences
 
-	Extracted annotations for  2  out of total  59  sentences
+	Processed 60 / 60 sentences
+
+	Extracted annotations for  2  out of total  60  sentences
 
 	Relations extracted from this website: 2 (Overall: 2)
 
 URL (2 / 10): https://www.instagram.com/thisisbillgates/?hl=en
 Fetching text from url ...
-Unable to fetch URL. Skipping...
+Webpage length (num characters): 17
+Annotating the webpage using spacy...
+Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Extracted annotations for  0  out of total  1  sentences
+
+	Relations extracted from this website: 0 (Overall: 0)
 
 URL (3 / 10): https://www.gatesnotes.com/
 Fetching text from url ...
@@ -72,11 +78,13 @@ Unable to fetch URL. Skipping...
 
 URL (4 / 10): https://www.facebook.com/BillGates/
 Fetching text from url ...
-Webpage length (num characters): 10
+Webpage length (num characters): 587
 Annotating the webpage using spacy...
-Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+Extracted 7 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
 
-	Extracted annotations for  0  out of total  1  sentences
+	Processed 5 / 7 sentences
+
+	Extracted annotations for  0  out of total  7  sentences
 
 	Relations extracted from this website: 0 (Overall: 0)
 
@@ -126,24 +134,10 @@ Extracted 1 sentences. Processing each sentence one by one to check for presence
 
 ================== ALL RELATIONS for org:top_members/employees ( 2 ) ==================
 Confidence: 0.9740791 	| Subject: Microsoft 	| Object: Satya Nadella
-Confidence: 0.8157005 	| Subject: Gates Ventures Technology 	| Object: Melinda
-____
-    Parameters:
-    Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
-    Engine key      = 84f98f408aba949e8
-    Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
-    Method          = -spanbert
-    Relation        = 4
-    Threshold       = 0.7
-    Query           = Microsoft Satya Nadella
-    # of Tuples     = 10
+Confidence: 0.7858930 	| Subject: Gates Ventures Technology 	| Object: Melinda
 
-    Loading necessary libraries; This should take a minute or so ...
-    ========== Iteration: 1 - Query: Microsoft Satya Nadella ==========
-    
-Google Search Results:
-======================
-======================
+========== Iteration: 1 - Query: Microsoft Satya Nadella ==========
+
 
 URL (1 / 10): https://news.microsoft.com/source/exec/satya-nadella/
 Fetching text from url ...
@@ -151,7 +145,7 @@ Unable to fetch URL. Skipping...
 
 URL (2 / 10): https://en.wikipedia.org/wiki/Satya_Nadella
 Fetching text from url ...
-Trimming webpage content from 31880 to 10000 characters
+Trimming webpage content from 31877 to 10000 characters
 Webpage length (num characters): 10000
 Annotating the webpage using spacy...
 Extracted 94 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
@@ -242,13 +236,13 @@ Extracted 94 sentences. Processing each sentence one by one to check for presenc
 
 	Extracted annotations for  8  out of total  94  sentences
 
-	Relations extracted from this website: 6 (Overall: 7)
+	Relations extracted from this website: 6 (Overall: 8)
 
-URL (3 / 10): https://news.microsoft.com/exec/satya-nadella/
+URL (3 / 10): https://www.linkedin.com/in/satyanadella
 Fetching text from url ...
 Unable to fetch URL. Skipping...
 
-URL (4 / 10): https://www.linkedin.com/in/satyanadella
+URL (4 / 10): https://news.microsoft.com/exec/satya-nadella/
 Fetching text from url ...
 Unable to fetch URL. Skipping...
 
@@ -268,7 +262,7 @@ Extracted 3 sentences. Processing each sentence one by one to check for presence
 
 URL (7 / 10): https://fortune.com/2025/03/17/bill-gates-microsoft-satya-nadella-succession-planning-ceo-role/
 Fetching text from url ...
-Webpage length (num characters): 2431
+Webpage length (num characters): 2289
 Annotating the webpage using spacy...
 Extracted 15 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
 
@@ -309,29 +303,15 @@ Confidence: 0.9893309 	| Subject: Indian Administrative Service 	| Object: Bukka
 Confidence: 0.9889403 	| Subject: the Online Services Division 	| Object: Nadella
 Confidence: 0.9740791 	| Subject: Microsoft 	| Object: Satya Nadella
 Confidence: 0.9615144 	| Subject: Sun Microsystems 	| Object: Nadella
-Confidence: 0.8157005 	| Subject: Gates Ventures Technology 	| Object: Melinda
+Confidence: 0.7858930 	| Subject: Gates Ventures Technology 	| Object: Melinda
 Confidence: 0.7642155 	| Subject: Microsoft 	| Object: Steve Ballmer
-____
-    Parameters:
-    Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
-    Engine key      = 84f98f408aba949e8
-    Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
-    Method          = -spanbert
-    Relation        = 4
-    Threshold       = 0.7
-    Query           = Microsoft Nadella
-    # of Tuples     = 10
 
-    Loading necessary libraries; This should take a minute or so ...
-    ========== Iteration: 2 - Query: Microsoft Nadella ==========
-    
-Google Search Results:
-======================
-======================
+========== Iteration: 2 - Query: Microsoft Nadella ==========
+
 
 URL (1 / 10): https://en.wikipedia.org/wiki/Satya_Nadella
 Fetching text from url ...
-Trimming webpage content from 31880 to 10000 characters
+Trimming webpage content from 31877 to 10000 characters
 Webpage length (num characters): 10000
 Annotating the webpage using spacy...
 Extracted 94 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
@@ -422,7 +402,7 @@ Extracted 94 sentences. Processing each sentence one by one to check for presenc
 
 	Extracted annotations for  8  out of total  94  sentences
 
-	Relations extracted from this website: 0 (Overall: 7)
+	Relations extracted from this website: 0 (Overall: 8)
 
 URL (2 / 10): https://news.microsoft.com/source/exec/satya-nadella/
 Fetching text from url ...
@@ -452,7 +432,7 @@ Unable to fetch URL. Skipping...
 
 URL (7 / 10): https://fortune.com/2025/03/17/bill-gates-microsoft-satya-nadella-succession-planning-ceo-role/
 Fetching text from url ...
-Webpage length (num characters): 2431
+Webpage length (num characters): 2289
 Annotating the webpage using spacy...
 Extracted 15 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
 
@@ -478,7 +458,7 @@ Extracted 7 sentences. Processing each sentence one by one to check for presence
 
 	Relations extracted from this website: 0 (Overall: 0)
 
-URL (9 / 10): https://blogs.microsoft.com/blog/2025/01/13/introducing-core-ai-platform-and-tools/
+URL (9 / 10): https://blogs.microsoft.com/blog/2018/10/15/microsoft-ceo-satya-nadellas-statement-on-the-passing-of-paul-allen/
 Fetching text from url ...
 Unable to fetch URL. Skipping...
 
@@ -493,31 +473,70 @@ Confidence: 0.9893309 	| Subject: Indian Administrative Service 	| Object: Bukka
 Confidence: 0.9889403 	| Subject: the Online Services Division 	| Object: Nadella
 Confidence: 0.9740791 	| Subject: Microsoft 	| Object: Satya Nadella
 Confidence: 0.9615144 	| Subject: Sun Microsystems 	| Object: Nadella
-Confidence: 0.8157005 	| Subject: Gates Ventures Technology 	| Object: Melinda
+Confidence: 0.7858930 	| Subject: Gates Ventures Technology 	| Object: Melinda
 Confidence: 0.7642155 	| Subject: Microsoft 	| Object: Steve Ballmer
-____
-    Parameters:
-    Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
-    Engine key      = 84f98f408aba949e8
-    Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
-    Method          = -spanbert
-    Relation        = 4
-    Threshold       = 0.7
-    Query           = the Microsoft Business Division Nadella
-    # of Tuples     = 10
 
-    Loading necessary libraries; This should take a minute or so ...
-    ========== Iteration: 3 - Query: the Microsoft Business Division Nadella ==========
-    
-Google Search Results:
-======================
-======================
+========== Iteration: 3 - Query: the Microsoft Business Division Nadella ==========
+
 
 URL (1 / 10): https://news.microsoft.com/exec/satya-nadella/
 Fetching text from url ...
 Unable to fetch URL. Skipping...
 
-URL (2 / 10): https://www.businessroundtable.org/members/satya-nadella
+URL (2 / 10): https://en.wikipedia.org/wiki/Microsoft
+Fetching text from url ...
+Trimming webpage content from 147086 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 53 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 53 sentences
+
+	Processed 10 / 53 sentences
+
+	Processed 15 / 53 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['U.S.', 'Area', 'served', 'Worldwide', 'Key', 'people', 'Satya', 'Nadella', '(', 'chairman', '&', 'CEO', ')']
+		Output Confidence: 0.9908694 ; Subject: & CEO ; Object: Satya Nadella ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['chairman', '&', 'CEO', ')', 'Brad', 'Smith', '(']
+		Output Confidence: 0.9499334 ; Subject: & CEO ; Object: Brad Smith ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 20 / 53 sentences
+
+	Processed 25 / 53 sentences
+
+	Processed 30 / 53 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['Steve', 'Ballmer', 'replaced', 'Gates', 'as', 'CEO', 'in', '2000', '.']
+		Output Confidence: 0.9817981 ; Subject: Gates ; Object: Steve Ballmer ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 35 / 53 sentences
+
+	Processed 40 / 53 sentences
+
+	Processed 45 / 53 sentences
+
+	Processed 50 / 53 sentences
+
+	Extracted annotations for  3  out of total  53  sentences
+
+	Relations extracted from this website: 3 (Overall: 3)
+
+URL (3 / 10): https://news.microsoft.com/source/exec/satya-nadella/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (4 / 10): https://www.businessroundtable.org/members/satya-nadella
 Fetching text from url ...
 Webpage length (num characters): 121
 Annotating the webpage using spacy...
@@ -527,13 +546,13 @@ Extracted 2 sentences. Processing each sentence one by one to check for presence
 
 	Relations extracted from this website: 0 (Overall: 0)
 
-URL (3 / 10): https://news.microsoft.com/2006/09/12/microsoft-appoints-nadella-to-lead-microsoft-business-solutions/
+URL (5 / 10): https://news.microsoft.com/2006/09/12/microsoft-appoints-nadella-to-lead-microsoft-business-solutions/
 Fetching text from url ...
 Unable to fetch URL. Skipping...
 
-URL (4 / 10): https://som.yale.edu/story/2022/yale-chief-executive-leadership-institute-honors-microsoft-ceo-satya-nadella-legend
+URL (6 / 10): https://som.yale.edu/story/2022/yale-chief-executive-leadership-institute-honors-microsoft-ceo-satya-nadella-legend
 Fetching text from url ...
-Webpage length (num characters): 6685
+Webpage length (num characters): 6704
 Annotating the webpage using spacy...
 Extracted 36 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
 
@@ -1302,3 +1321,307 @@ Extracted 36 sentences. Processing each sentence one by one to check for presenc
 		==========
 
 	Processed 25 / 36 sentences
+
+	Processed 30 / 36 sentences
+
+	Processed 35 / 36 sentences
+
+	Extracted annotations for  115  out of total  36  sentences
+
+	Relations extracted from this website: 111 (Overall: 126)
+
+URL (7 / 10): https://news.uchicago.edu/story/microsoft-ceo-elected-university-chicago-board-trustees
+Fetching text from url ...
+Webpage length (num characters): 4129
+Annotating the webpage using spacy...
+Extracted 24 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+		=== Extracted Relation ===
+		Input tokens: ['Microsoft', 'CEO', 'elected', 'to', 'University', 'of', 'Chicago', 'Board', 'of', 'Trustees', '|', 'University', 'of', 'Chicago', 'News', 'Microsoft', 'CEO', 'elected', 'to', 'University', 'of', 'Chicago', 'Board', 'of', 'Trustees', 'Oct', '1', ',', '2018', 'Satya', 'Nadella', ',']
+		Output Confidence: 0.9518587 ; Subject: Microsoft ; Object: Satya Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Microsoft', 'CEO', 'elected', 'to', 'University', 'of', 'Chicago', 'Board', 'of', 'Trustees', '|', 'University', 'of', 'Chicago', 'News', 'Microsoft', 'CEO', 'elected', 'to', 'University', 'of', 'Chicago', 'Board', 'of', 'Trustees', 'Oct', '1', ',', '2018', 'Satya', 'Nadella', ',']
+		Output Confidence: 0.9730031 ; Subject: University of Chicago Board of Trustees | University of Chicago News Microsoft ; Object: Satya Nadella ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['2018', 'Satya', 'Nadella', ',', 'MBA’97', ',', 'chief', 'executive', 'officer', 'of', 'Microsoft', ',', 'has', 'been', 'elected', 'to', 'the', 'University', 'of', 'Chicago', 'Board', 'of', 'Trustees', '.']
+		Output Confidence: 0.9814939 ; Subject: the University of Chicago Board of Trustees ; Object: Satya Nadella ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['said', 'Board', 'Chairman', 'Joseph', 'Neubauer', ',']
+		Output Confidence: 0.9911562 ; Subject: Board ; Object: Joseph Neubauer ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 5 / 24 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['Nadella', 'was', 'named', 'chief', 'executive', 'officer', 'of', 'Microsoft', 'in', '2014', 'after', 'holding', 'leadership', 'roles', 'in', 'both', 'enterprise', 'and', 'consumer', 'businesses', 'across', 'the', 'company', '.']
+		Output Confidence: 0.9868038 ; Subject: Microsoft ; Object: Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Nadella', 'served', 'as', 'executive', 'vice', 'president', 'of', 'Microsoft', '’s', 'cloud', 'and', 'enterprise', 'group', ',']
+		Output Confidence: 0.9900051 ; Subject: Microsoft ; Object: Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Nadella', 'was', 'a', 'member', 'of', 'the', 'technology', 'staff', 'at', 'Sun', 'Microsystems', '.']
+		Output Confidence: 0.9665365 ; Subject: Sun Microsystems ; Object: Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+	Processed 10 / 24 sentences
+
+	Processed 15 / 24 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['Nadella', 'serves', 'on', 'the', 'board', 'of', 'trustees', 'at', 'the', 'Fred', 'Hutchinson', 'Cancer', 'Research', 'Center', 'in', 'Seattle', 'and', 'is', 'a', 'member', 'of', 'the', 'board', 'of', 'directors', 'of', 'Starbucks', '.']
+		Output Confidence: 0.9917309 ; Subject: the Fred Hutchinson Cancer Research Center ; Object: Nadella ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Nadella', 'serves', 'on', 'the', 'board', 'of', 'trustees', 'at', 'the', 'Fred', 'Hutchinson', 'Cancer', 'Research', 'Center', 'in', 'Seattle', 'and', 'is', 'a', 'member', 'of', 'the', 'board', 'of', 'directors', 'of', 'Starbucks', '.']
+		Output Confidence: 0.9872584 ; Subject: Starbucks ; Object: Nadella ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 20 / 24 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['Recommended', '—', 'Microsoft', 'CEO', 'honed', 'business', 'skills', 'atBooth', '—', 'Chicago', 'Booth', 'alum', 'Satya', 'Nadella', 'takes', 'helm', 'of', 'Microsoft', 'Related', 'Topics', 'Satya', 'Nadella', ',']
+		Output Confidence: 0.9842408 ; Subject: Microsoft ; Object: Satya Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Chicago', 'Booth', 'alum', 'Satya', 'Nadella', 'takes', 'helm', 'of', 'Microsoft', 'Related', 'Topics', 'Satya', 'Nadella', ',']
+		Output Confidence: 0.9599124 ; Subject: Microsoft Related Topics Satya Nadella ; Object: Satya Nadella ;
+		Adding to set of extracted relations
+		==========
+
+	Extracted annotations for  9  out of total  24  sentences
+
+	Relations extracted from this website: 6 (Overall: 11)
+
+URL (8 / 10): https://www.sibos.com/conference/hub/articles/microsoft-ceo-satya-nadella-close-sibos-2017-toronto
+Fetching text from url ...
+Webpage length (num characters): 84
+Annotating the webpage using spacy...
+Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+		=== Extracted Relation ===
+		Input tokens: ['Microsoft', 'CEO', 'Satya', 'Nadella', 'to', 'close', 'Sibos', '2017', 'Toronto', '|', 'Sibos', 'Skip', 'to', 'main', 'content']
+		Output Confidence: 0.9806449 ; Subject: Microsoft ; Object: Satya Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+	Extracted annotations for  1  out of total  1  sentences
+
+	Relations extracted from this website: 0 (Overall: 1)
+
+URL (9 / 10): https://www.linkedin.com/in/satyanadella
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (10 / 10): https://live.worldbank.org/en/experts/s/satya-nadella
+Fetching text from url ...
+Webpage length (num characters): 2444
+Annotating the webpage using spacy...
+Extracted 22 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+		=== Extracted Relation ===
+		Input tokens: ['Microsoft', 'Featured', 'on', ':', 'Satya', 'Nadella', 'is', 'Chairman', 'and', 'Chief', 'Executive', 'Officer', 'of', 'Microsoft', '.']
+		Output Confidence: 0.9746096 ; Subject: Microsoft ; Object: Satya Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Satya', 'Nadella', 'is', 'Chairman', 'and', 'Chief', 'Executive', 'Officer', 'of', 'Microsoft', '.']
+		Output Confidence: 0.9900339 ; Subject: Microsoft ; Object: Satya Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Nadella', 'was', 'executive', 'vice', 'president', 'of', 'Microsoft', '’s', 'Cloud', 'and', 'Enterprise', 'group', '.']
+		Output Confidence: 0.9891680 ; Subject: Microsoft ; Object: Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Nadella', 'was', 'executive', 'vice', 'president', 'of', 'Microsoft', '’s', 'Cloud', 'and', 'Enterprise', 'group', '.']
+		Output Confidence: 0.9838405 ; Subject: Cloud and Enterprise ; Object: Nadella ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 5 / 22 sentences
+
+		=== Extracted Relation ===
+		Input tokens: ['Previously', ',', 'Nadella', 'led', 'R&D', 'for', 'the', 'Online', 'Services', 'Division', 'and', 'was', 'vice', 'president', 'of', 'the', 'Microsoft', 'Business', 'Division', '.']
+		Output Confidence: 0.9895961 ; Subject: the Online Services Division ; Object: Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Previously', ',', 'Nadella', 'led', 'R&D', 'for', 'the', 'Online', 'Services', 'Division', 'and', 'was', 'vice', 'president', 'of', 'the', 'Microsoft', 'Business', 'Division', '.']
+		Output Confidence: 0.9923980 ; Subject: the Microsoft Business Division ; Object: Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Input tokens: ['Nadella', 'was', 'a', 'member', 'of', 'the', 'technology', 'staff', 'at', 'Sun', 'Microsystems', '.']
+		Output Confidence: 0.9665365 ; Subject: Sun Microsystems ; Object: Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+
+	Processed 10 / 22 sentences
+
+	Processed 15 / 22 sentences
+
+	Processed 20 / 22 sentences
+
+	Extracted annotations for  5  out of total  22  sentences
+
+	Relations extracted from this website: 1 (Overall: 7)
+
+================== ALL RELATIONS for org:top_members/employees ( 129 ) ==================
+Confidence: 0.9931010 	| Subject: Marriott International 	| Object: Lisa Su
+Confidence: 0.9925066 	| Subject: General Motors Company 	| Object: Paul Polman
+Confidence: 0.9923189 	| Subject: AMD 	| Object: Andrew J. Young
+Confidence: 0.9922338 	| Subject: Marriott International 	| Object: M.D.
+Confidence: 0.9921551 	| Subject: Regeneron Pharmaceuticals 	| Object: Leonard S. Schleifer
+Confidence: 0.9919509 	| Subject: Duke Energy 	| Object: Arne Sorenson
+Confidence: 0.9918960 	| Subject: Walmart 	| Object: M.D.
+Confidence: 0.9918418 	| Subject: Walmart 	| Object: Anthony Fauci
+Confidence: 0.9917309 	| Subject: the Fred Hutchinson Cancer Research Center 	| Object: Nadella
+Confidence: 0.9915370 	| Subject: Johnson & Johnson 	| Object: Doug McMillon
+Confidence: 0.9913793 	| Subject: State 	| Object: Janet Yellen
+Confidence: 0.9911562 	| Subject: Board 	| Object: Joseph Neubauer
+Confidence: 0.9909038 	| Subject: Bank of America 	| Object: Paul Polman
+Confidence: 0.9908694 	| Subject: & CEO 	| Object: Satya Nadella
+Confidence: 0.9906256 	| Subject: State 	| Object: Rometty
+Confidence: 0.9906158 	| Subject: The Carlyle Group 	| Object: Brian Roberts
+Confidence: 0.9903847 	| Subject: Microsoft 	| Object: Nadella
+Confidence: 0.9902997 	| Subject: Walmart 	| Object: Lisa Su
+Confidence: 0.9902373 	| Subject: Duke Energy 	| Object: Doug McMillon
+Confidence: 0.9902345 	| Subject: Merck & Co. 	| Object: Ivan G. Seidenberg
+Confidence: 0.9899277 	| Subject: the Microsoft Business Division 	| Object: Nadella
+Confidence: 0.9895676 	| Subject: Verizon Communications 	| Object: Randall L. Stephenson
+Confidence: 0.9893309 	| Subject: Indian Administrative Service 	| Object: Bukkapuram Nadella Yugandhar
+Confidence: 0.9892386 	| Subject: Johnson & Johnson 	| Object: Arvind Krishna
+Confidence: 0.9891146 	| Subject: Walmart 	| Object: Lynn Good
+Confidence: 0.9889403 	| Subject: the Online Services Division 	| Object: Nadella
+Confidence: 0.9888284 	| Subject: NIAID 	| Object: Lisa Su
+Confidence: 0.9884441 	| Subject: Comcast 	| Object: Leonard S. Schleifer
+Confidence: 0.9884415 	| Subject: AMD 	| Object: Arne Sorenson
+Confidence: 0.9881966 	| Subject: Marriott International 	| Object: Anthony Fauci
+Confidence: 0.9881924 	| Subject: American Airlines 	| Object: Doug Parker
+Confidence: 0.9880581 	| Subject: NIAID 	| Object: Lynn Good
+Confidence: 0.9880424 	| Subject: Target Corporation 	| Object: Ivan G. Seidenberg
+Confidence: 0.9876366 	| Subject: IBM 	| Object: Arvind Krishna
+Confidence: 0.9875951 	| Subject: the University of Chicago 	| Object: Nadella
+Confidence: 0.9875830 	| Subject: Honeywell 	| Object: Darius Adamczyk
+Confidence: 0.9875830 	| Subject: Pfizer 	| Object: Albert Bourla
+Confidence: 0.9872584 	| Subject: Starbucks 	| Object: Nadella
+Confidence: 0.9872570 	| Subject: Cloud and Enterprise Group 	| Object: Nadella
+Confidence: 0.9867321 	| Subject: AT&T 	| Object: Ken Frazier
+Confidence: 0.9864650 	| Subject: Verizon Communications 	| Object: Colin Powell
+Confidence: 0.9863915 	| Subject: American Airlines 	| Object: Alex Gorsky
+Confidence: 0.9853925 	| Subject: Johnson & Johnson 	| Object: Alex Gorsky
+Confidence: 0.9853204 	| Subject: AMD 	| Object: Lisa Su
+Confidence: 0.9853204 	| Subject: Walmart 	| Object: Doug McMillon
+Confidence: 0.9853204 	| Subject: Comcast 	| Object: Brian Roberts
+Confidence: 0.9851188 	| Subject: Bank of America 	| Object: Brian Moynihan
+Confidence: 0.9845235 	| Subject: Marriott International 	| Object: Doug McMillon
+Confidence: 0.9843293 	| Subject: AT&T 	| Object: Ivan G. Seidenberg
+Confidence: 0.9842237 	| Subject: Merck & Co. 	| Object: Colin Powell
+Confidence: 0.9841563 	| Subject: Duke Energy 	| Object: Lynn Good
+Confidence: 0.9841563 	| Subject: Marriott International 	| Object: Arne Sorenson
+Confidence: 0.9841563 	| Subject: Unilever PLC 	| Object: Paul Polman
+Confidence: 0.9841563 	| Subject: Lockheed Martin 	| Object: Marillyn Hewson
+Confidence: 0.9841563 	| Subject: JPMorgan Chase 	| Object: Jamie Dimon
+Confidence: 0.9841512 	| Subject: Johnson & Johnson 	| Object: M.D.
+Confidence: 0.9838405 	| Subject: Cloud and Enterprise 	| Object: Nadella
+Confidence: 0.9834193 	| Subject: Walmart 	| Object: Randall L. Stephenson
+Confidence: 0.9831783 	| Subject: the Bill & Melinda Gates Foundation 	| Object: Alex Gorsky
+Confidence: 0.9819312 	| Subject: Johnson & Johnson 	| Object: Albert Bourla
+Confidence: 0.9817981 	| Subject: Gates 	| Object: Steve Ballmer
+Confidence: 0.9814939 	| Subject: the University of Chicago Board of Trustees 	| Object: Satya Nadella
+Confidence: 0.9803104 	| Subject: Regeneron Pharmaceuticals 	| Object: D. Yancopoulos
+Confidence: 0.9801306 	| Subject: Comcast 	| Object: D. Yancopoulos
+Confidence: 0.9800561 	| Subject: Verizon Communications 	| Object: Doug McMillan
+Confidence: 0.9787002 	| Subject: Merck & Co. 	| Object: Ken Frazier
+Confidence: 0.9775723 	| Subject: Co-Executive 	| Object: D. Yancopoulos
+Confidence: 0.9775047 	| Subject: IBM Corporation 	| Object: Brian Moynihan
+Confidence: 0.9773368 	| Subject: Joint Chiefs of Staff 	| Object: Ken Frazier
+Confidence: 0.9772025 	| Subject: the United Nations 	| Object: Ivan G. Seidenberg
+Confidence: 0.9767630 	| Subject: NIAID 	| Object: Andrew J. Young
+Confidence: 0.9762710 	| Subject: Verizon Communications 	| Object: Brian C. Cornell
+Confidence: 0.9754842 	| Subject: Johnson & Johnson 	| Object: Lisa Su
+Confidence: 0.9752138 	| Subject: Joint Chiefs of Staff 	| Object: Janet Yellen
+Confidence: 0.9751323 	| Subject: Walmart 	| Object: Brian C. Cornell
+Confidence: 0.9744253 	| Subject: Johnson & Johnson 	| Object: Doug Parker
+Confidence: 0.9742792 	| Subject: Duke Energy 	| Object: Alex Gorsky
+Confidence: 0.9740791 	| Subject: Microsoft 	| Object: Satya Nadella
+Confidence: 0.9736500 	| Subject: Unilever PLC 	| Object: Brian Moynihan
+Confidence: 0.9732901 	| Subject: AMD 	| Object: Lynn Good
+Confidence: 0.9730031 	| Subject: University of Chicago Board of Trustees | University of Chicago News Microsoft 	| Object: Satya Nadella
+Confidence: 0.9705595 	| Subject: State 	| Object: Virginia M.
+Confidence: 0.9700046 	| Subject: AMD 	| Object: Doug McMillon
+Confidence: 0.9699294 	| Subject: Lockheed Martin 	| Object: D. Yancopoulos
+Confidence: 0.9661530 	| Subject: General Motors Company 	| Object: Janet Yellen
+Confidence: 0.9644966 	| Subject: NIAID 	| Object: Arne Sorenson
+Confidence: 0.9640045 	| Subject: Lockheed Martin 	| Object: Brian Roberts
+Confidence: 0.9615144 	| Subject: Sun Microsystems 	| Object: Nadella
+Confidence: 0.9599124 	| Subject: Microsoft Related Topics Satya Nadella 	| Object: Satya Nadella
+Confidence: 0.9590477 	| Subject: AMD 	| Object: Alex Gorsky
+Confidence: 0.9586276 	| Subject: the Starbucks Board of Directors 	| Object: Nadella
+Confidence: 0.9581812 	| Subject: General Motors Company 	| Object: David M. Rubenstein
+Confidence: 0.9499334 	| Subject: & CEO 	| Object: Brad Smith
+Confidence: 0.9488623 	| Subject: Honeywell 	| Object: Alex Gorsky
+Confidence: 0.9487371 	| Subject: Johnson & Johnson 	| Object: Anthony Fauci
+Confidence: 0.9453225 	| Subject: Pfizer 	| Object: Doug Parker
+Confidence: 0.9451614 	| Subject: Duke Energy 	| Object: M.D.
+Confidence: 0.9443909 	| Subject: American Express 	| Object: Jamie Dimon
+Confidence: 0.9392059 	| Subject: the Yale School of Management 	| Object: Satya Nadella
+Confidence: 0.9367679 	| Subject: IBM Corporation 	| Object: Virginia M.
+Confidence: 0.9332066 	| Subject: Volodymyr Zelenskyy 	| Object: Darius Adamczyk
+Confidence: 0.9280559 	| Subject: the Yale School of Management 	| Object: Jeffrey Sonnenfeld
+Confidence: 0.9278482 	| Subject: Pfizer 	| Object: Anthony Fauci
+Confidence: 0.9261877 	| Subject: Walmart 	| Object: Ken Frazier
+Confidence: 0.9221999 	| Subject: AT&T 	| Object: Randall L. Stephenson
+Confidence: 0.9132634 	| Subject: Co-Executive 	| Object: Leonard S. Schleifer
+Confidence: 0.9106238 	| Subject: Johnson & Johnson 	| Object: Darius Adamczyk
+Confidence: 0.8977780 	| Subject: JPMorgan Chase 	| Object: D. Yancopoulos
+Confidence: 0.8908859 	| Subject: Target Corporation 	| Object: Brian C. Cornell
+Confidence: 0.8908859 	| Subject: Verizon Communications 	| Object: Ivan G. Seidenberg
+Confidence: 0.8738456 	| Subject: Target Corporation 	| Object: Ken Frazier
+Confidence: 0.8700899 	| Subject: U.S. Army General 	| Object: Ginni
+Confidence: 0.8663980 	| Subject: State 	| Object: Randall L. Stephenson
+Confidence: 0.8637120 	| Subject: Walmart 	| Object: Colin Powell
+Confidence: 0.8557269 	| Subject: Bank of America 	| Object: Mary T. Barra
+Confidence: 0.8537508 	| Subject: State 	| Object: Ginni
+Confidence: 0.8381881 	| Subject: Duke Energy 	| Object: Anthony Fauci
+Confidence: 0.8060515 	| Subject: NIAID 	| Object: Alex Gorsky
+Confidence: 0.7950453 	| Subject: Joint Chiefs of Staff 	| Object: Colin Powell
+Confidence: 0.7889855 	| Subject: American Airlines 	| Object: Anthony Fauci
+Confidence: 0.7858930 	| Subject: Gates Ventures Technology 	| Object: Melinda
+Confidence: 0.7642155 	| Subject: Microsoft 	| Object: Steve Ballmer
+Confidence: 0.7583695 	| Subject: Joint Chiefs of Staff 	| Object: Randall L. Stephenson
+Confidence: 0.7561885 	| Subject: Honeywell 	| Object: Albert Bourla
+Confidence: 0.7522435 	| Subject: NIAID 	| Object: M.D.
+Confidence: 0.7462406 	| Subject: The Carlyle Group 	| Object: D. Yancopoulos
+Confidence: 0.7456942 	| Subject: American Airlines 	| Object: Darius Adamczyk
+Confidence: 0.7456565 	| Subject: U.S. Army General 	| Object: Ken Frazier
+Confidence: 0.7035279 	| Subject: American Airlines 	| Object: Albert Bourla
+Total # of iterations = 4

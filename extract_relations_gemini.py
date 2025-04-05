@@ -93,12 +93,21 @@ class ExtractRelationsGemini:
         }
         self.relation_name = relation_map[r]
 
+        relation_string = {
+            1: "attended school(s) at",
+            2: "work for",
+            3: "live in",
+            4: "was top member employee(s) of"
+        }
+        self.relation_str = relation_string[r]
+
         self.relation_requirements = {
             "Schools_Attended": ("person", "organization"),
-            "Work_For": ("oerson", "organization"),
-            "Live_In": ("oerson", ["location", "city", "state or province", "country"]),
+            "Work_For": ("person", "organization"),
+            "Live_In": ("person", ["location", "city", "state or province", "country"]),
             "Top_Member_Employees": ("person", "organization")
         }
+
         self.entities_of_interest = {
           1: ["PERSON", "ORGANIZATION"], # Schools_Attended
           2: ["PERSON", "ORGANIZATION"], # Work_For 
@@ -122,7 +131,8 @@ class ExtractRelationsGemini:
             self.candidate_pairs = []
             if (idx + 1) % 5 == 0:
                 print(f"\n\tProcessed {idx + 1} / {len(sentences)} sentences")
-
+            
+            # print(f"index: {idx + 1}, sentence: {sentence} \n")
             ents = get_entities(sentence, self.entities_of_interest[self.relation])
             
             # create entity pairs
@@ -130,6 +140,8 @@ class ExtractRelationsGemini:
         
             for ep in sentence_entity_pairs:
                 tokens, subj, obj = ep[0], ep[1], ep[2]
+                if not tokens or not subj[0].strip() or not obj[0].strip():
+                    continue
 
                 if self.relation == 1:  # Schools_Attended
                     if (subj[1], obj[1]) == ("PERSON", "ORGANIZATION"):
@@ -152,8 +164,10 @@ class ExtractRelationsGemini:
 
                 elif self.relation == 4:  # Top_Member_Employees
                     if (subj[1], obj[1]) == ("ORGANIZATION", "PERSON"):
+                        print(f"first ep1: {ep[1]}, ep2: {ep[2]}")
                         self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
                     elif (obj[1], subj[1]) == ("ORGANIZATION", "PERSON"):
+                        print(f"second ep1: {ep[1]}, ep2: {ep[2]}")
                         self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
             
             if len(self.candidate_pairs) == 0:
@@ -163,14 +177,16 @@ class ExtractRelationsGemini:
                     subj, obj = ex['subj'], ex['obj']
                     tokens = ex['tokens']
                     sentence = " ".join(tokens)
-                    relation_tuple = self.call_gemini_api(sentence)
+                    # print(f"ashley: {subj[0]} is {subj[1]}, obj: {obj[0]} is {obj[1]}")
+                    relation_answer = self.call_gemini_api(sentence, subj, obj, tokens)
 
-                    if relation_tuple is not None:
-                        subj, obj = relation_tuple
+                    if relation_answer and 'subject' in relation_answer and 'object' in relation_answer:
+                        subj = relation_answer['subject']
+                        obj = relation_answer['object']
                         key = (subj, obj)
                         self.possible_tuples_num += 1
                         print("\n\t\t=== Extracted Relation ===")
-                        print(f"\t\tSentence:: {sentence}")
+                        print(f"\t\tSentence: {sentence}")
                         print(f"\t\tSubject: {subj} ; Object: {obj} ;")
 
                         if key not in self.seen_keys:
@@ -196,93 +212,92 @@ class ExtractRelationsGemini:
         return self.chosen_tuples, self.seen_keys
     
 
-    def call_gemini_api(self, sentence):
+    def call_gemini_api(self, sentence, subj, obj, token):
         """
         Construct a prompt with the sentence and call the Gemini API.
         Returns a tuple (subject, relation, object, confidence) if successful, else None.
         """
-        palm.configure(api_key=self.google_gemini_api_key)
-        
+        subj_name = subj[0]
+        subj_type = subj[1].lower()
+
+        obj_name = obj[0]
+        obj_type = obj[1].lower()
+
         req_subject, req_object = self.relation_requirements[self.relation_name]
+        # print(f"subj_name: {subj_name}, obj_name: {obj_name}")
+        # print(f"subj_type: {subj_type}, obj_type: {obj_type}")
+        # print(f"req_subject:{req_subject}, req_object: {req_object}")
+        if(subj_type == req_subject and (obj_type in req_object if isinstance(req_object, list) else obj_type == req_object)):
+            palm.configure(api_key=self.google_gemini_api_key)
+            # print("chosen")
+            # print(f"subject is: {subj_name} of type {subj_type}, object is: {obj_name} of type {obj_type}")
+            # If the object is a list, join them into a string
+            if isinstance(req_object, list):
+                req_object_str = " or ".join(req_object)
+            else:
+                req_object_str = req_object
 
-        # If the object is a list, join them into a string
-        if isinstance(req_object, list):
-            req_object_str = " or ".join(req_object)
-        else:
-            req_object_str = req_object
+            example = EXAMPLES[self.relation_name]
+            description = RELATION_DESCRIPTIONS[self.relation_name]
 
-        example = EXAMPLES[self.relation_name]
-        description = RELATION_DESCRIPTIONS[self.relation_name]
-# f"For this step, extract the relation '{self.relation_name}' from the following sentence: \"{sentence}\" \n"
-        # prompt = (
-        #     f"I am implementing an Iterative Set Expansion (ISE) algorithm. My goal is to extract factual relations from natural language sentences.\n"
-            
-        #     f"Your task is to extract the '{self.relation_name}' relation from the following sentence: \"{sentence}\" \n"
-        #     f"For this relation '{self.relation_name}', the subject must be of type {req_subject} and the object must be of type {req_object}.\n"
-        #     f"For type person, use the actual names as they appear in the sentence. **Avoid pronouns** like 'he', 'she', or 'they'.\n"
-        #     f"If the relation is present, return the result in JSON format with keys 'subject', 'relation', and 'object'.\n"
-        #     f"If the relation is not present or there is not enough information, return an empty JSON object{{}}.\n"
-        #     f"If the sentence contains non-English words, skip these words."
-        #     f"Ignore sentences that are unclear, vague, or refer to lists of languages, dates, or unrelated facts.\n"
-        #     f"Example: {example}"
-        # )
-        
-        spec = RELATION_SPECS[self.relation_name]
-
-        prompt = (
-            f'Given a sentence: "{sentence}", extract a relation in the following JSON format:\n\n'
-            '{\n'
-            '  "subject": "<subject>",\n'
-            '  "object": "<object>"\n'
-            '}\n\n'
-            'The value of this json has to be exactly the same as it appears in the sentence.\n'
-            'Only extract if all of the following conditions are satisfied:\n\n'
-            f'- The relation is "{self.relation_name}".\n'
-            f'- The subject is {spec["subject_type"]}.\n'
-            f'- The object is a proper noun that refers to {spec["object_type"]}.\n'
-            f'- The object must {spec["object_constraints"]}.\n'
-            f'- Both subject and object must be nouns, and clearly connected by the "{self.relation_name}" relation.\n'
-            '- Both subject and object must appear explicitly and unambiguously in the sentence.\n'
-            f'- The relation must clearly indicate that {spec["relation_description"]}.'
-            '- The sentence must provide a clear, unambiguous match for the relation — no inferred subjects or vague contexts.\n\n'
-            'If any condition is not met, return this exact output:\n'
-            '{}'
-        )
-        # To avoid overloading the API, sleep for a short period
-        time.sleep(5)
-        
-        try:
-            model = palm.GenerativeModel('models/gemini-2.0-flash')
-            generation_config = palm.types.GenerationConfig(
-                max_output_tokens=100,
-                temperature=0.2,
-                top_p=1,
-                top_k=32
+            spec = RELATION_SPECS[self.relation_name]
+           
+            prompt = (
+                f'Given a sentence: "{sentence}".\n'
+                f'Your task is to extract if there is a relation of {self.relation_name} in this sentence'
+                f'between the subject name: {subj_name} of type {subj_type} and '
+                f'the object name: {obj_name} of type {req_object_str}.\n'
+                f'Such that "{subj_name} {self.relation_str} {obj_name}" can be referred from this sentence. \n'
+                f'You should answer strictly in the following JSON format:\n\n'
+                '{\n'
+                '  "subject": "<subject name>",\n '
+                '  "object": "<object name>",\n '
+                '}\n\n'
+                'If the subject or object includes extra descriptive text or non-name elements, '
+                'refine it to only the proper noun representing the actual person or organization name.' 
+                'Otherwise, preserve the original value. For example, "Bill Gates Personal Awards" should be refined to "Bill Gates"."'
+                'If such a relation exists between the subject and object, return the json as instructed.\n'
+                f'If any condition is not met, the value is just return an empty json: {{}}\n'
+                'Please make sure the subject and object are both valid.'
+                'return an empty json if the sentence involves non-english words.'
+                f'For example: {EXAMPLES[self.relation_name]}'
             )
-            response = model.generate_content(prompt, generation_config=generation_config)
+            # To avoid overloading the API, sleep for a short period
+            time.sleep(5)
             
-            # Try to parse the response
-            json_match = re.search(r"\{.*?\}", response.text, re.DOTALL)
-            if not json_match:
-                return None
-
             try:
-                result = json.loads(json_match.group())
-            except json.JSONDecodeError:
-                return None
+                model = palm.GenerativeModel('models/gemini-2.0-flash')
+                generation_config = palm.types.GenerationConfig(
+                    max_output_tokens=100,
+                    temperature=0.2,
+                    top_p=1,
+                    top_k=32
+                )
+                response = model.generate_content(prompt, generation_config=generation_config)
+                # print(response.text)
+                # Try to parse the response
+                json_match = re.search(r"\{.*?\}", response.text, re.DOTALL)
+                if not json_match:
+                    return None
 
-            # Validate the result
-            if result and "subject" in result and "object" in result:
-                return (result["subject"], result["object"])
+                try:
+                    result = json.loads(json_match.group())
+                except json.JSONDecodeError:
+                    return None
+                # print(result)
+                # Validate the result
+                # if result:
+                return result
+                
+            except Exception as e:
+                print(f"Error calling Gemini API: {e}")
+                # If 429 is in error, apply retry delay
+                if "429" in str(e):
+                    retry_match = re.search(r'retry_delay \{\s*seconds: (\d+)', str(e))
+                    if retry_match:
+                        delay = int(retry_match.group(1))
+                        print(f"Sleeping for {delay} seconds due to rate limit...")
+                        time.sleep(delay)
             
-        except Exception as e:
-            print(f"Error calling Gemini API: {e}")
-            # If 429 is in error, apply retry delay
-            if "429" in str(e):
-                retry_match = re.search(r'retry_delay \{\s*seconds: (\d+)', str(e))
-                if retry_match:
-                    delay = int(retry_match.group(1))
-                    print(f"Sleeping for {delay} seconds due to rate limit...")
-                    time.sleep(delay)
-        
+            return None
         return None

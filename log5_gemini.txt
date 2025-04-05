@@ -1,0 +1,430 @@
+Loading pre-trained spanBERT from ./pretrained_spanbert
+____
+Parameters:
+Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+Engine key      = 84f98f408aba949e8
+Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+Method          = -gemini
+Relation        = 2
+Threshold       = 0.7
+Query           = sundar pichai google
+# of Tuples     = 3
+Loading necessary libraries; This should take a minute or so ...)
+========== Iteration: 0 - Query: sundar pichai google ==========
+            
+
+URL (1 / 10): https://en.wikipedia.org/wiki/Sundar_Pichai
+Fetching text from url ...
+Trimming webpage content from 37697 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 125 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 125 sentences
+
+	Processed 10 / 125 sentences
+
+	Processed 15 / 125 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Spouse Anjali Pichai Children 2 Awards Padma Bhushan ( 2022 ) Sundar Pichai 's voice Pichai on being chief executive officer of Google .
+		Subject: Sundar Pichai ; Object: Google ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Sundar Pichai 's voice Pichai on being chief executive officer of Google .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Sundar Pichai 's voice Pichai on being chief executive officer of Google .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 20 / 125 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Pichai also announced the open - sourcing of the new video codec VP8 by Google and introduced the new video format ,
+		Subject: Pichai ; Object: Google ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 25 / 125 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Pichai was selected to become the next CEO of Google on August 10 , 2015 , after previously being appointed chief product officer by then CEO Larry Page .
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 30 / 125 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Lakshmi , was a stenographer , and his father , Regunatha Pichai , was an electrical engineer at GEC ,
+		Subject: Regunatha Pichai ; Object: GEC ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Regunatha Pichai , was an electrical engineer at GEC ,
+		Subject: Regunatha Pichai ; Object: GEC ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 35 / 125 sentences
+
+	Processed 40 / 125 sentences
+
+	Processed 45 / 125 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Android was formerly managed by Andy Rubin , [ 28 ] who was a director of Jive Software from April 2011 to July 30 ,
+		Subject: Andy Rubin ; Object: Jive Software ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Pichai was selected to become the next CEO of Google on August 10 , 2015 , [ 32 ] after previously being appointed Product Chief by CEO , Larry Page .
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 50 / 125 sentences
+
+	Processed 55 / 125 sentences
+
+	Processed 60 / 125 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Sundar Pichai was questioned by the United States House Judiciary Committee on a range of Google -
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Sundar Pichai was questioned by the United States House Judiciary Committee on a range of Google -
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Sundar Pichai was questioned by the United States House Judiciary Committee on a range of Google - related issues such as possible political bias on Google 's platforms ,
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Pichai told the committee that Google employees can not influence search results .
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 65 / 125 sentences
+
+		=== Extracted Relation ===
+		Sentence:: after 28 Google employees were fired for protesting against Project Nimbus , Pichai stated that the office is not a place "
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: after 28 Google employees were fired for protesting against Project Nimbus , Pichai stated that the office is not a place "
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: under Pichai 's leadership , Google responded to pressure from Donald Trump and Elon Musk to cease DEI initiatives by removing many annual American cultural events from Google Calendar ,
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: under Pichai 's leadership , Google responded to pressure from Donald Trump and Elon Musk to cease DEI initiatives by removing many annual American cultural events from Google Calendar ,
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: under Pichai 's leadership , Google responded to pressure from Donald Trump and Elon Musk to cease DEI initiatives by removing many annual American cultural events from Google Calendar ,
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 70 / 125 sentences
+
+	Processed 75 / 125 sentences
+
+	Processed 80 / 125 sentences
+
+	Processed 85 / 125 sentences
+
+	Processed 90 / 125 sentences
+
+	Processed 95 / 125 sentences
+
+	Processed 100 / 125 sentences
+
+	Processed 105 / 125 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Sundar Pichai | Biography , Google , & Facts "
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 110 / 125 sentences
+
+	Processed 115 / 125 sentences
+
+	Processed 120 / 125 sentences
+
+	Processed 125 / 125 sentences
+	Extracted annotations for  4  out of total  125  sentences 
+
+	Relations extracted from this website: 4 (Overall: 19) 
+
+
+URL (2 / 10): https://www.linkedin.com/in/sundarpichai
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (3 / 10): https://blog.google/authors/sundar-pichai/
+Fetching text from url ...
+Webpage length (num characters): 3797
+Annotating the webpage using spacy...
+Extracted 29 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+		=== Extracted Relation ===
+		Sentence:: Sundar Pichai | Google Blog Skip to main content The Keyword Sundar Pichai Share Twitter Facebook LinkedIn Mail Copy link Home Product news Product news Android ,
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 5 / 29 sentences
+
+	Processed 10 / 29 sentences
+
+		=== Extracted Relation ===
+		Sentence:: See all Inside Google Data centers and infrastructure Doodles Googlers Life at Google See all Around the globe Google in Asia Google in Europe Google in Latin America See all Authors Sundar Pichai , CEO Ruth Porat ,
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: SVP James Manyika , SVP See all Outreach &
+		Subject: James Manyika ; Object: Outreach ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: See all Inside Google Data centers and infrastructure Doodles Googlers Life at Google See all Around the globe Google in Asia Google in Europe Google in Latin America See all Authors Sundar Pichai , CEO Ruth Porat ,
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 15 / 29 sentences
+
+	Processed 20 / 29 sentences
+
+		=== Extracted Relation ===
+		Sentence:: See all Inside Google Data centers and infrastructure Doodles Googlers Life at Google See all Around the globe Google in Asia Google in Europe Google in Latin America See all Authors Sundar Pichai , CEO Ruth Porat ,
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: SVP See all Feed Press corner RSS feed Subscribe Sundar Pichai CEO of Google and Alphabet Sundar is the CEO of Google and Alphabet and serves on Alphabet ’s Board of Directors .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: SVP See all Feed Press corner RSS feed Subscribe Sundar Pichai CEO of Google and Alphabet Sundar is the CEO of Google and Alphabet and serves on Alphabet ’s Board of Directors .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: SVP See all Feed Press corner RSS feed Subscribe Sundar Pichai CEO of Google and Alphabet Sundar is the CEO of Google and Alphabet and serves on Alphabet ’s Board of Directors .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: SVP See all Feed Press corner RSS feed Subscribe Sundar Pichai CEO of Google and Alphabet Sundar is the CEO of Google and Alphabet and serves on Alphabet ’s Board of Directors .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: SVP See all Feed Press corner RSS feed Subscribe Sundar Pichai CEO of Google and Alphabet Sundar is the CEO of Google and Alphabet and serves on Alphabet ’s Board of Directors .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: SVP See all Feed Press corner RSS feed Subscribe Sundar Pichai CEO of Google and Alphabet Sundar is the CEO of Google and Alphabet and serves on Alphabet ’s Board of Directors .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: SVP See all Feed Press corner RSS feed Subscribe Sundar Pichai CEO of Google and Alphabet Sundar is the CEO of Google and Alphabet and serves on Alphabet ’s Board of Directors .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 25 / 29 sentences
+	Extracted annotations for  1  out of total  29  sentences 
+
+	Relations extracted from this website: 1 (Overall: 12) 
+
+
+URL (4 / 10): https://www.instagram.com/sundarpichai/?hl=en
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (5 / 10): https://www.youtube.com/watch?v=OsxwBmp3iFU
+Fetching text from url ...
+Webpage length (num characters): 256
+Annotating the webpage using spacy...
+Extracted 3 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Extracted annotations for  0  out of total  3  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (6 / 10): https://www.reddit.com/r/google/comments/1czp5u9/while_i_was_not_before_i_am_now_convinced_sundar/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (7 / 10): https://www.productplan.com/learn/sundar-pichai-product-manager-to-ceo/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (8 / 10): https://mitsloan.mit.edu/ideas-made-to-matter/googles-sundar-pichai-says-tech-a-powerful-agent-change
+Fetching text from url ...
+Trimming webpage content from 11089 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 74 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 74 sentences
+
+	Processed 10 / 74 sentences
+
+	Processed 15 / 74 sentences
+
+	Processed 20 / 74 sentences
+
+	Processed 25 / 74 sentences
+
+		=== Extracted Relation ===
+		Sentence:: The company is making sure YouTube and Google search — free , important sources of information — are still operating , CEO Sundar Pichai said last week .
+		Subject: Sundar Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 30 / 74 sentences
+
+		=== Extracted Relation ===
+		Sentence:: said Sundar , who became the CEO of Google in 2015 and its parent company ,
+		Subject: Sundar ; Object: Google ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: said Sundar , who became the CEO of Google in 2015 and its parent company , Alphabet ,
+		Subject: Sundar ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 35 / 74 sentences
+
+		=== Extracted Relation ===
+		Sentence:: ranging MIT Forefront conversation last week with MIT president L. Rafael Reif ,
+		Subject: L. Rafael Reif ; Object: MIT ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: ranging MIT Forefront conversation last week with MIT president L. Rafael Reif ,
+		Subject: L. Rafael Reif ; Object: MIT ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: ranging MIT Forefront conversation last week with MIT president L. Rafael Reif , Pichai talked about internal and external challenges , including how Google is addressing climate change ;
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Pichai , who led development of the Google Chrome browser and oversaw Google Maps , Android , Gmail ,
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Pichai , who led development of the Google Chrome browser and oversaw Google Maps , Android , Gmail ,
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 40 / 74 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Instead of developing AI and thinking about the consequences later , Google aims to think through the risks early on and invest in the right frameworks , Pichai said .
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence:: Google aims to think through the risks early on and invest in the right frameworks , Pichai said .
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 45 / 74 sentences
+
+		=== Extracted Relation ===
+		Sentence:: Pichai said : It can be used to improve Google search , help with self - driving cars , make YouTube a better platform for education ,
+		Subject: Pichai ; Object: Google ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 50 / 74 sentences
+
+	Processed 55 / 74 sentences
+
+	Processed 60 / 74 sentences
+
+	Processed 65 / 74 sentences
+
+	Processed 70 / 74 sentences
+	Extracted annotations for  2  out of total  74  sentences 
+
+	Relations extracted from this website: 2 (Overall: 11) 
+
+
+URL (9 / 10): https://www.reddit.com/r/technology/comments/1cfzuhf/google_layoffs_sundar_pichailed_company_fires/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (10 / 10): https://www.financialexpress.com/trending/google-ceo-sundar-pichai-caught-in-tamil-nadus-heated-debate-over-three-language-policy-heres-what-happened/3778285/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+================== ALL RELATIONS for per:employee_of ( 7 ) ==================
+Subject: Sundar Pichai 	| Object: Google
+Subject: Pichai 	| Object: Google
+Subject: Regunatha Pichai 	| Object: GEC
+Subject: Andy Rubin 	| Object: Jive Software
+Subject: James Manyika 	| Object: Outreach
+Subject: Sundar 	| Object: Google
+Subject: L. Rafael Reif 	| Object: MIT
+Total # of iterations = 1

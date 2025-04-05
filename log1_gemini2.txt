@@ -1,0 +1,502 @@
+____
+Parameters:
+Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+Engine key      = 84f98f408aba949e8
+Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+Method          = -gemini
+Relation        = 1
+Threshold       = 0.7
+Query           = sergey brin stanford
+# of Tuples     = 10
+Loading necessary libraries; This should take a minute or so ...)
+
+
+========== Iteration: 0 - Query: sergey brin stanford ==========
+
+
+URL (1 / 10): https://en.wikipedia.org/wiki/Sergey_Brin
+Fetching text from url ...
+Trimming webpage content from 42182 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 74 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+        Processed 5 / 74 sentences
+
+        Processed 10 / 74 sentences
+
+        Processed 15 / 74 sentences
+
+        Processed 20 / 74 sentences
+
+        Processed 25 / 74 sentences
+
+        Processed 30 / 74 sentences
+
+                === Extracted Relation ===
+                Sentence: Mikhail and Eugenia Brin ( 1948–2024 ) , both graduates of Moscow State University (
+                Subject: Eugenia Brin ; Object: Moscow State University ;
+                Adding to set of extracted relations
+                ==========
+
+        Processed 35 / 74 sentences
+
+        Processed 40 / 74 sentences
+
+                === Extracted Relation ===
+                Sentence: Brin attended elementary school at Paint Branch Montessori School in Adelphi ,
+                Subject: Brin ; Object: Paint Branch Montessori School ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Brin attended elementary school at Paint Branch Montessori School in Adelphi , Maryland , but he received further education at home ; his father , a professor in the department of mathematics at the University of Maryland ,
+                Subject: Brin ; Object: the University of Maryland ;
+                Adding to set of extracted relations
+                ==========
+
+        Processed 45 / 74 sentences
+
+                === Extracted Relation ===
+                Sentence: Brin enrolled in the University of Maryland ,
+                Subject: Brin ; Object: the University of Maryland ;
+                Duplicate. Ignoring this.
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Brin enrolled in the University of Maryland , where he received his Bachelor of Science from the Department of Computer Science in 1993 with honors in computer science and mathematics at the age of 19.[14 ]
+                Subject: Brin ; Object: Bachelor of Science ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Brin enrolled in the University of Maryland , where he received his Bachelor of Science from the Department of Computer Science in 1993 with honors in computer science and mathematics at the age of 19.[14 ]
+                Subject: Brin ; Object: the Department of Computer Science ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Brin began his graduate study in computer science at Stanford University on a graduate fellowship from the National Science Foundation ,
+                Subject: Brin ; Object: Stanford University ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Brin began his graduate study in computer science at Stanford University on a graduate fellowship from the National Science Foundation , receiving an M.S. in computer science in 1995.[15 ]
+                Subject: Brin ; Object: M.S. ;
+                Adding to set of extracted relations
+                ==========
+
+        Processed 50 / 74 sentences
+
+                === Extracted Relation ===
+                Sentence: During an orientation for new students at Stanford , he met Larry Page .
+                Subject: Larry Page ; Object: Stanford ;
+                Adding to set of extracted relations
+                ==========
+
+        Processed 55 / 74 sentences
+
+        Processed 60 / 74 sentences
+
+        Processed 65 / 74 sentences
+
+        Processed 70 / 74 sentences
+        Extracted annotations for  7  out of total  74  sentences 
+
+        Relations extracted from this website: 8 (Overall: 9) 
+
+
+URL (2 / 10): http://infolab.stanford.edu/~sergey/
+Fetching text from url ...
+Webpage length (num characters): 4605
+Annotating the webpage using spacy...
+Extracted 62 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+                === Extracted Relation ===
+                Sentence: Sergey Brin Sergey Brin 's Home Page Ph.D. student in Computer Science at Stanford -
+                Subject: Sergey Brin ; Object: Computer Science ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Sergey Brin Sergey Brin 's Home Page Ph.D. student in Computer Science at Stanford - sergey@cs.stanford.edu .
+                Subject: Sergey Brin ; Object: Stanford - sergey@cs.stanford.edu ;
+                Adding to set of extracted relations
+                ==========
+
+        Processed 5 / 62 sentences
+
+        Processed 10 / 62 sentences
+
+        Processed 15 / 62 sentences
+
+        Processed 20 / 62 sentences
+
+        Processed 25 / 62 sentences
+
+        Processed 30 / 62 sentences
+
+        Processed 35 / 62 sentences
+
+        Processed 40 / 62 sentences
+
+        Processed 45 / 62 sentences
+
+        Processed 50 / 62 sentences
+
+        Processed 55 / 62 sentences
+
+        Processed 60 / 62 sentences
+        Extracted annotations for  2  out of total  62  sentences 
+
+        Relations extracted from this website: 2 (Overall: 2) 
+
+
+URL (3 / 10): https://engineering.stanford.edu/about/history/heroes/2014-heroes/sergey-brin
+Fetching text from url ...
+Webpage length (num characters): 6768
+Annotating the webpage using spacy...
+Extracted 29 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+                === Extracted Relation ===
+                Sentence: Sergey Brin | Stanford University School of Engineering Skip to main content Skip to secondary navigation Stanford University (
+                Subject: Sergey Brin ; Object: Stanford University School of Engineering Skip ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Sergey Brin | Stanford University School of Engineering Skip to main content Skip to secondary navigation Stanford University (
+                Subject: Sergey Brin ; Object: Stanford University ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Meet our 2024 Cohort Dean ’s Graduate Student Advisory Council Funding and Financial Aid Funding Your Master ’s Degree Funding Your PhD Technical Communication Program Consulting Request Form Frequently Asked Questions The Student Experience Faculty &
+                Subject: Dean ; Object: Graduate Student Advisory Council Funding and Financial Aid Funding Your Master’s Degree Funding ;
+                Adding to set of extracted relations
+                ==========
+
+        Processed 5 / 29 sentences
+
+        Processed 10 / 29 sentences
+
+        Processed 15 / 29 sentences
+
+                === Extracted Relation ===
+                Sentence: Future Main content start Sergey Brin — Google co - founder Sergey Brin co - founded web - search giant Google Inc. in 1998 with fellow Stanford student Larry Page .
+                Subject: Sergey Brin ; Object: Stanford ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: founder Sergey Brin co - founded web - search giant Google Inc. in 1998 with fellow Stanford student Larry Page .
+                Subject: Sergey Brin ; Object: Stanford ;
+                Duplicate. Ignoring this.
+                ==========
+
+                === Extracted Relation ===
+                Sentence: search giant Google Inc. in 1998 with fellow Stanford student Larry Page .
+                Subject: Larry Page ; Object: Stanford ;
+                Duplicate. Ignoring this.
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Brin earned his master ’s degree in computer science at Stanford ,
+                Subject: Brin ; Object: Stanford ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Brin earned his master ’s degree in computer science at Stanford , where he and Page developed the “
+                Subject: Page ; Object: Stanford ;
+                Adding to set of extracted relations
+                ==========
+
+        Processed 20 / 29 sentences
+
+        Processed 25 / 29 sentences
+        Extracted annotations for  5  out of total  29  sentences 
+
+        Relations extracted from this website: 6 (Overall: 8) 
+
+
+URL (4 / 10): http://infolab.stanford.edu/pub/papers/google.pdf
+Fetching text from url ...
+Trimming webpage content from 112223 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 28 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+        Processed 5 / 28 sentences
+
+        Processed 10 / 28 sentences
+
+        Processed 15 / 28 sentences
+
+        Processed 20 / 28 sentences
+
+        Processed 25 / 28 sentences
+        Extracted annotations for  0  out of total  28  sentences 
+
+        Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (5 / 10): https://snap.stanford.edu/class/cs224w-readings/Brin98Anatomy.pdf
+Fetching text from url ...
+Trimming webpage content from 1268522 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 63 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+        Processed 5 / 63 sentences
+
+        Processed 10 / 63 sentences
+
+        Processed 15 / 63 sentences
+
+        Processed 20 / 63 sentences
+
+        Processed 25 / 63 sentences
+
+        Processed 30 / 63 sentences
+
+        Processed 35 / 63 sentences
+
+        Processed 40 / 63 sentences
+
+        Processed 45 / 63 sentences
+
+        Processed 50 / 63 sentences
+
+        Processed 55 / 63 sentences
+
+        Processed 60 / 63 sentences
+        Extracted annotations for  0  out of total  63  sentences 
+
+        Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (6 / 10): https://www.quora.com/What-was-it-like-to-be-at-Stanford-with-Sergey-Brin-and-Larry-Page
+Fetching text from url ...
+Webpage length (num characters): 194
+Annotating the webpage using spacy...
+Extracted 4 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+                === Extracted Relation ===
+                Sentence: What was it like to be at Stanford with Sergey Brin and Larry Page ?
+                Subject: Sergey Brin ; Object: Stanford ;
+                Duplicate. Ignoring this.
+                ==========
+
+                === Extracted Relation ===
+                Sentence: What was it like to be at Stanford with Sergey Brin and Larry Page ?
+                Subject: Larry Page ; Object: Stanford ;
+                Duplicate. Ignoring this.
+                ==========
+        Extracted annotations for  0  out of total  4  sentences 
+
+        Relations extracted from this website: 0 (Overall: 2) 
+
+
+URL (7 / 10): https://about.google/intl/ALL_us/our-story/
+Fetching text from url ...
+Webpage length (num characters): 3427
+Annotating the webpage using spacy...
+Extracted 24 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+                === Extracted Relation ===
+                Sentence: Larry Page was 
+ considering Stanford for grad school and Sergey Brin ,
+                Subject: Larry Page ; Object: Stanford ;
+                Duplicate. Ignoring this.
+                ==========
+
+        Processed 5 / 24 sentences
+
+        Processed 10 / 24 sentences
+
+        Processed 15 / 24 sentences
+
+        Processed 20 / 24 sentences
+        Extracted annotations for  0  out of total  24  sentences 
+
+        Relations extracted from this website: 0 (Overall: 1) 
+
+
+URL (8 / 10): https://facts.stanford.edu/alumni/
+Fetching text from url ...
+Webpage length (num characters): 4851
+Annotating the webpage using spacy...
+Extracted 20 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+        Processed 5 / 20 sentences
+
+                === Extracted Relation ===
+                Sentence: Academic Leaders John Bravman , Bucknell president Michael Drake ,
+                Subject: John Bravman ; Object: Bucknell ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Bucknell president Michael Drake ,
+                Subject: Michael Drake ; Object: Bucknell ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Bucknell president Michael Drake , University of California president Jonathan Holloway ,
+                Subject: Michael Drake ; Object: University of California ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: University of California president Jonathan Holloway ,
+                Subject: Jonathan Holloway ; Object: University of California ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Rutgers University president Vincent E. Price ,
+                Subject: Vincent E. Price ; Object: Rutgers University ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Duke University president Karl Scholz ,
+                Subject: Karl Scholz ; Object: Duke University ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: University of Oregon president Lori White ,
+                Subject: Lori White ; Object: University of Oregon ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: University of Oregon president Lori White , DePauw University president News Media
+                Subject: Lori White ; Object: DePauw University ;
+                Adding to set of extracted relations
+                ==========
+
+        Processed 10 / 20 sentences
+
+                === Extracted Relation ===
+                Sentence: U.S. president Supreme Court Justices Stephen Breyer Anthony Kennedy Sandra Day O’Connor *
+                Subject: Stephen Breyer ; Object: Supreme Court ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: U.S. president Supreme Court Justices Stephen Breyer Anthony Kennedy Sandra Day O’Connor * William Rehnquist *
+                Subject: William Rehnquist ; Object: Supreme Court ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Kiva co - founder Eunice Kennedy Shriver * , Special Olympics founder Jeffrey Skoll , Skoll Foundation * deceased Stanford Alumni Association
+                Subject: Eunice Kennedy Shriver ; Object: Stanford Alumni Association ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: founder Eunice Kennedy Shriver * , Special Olympics founder Jeffrey Skoll , Skoll Foundation * deceased Stanford Alumni Association
+                Subject: Eunice Kennedy Shriver ; Object: Stanford Alumni Association ;
+                Duplicate. Ignoring this.
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Special Olympics founder Jeffrey Skoll , Skoll Foundation *
+                Subject: Jeffrey Skoll ; Object: Skoll Foundation ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: Special Olympics founder Jeffrey Skoll , Skoll Foundation * deceased Stanford Alumni Association
+                Subject: Jeffrey Skoll ; Object: Stanford Alumni Association ;
+                Adding to set of extracted relations
+                ==========
+
+        Processed 15 / 20 sentences
+
+        Processed 20 / 20 sentences
+        Extracted annotations for  13  out of total  20  sentences 
+
+        Relations extracted from this website: 13 (Overall: 14) 
+
+
+URL (9 / 10): https://www.quora.com/How-long-were-Larry-and-Sergey-at-Stanford-before-dropping-out
+Fetching text from url ...
+Webpage length (num characters): 190
+Annotating the webpage using spacy...
+Extracted 4 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+                === Extracted Relation ===
+                Sentence: How long were Larry and Sergey at Stanford before dropping out ?
+                Subject: Larry ; Object: Stanford ;
+                Adding to set of extracted relations
+                ==========
+
+                === Extracted Relation ===
+                Sentence: How long were Larry and Sergey at Stanford before dropping out ?
+                Subject: Sergey ; Object: Stanford ;
+                Adding to set of extracted relations
+                ==========
+        Extracted annotations for  1  out of total  4  sentences 
+
+        Relations extracted from this website: 2 (Overall: 2) 
+
+
+URL (10 / 10): http://ilpubs.stanford.edu/422/1/1999-66.pdf
+Fetching text from url ...
+Trimming webpage content from 272027 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 22 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+        Processed 5 / 22 sentences
+
+        Processed 10 / 22 sentences
+
+        Processed 15 / 22 sentences
+
+        Processed 20 / 22 sentences
+        Extracted annotations for  0  out of total  22  sentences 
+
+        Relations extracted from this website: 0 (Overall: 0) 
+
+
+================== ALL RELATIONS for per:schools_attended ( 31 ) ==================
+Subject: Eugenia Brin   | Object: Moscow State University
+Subject: Brin   | Object: Paint Branch Montessori School
+Subject: Brin   | Object: the University of Maryland
+Subject: Brin   | Object: Bachelor of Science
+Subject: Brin   | Object: the Department of Computer Science
+Subject: Brin   | Object: Stanford University
+Subject: Brin   | Object: M.S.
+Subject: Larry Page     | Object: Stanford
+Subject: Sergey Brin    | Object: Computer Science
+Subject: Sergey Brin    | Object: Stanford - sergey@cs.stanford.edu
+Subject: Sergey Brin    | Object: Stanford University School of Engineering Skip
+Subject: Sergey Brin    | Object: Stanford University
+Subject: Dean   | Object: Graduate Student Advisory Council Funding and Financial Aid Funding Your Master’s Degree Funding
+Subject: Sergey Brin    | Object: Stanford
+Subject: Brin   | Object: Stanford
+Subject: Page   | Object: Stanford
+Subject: John Bravman   | Object: Bucknell
+Subject: Michael Drake  | Object: Bucknell
+Subject: Michael Drake  | Object: University of California
+Subject: Jonathan Holloway      | Object: University of California
+Subject: Vincent E. Price       | Object: Rutgers University
+Subject: Karl Scholz    | Object: Duke University
+Subject: Lori White     | Object: University of Oregon
+Subject: Lori White     | Object: DePauw University
+Subject: Stephen Breyer         | Object: Supreme Court
+Subject: William Rehnquist      | Object: Supreme Court
+Subject: Eunice Kennedy Shriver         | Object: Stanford Alumni Association
+Subject: Jeffrey Skoll  | Object: Skoll Foundation
+Subject: Jeffrey Skoll  | Object: Stanford Alumni Association
+Subject: Larry  | Object: Stanford
+Subject: Sergey         | Object: Stanford
+Total # of iterations = 1

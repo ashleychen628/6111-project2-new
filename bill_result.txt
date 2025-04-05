@@ -1,0 +1,1127 @@
+Loading pre-trained spanBERT from ./pretrained_spanbert
+____
+Parameters:
+Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+Engine key      = 84f98f408aba949e8
+Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+Method          = -spanbert
+Relation        = 4
+Threshold       = 0.7
+Query           = microsoft bill gates
+# of Tuples     = 10
+Loading necessary libraries; This should take a minute or so ...)
+
+
+========== Iteration: 0 - Query: microsoft bill gates ==========
+
+
+URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
+Fetching text from url ...
+Trimming webpage content from 146844 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 60 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+index: 1, sentence: Bill Gates - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Pages for logged out editors learn more Contributions Talk Contents move to sidebar hide (Top) 1 
+
+index: 2, sentence: Early life and education 2 Microsoft Toggle Microsoft subsection 2.1 BASIC 2.2 IBM partnership 2.3 Windows 2.4 Management style 3 Post-Microsoft Toggle Post-Microsoft subsection 3.1 Business ventures and investments 4 Climate change and energy 5 Political positions Toggle Political positions subsection 5.1 Regulation of the software industry 5.2 Donald Trump Facebook ban 5.3 Patents for COVID-19 vaccines 5.4 Cryptocurrencies 6 Philanthropy Toggle Philanthropy subsection 6.1 Bill & Melinda Gates Foundation 6.2 Personal donations 6.3 Charity sports events 7 Books 8 Personal life Toggle Personal life subsection 8.1 Marriage, family and divorce 8.2 Public image 8.3 Religious views 8.4 Wealth 9 Controversies Toggle Controversies subsection 9.1 Antitrust litigation 9.2 Treatment of colleagues and employees 9.3 Relationship with Jeffrey Epstein 10 Recognition 11 Depiction in media Toggle Depiction in media subsection 11.1 Documentary films about Gates 11.2 Feature films 11.3 Video and film clips 11.4 Radio 11.5 Television 12 Books 13 See also 14 Notes 15 References Toggle References subsection 15.1 Bibliography 15.2 Primary sources 16 Further reading 17 External links Toggle the table of contents Bill Gates 171 languages Afrikaans Alemannisch አማርኛ अंगिका Ænglisc العربية Aragonés Արեւմտահայերէն অসমীয়া Asturianu अवधी Azərbaycanca تۆرکجه Basa Bali বাংলা Banjar 閩南語 / Bân-lâm-gú Basa 
+
+tokens: ['Early', 'life', 'and', 'education', '2', 'Microsoft', 'Toggle', 'Microsoft', 'subsection', '2.1', 'BASIC', '2.2', 'IBM', 'partnership', '2.3', 'Windows', '2.4', 'Management', 'style', '3', 'Post', '-']
+tokens: ['Early', 'life', 'and', 'education', '2', 'Microsoft', 'Toggle', 'Microsoft', 'subsection', '2.1', 'BASIC', '2.2', 'IBM', 'partnership', '2.3', 'Windows', '2.4', 'Management', 'style', '3', 'Post', '-']
+tokens: ['Early', 'life', 'and', 'education', '2', 'Microsoft', 'Toggle', 'Microsoft', 'subsection', '2.1', 'BASIC', '2.2', 'IBM', 'partnership', '2.3', 'Windows', '2.4', 'Management', 'style', '3', 'Post', '-']
+index: 3, sentence: Banyumasan Башҡортса 
+
+index: 4, sentence: Беларуская Беларуская (тарашкевіца) Bikol Central Bislama Български Boarisch Bosanski Brezhoneg Català Чӑвашла Čeština ChiTumbuka Cymraeg Dansk الدارجة Deutsch डोटेली ཇོང་ཁ Eesti Ελληνικά Español Esperanto Estremeñu Euskara 
+
+
+	Processed 5 / 60 sentences
+index: 5, sentence: Eʋegbe فارسی Føroyskt Français Frysk Gaeilge Gàidhlig Galego Gĩkũyũ ગુજરાતી गोंयची कोंकणी / Gõychi Konknni 客家語 / Hak-kâ-ngî 한국어 Hausa Հայերեն हिन्दी Hrvatski Ido Igbo Ilokano 
+
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/']
+second ep1: ('Føroyskt Français', 'PERSON', (2, 3)), ep2: ('कोंकणी', 'ORGANIZATION', (11, 11))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/']
+second ep1: ('Gàidhlig Galego Gĩkũyũ', 'PERSON', (6, 8)), ep2: ('कोंकणी', 'ORGANIZATION', (11, 11))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/']
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Gõychi Konknni', 'PERSON', (13, 14))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Hak-kâ-ngî', 'PERSON', (17, 21))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Hrvatski Ido Igbo', 'PERSON', (26, 28))
+tokens: ['Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+relation is: no_relation, key is ('कोंकणी', 'Føroyskt Français')
+relation is: no_relation, key is ('कोंकणी', 'Gàidhlig Galego Gĩkũyũ')
+relation is: no_relation, key is ('कोंकणी', 'Gõychi Konknni')
+relation is: no_relation, key is ('कोंकणी', 'Hak-kâ-ngî')
+relation is: no_relation, key is ('कोंकणी', 'Hrvatski Ido Igbo')
+index: 6, sentence: Bahasa Indonesia Interlingua Ирон Íslenska Italiano עברית Jawa ಕನ್ನಡ 
+
+tokens: ['Bahasa', 'Indonesia', 'Interlingua', 'Ирон', 'Íslenska', 'Italiano', 'עברית', 'Jawa', 'ಕನ್ನಡ']
+second ep1: ('Ирон Íslenska', 'PERSON', (3, 4)), ep2: ('Jawa ಕನ್ನಡ', 'ORGANIZATION', (7, 8))
+relation is: no_relation, key is ('Jawa ಕನ್ನಡ', 'Ирон Íslenska')
+index: 7, sentence: Kapampangan ქართული कॉशुर / کٲشُر Қазақша Kernowek Kiswahili Kurdî Кыргызча ລາວ Latina Latviešu Lëtzebuergesch Lietuvių Ligure Limburgs Lingua Franca Nova La.lojban. 
+
+index: 8, sentence: Lombard Magyar मैथिली Македонски Malagasy മലയാളം 
+
+index: 9, sentence: Malti मराठी მარგალური مصرى مازِرونی Bahasa Melayu ꯃꯤꯇꯩ ꯂꯣꯟ Mirandés Монгол မြန်မာဘာသာ Nederlands नेपाली नेपाल भाषा 日本語 Norsk bokmål Norsk nynorsk Occitan ଓଡ଼ିଆ Oromoo Oʻzbekcha / ўзбекча 
+
+tokens: ['Malti', 'मराठी', 'მარგალური', 'مصرى', 'مازِرونی', 'Bahasa', 'Melayu', 'ꯃꯤꯇꯩ', 'ꯂꯣꯟ', 'Mirandés', 'Монгол', 'မြန်မာဘာသာ', 'Nederlands', 'नेपाली', 'नेपाल', 'भाषा', '日本語', 'Norsk', 'bokmål', 'Norsk', 'nynorsk', 'Occitan', 'ଓଡ଼ିଆ', 'Oromoo', 'Oʻzbekcha', '/']
+
+	Processed 10 / 60 sentences
+index: 10, sentence: ਪੰਜਾਬੀ پنجابی پښتو ភាសាខ្មែរ Plattdüütsch Polski Português Qaraqalpaqsha Română Runa Simi Русский Саха тыла 
+
+index: 11, sentence: संस्कृतम् Sardu Scots Shqip Sicilianu සිංහල Simple English سنڌي Slovenčina Slovenščina Ślůnski Soomaaliga کوردی 
+
+index: 12, sentence: Српски / srpski Srpskohrvatski / српскохрватски Sunda Suomi Svenska Tagalog தமிழ் Taqbaylit Татарча / tatarça တႆး 
+
+tokens: ['Српски', '/', 'srpski', 'Srpskohrvatski', '/', 'српскохрватски', 'Sunda', 'Suomi', 'Svenska', 'Tagalog', 'தமிழ்', 'Taqbaylit', 'Татарча', '/']
+second ep1: ('Srpskohrvatski', 'PERSON', (3, 3)), ep2: ('Sunda Suomi', 'ORGANIZATION', (6, 7))
+relation is: no_relation, key is ('Sunda Suomi', 'Srpskohrvatski')
+index: 13, sentence: తెలుగు 
+
+index: 14, sentence: ไทย Тоҷикӣ Türkçe 
+
+
+	Processed 15 / 60 sentences
+index: 15, sentence: Türkmençe Українська اردو ئۇيغۇرچە / Uyghurche Vèneto Tiếng Việt Volapük Võro 
+
+tokens: ['Türkmençe', 'Українська', 'اردو', 'ئۇيغۇرچە', '/', 'Uyghurche', 'Vèneto', 'Tiếng', 'Việt', 'Volapük', 'Võro']
+index: 16, sentence: Winaray 吴语 ייִדיש 
+
+index: 17, sentence: Yorùbá 粵語 Zazaki Žemaitėška 中文 Batak Mandailing ꠍꠤꠟꠐꠤ Edit links Article Talk English Read View source View history Tools Tools move to sidebar hide 
+
+tokens: ['Yorùbá', '粵語', 'Zazaki', 'Žemaitėška', '中文', 'Batak', 'Mandailing', 'ꠍꠤꠟꠐꠤ', 'Edit', 'links', 'Article', 'Talk', 'English', 'Read', 'View', 'source', 'View', 'history', 'Tools', 'Tools', 'move', 'to', 'sidebar', 'hide']
+second ep1: ('Yorùbá', 'PERSON', (0, 0)), ep2: ('Zazaki Žemaitėška', 'ORGANIZATION', (2, 3))
+tokens: ['Yorùbá', '粵語', 'Zazaki', 'Žemaitėška', '中文', 'Batak', 'Mandailing', 'ꠍꠤꠟꠐꠤ', 'Edit', 'links', 'Article', 'Talk', 'English', 'Read', 'View', 'source', 'View', 'history', 'Tools', 'Tools', 'move', 'to', 'sidebar', 'hide']
+second ep1: ('Yorùbá', 'PERSON', (0, 0)), ep2: ('Batak Mandailing', 'ORGANIZATION', (5, 6))
+tokens: ['Yorùbá', '粵語', 'Zazaki', 'Žemaitėška', '中文', 'Batak', 'Mandailing', 'ꠍꠤꠟꠐꠤ', 'Edit', 'links', 'Article', 'Talk', 'English', 'Read', 'View', 'source', 'View', 'history', 'Tools', 'Tools', 'move', 'to', 'sidebar', 'hide']
+relation is: no_relation, key is ('Zazaki Žemaitėška', 'Yorùbá')
+relation is: no_relation, key is ('Batak Mandailing', 'Yorùbá')
+index: 18, sentence: Actions Read View source View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Download QR code Print/export Download as PDF Printable version In other projects Wikimedia Commons Wikinews Wikiquote Wikisource Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia American businessman and philanthropist (born 1955) 
+
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+index: 19, sentence: This article is about the co-founder of Microsoft. 
+
+
+	Processed 20 / 60 sentences
+index: 20, sentence: For other people with the same name, see Bill Gates (disambiguation). 
+
+index: 21, sentence: Bill Gates Gates in 2023 Born William Henry Gates III. 
+
+tokens: ['Bill', 'Gates', 'Gates', 'in', '2023', 'Born', 'William', 'Henry', 'Gates', 'III', '.']
+index: 22, sentence: (1955-10-28) October 28, 1955 (age69). 
+
+index: 23, sentence: Seattle, Washington, U.S. Education Harvard University (droppedout) Occupations Businessman philanthropist computer programmer writer Yearsactive 1972–present Knownfor Pioneer of the personal computer revolution with Paul Allen Co-founding of Microsoft and Gates Foundation Title See list Chair of the Gates Foundation Chairman and founder of Cascade Investment Chairman and founder of Branded Entertainment Network Chairman and co-founder of TerraPower Founder of Breakthrough Energy Founder of Gates Ventures Technology advisor of Microsoft Spouse Melinda French   (m. 1994; div. 2021)   
+
+tokens: ['U.S.', 'Education', 'Harvard', 'University', '(', 'droppedout', ')', 'Occupations', 'Businessman', 'philanthropist', 'computer', 'programmer', 'writer', 'Yearsactive', '1972', '–']
+first ep1: ('U.S. Education Harvard University', 'ORGANIZATION', (0, 3)), ep2: ('Yearsactive 1972', 'PERSON', (13, 14))
+tokens: ['U.S.', 'Education', 'Harvard', 'University', '(', 'droppedout', ')', 'Occupations', 'Businessman', 'philanthropist', 'computer', 'programmer', 'writer', 'Yearsactive', '1972', '–', 'present', 'Knownfor', 'Pioneer', 'of', 'the', 'personal', 'computer', 'revolution', 'with', 'Paul', 'Allen', 'Co', '-']
+tokens: ['Occupations', 'Businessman', 'philanthropist', 'computer', 'programmer', 'writer', 'Yearsactive', '1972', '–', 'present', 'Knownfor', 'Pioneer', 'of', 'the', 'personal', 'computer', 'revolution', 'with', 'Paul', 'Allen', 'Co', '-']
+second ep1: ('Yearsactive 1972', 'PERSON', (6, 7)), ep2: ('Knownfor Pioneer', 'ORGANIZATION', (10, 11))
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('TerraPower', 'ORGANIZATION', (2, 2)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('Breakthrough Energy', 'ORGANIZATION', (5, 6)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('Gates Ventures Technology', 'ORGANIZATION', (9, 11)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('Microsoft', 'ORGANIZATION', (14, 14)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+second ep1: ('Melinda', 'PERSON', (16, 16)), ep2: ('div', 'ORGANIZATION', (23, 23))
+relation is: no_relation, key is ('U.S. Education Harvard University', 'Yearsactive 1972')
+relation is: no_relation, key is ('Knownfor Pioneer', 'Yearsactive 1972')
+relation is: no_relation, key is ('TerraPower', 'Melinda')
+relation is: no_relation, key is ('Breakthrough Energy', 'Melinda')
+selected: 
+('Gates Ventures Technology', 'Melinda')
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+		Output Confidence: 0.7858930 ; Subject: Gates Ventures Technology ; Object: Melinda ;
+		Adding to set of extracted relations
+		==========
+relation is: no_relation, key is ('Microsoft', 'Melinda')
+relation is: no_relation, key is ('div', 'Melinda')
+index: 24, sentence: Children 3 Parents Bill Gates Sr. 
+
+
+	Processed 25 / 60 sentences
+index: 25, sentence: Mary Maxwell Awards Knight Commander of the Order of the British Empire (2005) Padma Bhushan (2015) Presidential Medal of Freedom (2016) Grand Cordon of the Order of the Rising Sun (2020) Hilal-e-Pakistan (2022) Website gatesnotes.com Signature This article is part of. 
+
+tokens: ['Mary', 'Maxwell', 'Awards', 'Knight', 'Commander', 'of', 'the', 'Order', 'of', 'the', 'British', 'Empire', '(', '2005', ')', 'Padma', 'Bhushan', '(']
+index: 26, sentence: a series about. 
+
+index: 27, sentence: Bill Gates Personal Awards and honors Philanthropy Political positions Public image Residence Companies Traf-O-Data Microsoft history timeline criticism BENlabs Cascade Investment TerraPower Gates Ventures Charitable organizations Bill & Melinda Gates Foundation Match for Africa 
+
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Philanthropy Political', 'ORGANIZATION', (6, 7))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Microsoft', 'ORGANIZATION', (18, 18))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('BENlabs Cascade', 'ORGANIZATION', (22, 23))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('TerraPower Gates Ventures Charitable', 'ORGANIZATION', (25, 28))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Bill & Melinda Gates Foundation Match', 'ORGANIZATION', (30, 35))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+relation is: no_relation, key is ('Philanthropy Political', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('Microsoft', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('BENlabs Cascade', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('TerraPower Gates Ventures Charitable', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('Bill & Melinda Gates Foundation Match', 'Bill Gates Personal Awards')
+index: 28, sentence: The Giving Pledge OER Project Breakthrough Energy Mission Innovation Writings " An Open Letter to Hobbyists " The Road Ahead Business @ the Speed of Thought How to Avoid a Climate Disaster How to Prevent the Next Pandemic Related Bill Gates' flower fly Codex Leicester Lost on the Grand Banks Paul Allen v t e William Henry Gates III (born October 28, 1955) is an American businessman and philanthropist. 
+
+tokens: ['flower', 'fly', 'Codex', 'Leicester', 'Lost', 'on', 'the', 'Grand', 'Banks', 'Paul', 'Allen', 'v', 't', 'e', 'William', 'Henry', 'Gates', 'III', '(']
+first ep1: ('Codex Leicester Lost', 'ORGANIZATION', (2, 4)), ep2: ('Paul Allen', 'PERSON', (9, 10))
+tokens: ['flower', 'fly', 'Codex', 'Leicester', 'Lost', 'on', 'the', 'Grand', 'Banks', 'Paul', 'Allen', 'v', 't', 'e', 'William', 'Henry', 'Gates', 'III', '(']
+first ep1: ('Codex Leicester Lost', 'ORGANIZATION', (2, 4)), ep2: ('William Henry Gates III', 'PERSON', (14, 17))
+tokens: ['flower', 'fly', 'Codex', 'Leicester', 'Lost', 'on', 'the', 'Grand', 'Banks', 'Paul', 'Allen', 'v', 't', 'e', 'William', 'Henry', 'Gates', 'III', '(']
+relation is: no_relation, key is ('Codex Leicester Lost', 'Paul Allen')
+relation is: no_relation, key is ('Codex Leicester Lost', 'William Henry Gates III')
+index: 29, sentence: A pioneer of the microcomputer revolution of the 1970s and 1980s, he co-founded the software company Microsoft in 1975 with his childhood friend Paul Allen. 
+
+tokens: ['founded', 'the', 'software', 'company', 'Microsoft', 'in', '1975', 'with', 'his', 'childhood', 'friend', 'Paul', 'Allen', '.']
+first ep1: ('Microsoft', 'ORGANIZATION', (4, 4)), ep2: ('Paul Allen', 'PERSON', (11, 12))
+relation is: org:founded_by, key is ('Microsoft', 'Paul Allen')
+
+	Processed 30 / 60 sentences
+index: 30, sentence: Following the company's 1986 initial public offering (IPO), Gates became then the youngest ever billionaire in 1987, at age 31. 
+
+tokens: ['IPO', ')', ',', 'Gates', 'became', 'then', 'the', 'youngest', 'ever', 'billionaire', 'in', '1987', ',']
+first ep1: ('IPO', 'ORGANIZATION', (0, 0)), ep2: ('Gates', 'PERSON', (3, 3))
+relation is: no_relation, key is ('IPO', 'Gates')
+index: 31, sentence: Forbes magazine ranked him as the world's wealthiest person for 18 out of 24 years between 1995 and 2017, including 13 years consecutively from 1995 to 2007. 
+
+index: 32, sentence: He became the first centibillionaire in 1999, when his net worth briefly surpassed $100 billion. 
+
+index: 33, sentence: On the 2024 Forbes list, he was ranked the world's seventh wealthiest person, with an estimated net worth of $128 billion. 
+
+index: 34, sentence: Born and raised in Seattle, Washington, Gates was privately educated at Lakeside School, where he befriended Allen and developed his computing interests. 
+
+tokens: ['Gates', 'was', 'privately', 'educated', 'at', 'Lakeside', 'School', ',']
+tokens: ['Gates', 'was', 'privately', 'educated', 'at', 'Lakeside', 'School', ',', 'where', 'he', 'befriended', 'Allen', 'and', 'developed', 'his', 'computing', 'interests', '.']
+first ep1: ('Gates', 'ORGANIZATION', (0, 0)), ep2: ('Allen', 'PERSON', (11, 11))
+tokens: ['Gates', 'was', 'privately', 'educated', 'at', 'Lakeside', 'School', ',', 'where', 'he', 'befriended', 'Allen', 'and', 'developed', 'his', 'computing', 'interests', '.']
+first ep1: ('Lakeside School', 'ORGANIZATION', (5, 6)), ep2: ('Allen', 'PERSON', (11, 11))
+relation is: no_relation, key is ('Gates', 'Allen')
+relation is: no_relation, key is ('Lakeside School', 'Allen')
+
+	Processed 35 / 60 sentences
+index: 35, sentence: In 1973, he enrolled at Harvard College, where he took classes including Math 55 and graduate level computer science courses, but he dropped out in 1975 to co-found and lead Microsoft. 
+
+tokens: ['he', 'enrolled', 'at', 'Harvard', 'College', ',', 'where', 'he', 'took', 'classes', 'including', 'Math', '55', 'and', 'graduate', 'level', 'computer', 'science', 'courses', ',', 'but', 'he', 'dropped', 'out', 'in', '1975', 'to', 'co', '-', 'found', 'and', 'lead', 'Microsoft', '.']
+index: 36, sentence: He served as its CEO for the next 25 years and also became president and chairman of the board when the company incorporated in 1981. 
+
+index: 37, sentence: Succeeded as CEO by Steve Ballmer in 2000, he transitioned to chief software architect, a position he held until 2008. 
+
+index: 38, sentence: He stepped down as chairman of the board in 2014 and became technology adviser to CEO Satya Nadella and other Microsoft leaders, a position he still holds. 
+
+tokens: ['He', 'stepped', 'down', 'as', 'chairman', 'of', 'the', 'board', 'in', '2014', 'and', 'became', 'technology', 'adviser', 'to', 'CEO', 'Satya', 'Nadella', 'and', 'other', 'Microsoft', 'leaders', ',']
+second ep1: ('Satya Nadella', 'PERSON', (16, 17)), ep2: ('Microsoft', 'ORGANIZATION', (20, 20))
+selected: 
+('Microsoft', 'Satya Nadella')
+
+		=== Extracted Relation ===
+		Input tokens: ['He', 'stepped', 'down', 'as', 'chairman', 'of', 'the', 'board', 'in', '2014', 'and', 'became', 'technology', 'adviser', 'to', 'CEO', 'Satya', 'Nadella', 'and', 'other', 'Microsoft', 'leaders', ',']
+		Output Confidence: 0.9740791 ; Subject: Microsoft ; Object: Satya Nadella ;
+		Adding to set of extracted relations
+		==========
+index: 39, sentence: He resigned from the board in 2020. 
+
+
+	Processed 40 / 60 sentences
+index: 40, sentence: Over time, Gates has reduced his role at Microsoft to focus on his philanthropic work with the Bill & Melinda Gates Foundation, the world's largest private charitable organization, which he and his then-wife Melinda French Gates established in 2000. 
+
+tokens: ['Gates', 'has', 'reduced', 'his', 'role', 'at', 'Microsoft', 'to', 'focus', 'on', 'his', 'philanthropic', 'work', 'with', 'the', 'Bill', '&']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Microsoft', 'ORGANIZATION', (6, 6))
+relation is: no_relation, key is ('Microsoft', 'Gates')
+index: 41, sentence: Focusing on areas including health, education, and poverty alleviation, he became known for his efforts to eradicate transmissible diseases such as tuberculosis, malaria, and polio. 
+
+index: 42, sentence: Gates and French Gates co-chaired the foundation until 2024, when the latter resigned following the couple's divorce; it has since been renamed the Gates Foundation, with Gates as its sole chair. 
+
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-']
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-', 'chaired', 'the', 'foundation', 'until', '2024', ',', 'when', 'the', 'latter', 'resigned', 'following', 'the', 'couple', "'s", 'divorce', ';', 'it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',']
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-', 'chaired', 'the', 'foundation', 'until', '2024', ',', 'when', 'the', 'latter', 'resigned', 'following', 'the', 'couple', "'s", 'divorce', ';', 'it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',']
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-', 'chaired', 'the', 'foundation', 'until', '2024', ',', 'when', 'the', 'latter', 'resigned', 'following', 'the', 'couple', "'s", 'divorce', ';', 'it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',', 'with', 'Gates', 'as', 'its', 'sole', 'chair', '.']
+tokens: ['it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',', 'with', 'Gates', 'as', 'its', 'sole', 'chair', '.']
+index: 43, sentence: Gates is founder and chairman of several other companies, including BEN, Cascade Investment, TerraPower, Gates Ventures, and Breakthrough Energy. 
+
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('BEN, Cascade Investment', 'ORGANIZATION', (11, 14))
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('TerraPower,', 'ORGANIZATION', (16, 17))
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Gates Ventures', 'ORGANIZATION', (18, 19))
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Breakthrough Energy', 'ORGANIZATION', (22, 23))
+tokens: ['including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+tokens: ['including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+tokens: ['including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+tokens: ['TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+tokens: ['Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+relation is: org:founded_by, key is ('BEN, Cascade Investment', 'Gates')
+relation is: org:founded_by, key is ('TerraPower,', 'Gates')
+relation is: org:founded_by, key is ('Gates Ventures', 'Gates')
+relation is: org:founded_by, key is ('Breakthrough Energy', 'Gates')
+index: 44, sentence: In 2010, he and Warren Buffett founded the Giving Pledge, whereby they and other billionaires pledge to give at least half their wealth to philanthropy. 
+
+tokens: ['he', 'and', 'Warren', 'Buffett', 'founded', 'the', 'Giving', 'Pledge', ',']
+second ep1: ('Warren Buffett', 'PERSON', (2, 3)), ep2: ('the Giving Pledge', 'ORGANIZATION', (5, 7))
+relation is: org:founded_by, key is ('the Giving Pledge', 'Warren Buffett')
+
+	Processed 45 / 60 sentences
+index: 45, sentence: Named as one of the 100 most influential people of the 20th century by Time magazine in 1999, he has received numerous other honors and accolades, including a Presidential Medal of Freedom, awarded jointly to him and French Gates in 2016 for their philanthropic work. 
+
+index: 46, sentence: The subject of several documentary films, he published the first of three planned memoirs, Source Code: My Beginnings, in 2025. 
+
+index: 47, sentence: Early life and education William Henry Gates III was born on October 28, 1955, in Seattle, Washington, [1] as the only son of William H. Gates Sr. 
+
+tokens: ['Early', 'life', 'and', 'education', 'William', 'Henry', 'Gates', 'III', 'was', 'born', 'on', 'October', '28', ',', '1955', ',', 'in', 'Seattle', ',', 'Washington', ',', '[', '1', ']', 'as', 'the', 'only', 'son', 'of', 'William', 'H.', 'Gates', 'Sr', '.']
+index: 48, sentence: [a] (1925–2020) and his first wife, Mary Maxwell Gates (1929–1994). 
+
+index: 49, sentence: [2] His ancestry includes English, German, and Irish / Scots-Irish. 
+
+
+	Processed 50 / 60 sentences
+index: 50, sentence: [3] His father was a prominent lawyer, and his mother served on the board of directors of First Interstate BancSystem and United Way of America. 
+
+tokens: ['and', 'his', 'mother', 'served', 'on', 'the', 'board', 'of', 'directors', 'of', 'First', 'Interstate', 'BancSystem', 'and', 'United', 'Way', 'of', 'America', '.']
+index: 51, sentence: Gates's maternal grandfather J. W. Maxwell was a national bank president. 
+
+tokens: ['Gates', "'s", 'maternal', 'grandfather', 'J.', 'W.', 'Maxwell', 'was', 'a', 'national', 'bank', 'president', '.']
+index: 52, sentence: Gates also has an older sister Kristi (Kristianne) and a younger sister Libby. 
+
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')', 'and', 'a', 'younger', 'sister', 'Libby', '.']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')', 'and', 'a', 'younger', 'sister', 'Libby', '.']
+tokens: ['Kristianne', ')', 'and', 'a', 'younger', 'sister', 'Libby', '.']
+index: 53, sentence: He is the fourth of his name in his family but is known as William Gates III or "Trey" (i.e., three) because his father had the "II" suffix. 
+
+tokens: ['He', 'is', 'the', 'fourth', 'of', 'his', 'name', 'in', 'his', 'family', 'but', 'is', 'known', 'as', 'William', 'Gates', 'III', 'or', '"', 'Trey', '"']
+index: 54, sentence: [4] [5] The family lived in the Sand Point area of Seattle in a home that was damaged by a rare tornado when Gates was 7. 
+
+tokens: ['The', 'family', 'lived', 'in', 'the', 'Sand', 'Point', 'area', 'of', 'Seattle', 'in', 'a', 'home', 'that', 'was', 'damaged', 'by', 'a', 'rare', 'tornado', 'when', 'Gates', 'was', '7', '.']
+first ep1: ('Sand Point', 'ORGANIZATION', (5, 6)), ep2: ('Gates', 'PERSON', (21, 21))
+relation is: no_relation, key is ('Sand Point', 'Gates')
+
+	Processed 55 / 60 sentences
+index: 55, sentence: [6] When Gates was young his parents wanted him to pursue a career in law. 
+
+index: 56, sentence: [7] During his childhood, his family regularly attended a church of the Congregational Christian Churches, a Protestant Reformed denomination. 
+
+index: 57, sentence: [8] [9] [10] Gates was small for his age and was bullied as a child. 
+
+index: 58, sentence: [5] The family encouraged competition; one visitor reported that "it didn't matter whether it was hearts or pickleball or swimming to the dock; there was always a reward for winning and there was always a penalty for losing". 
+
+index: 59, sentence: [11] Gates (right) with Paul Allen seated at Teletype Model 33 ASR terminals in Lakeside School, 1970 At age 13, he enrolled in the private Lakeside prep school. 
+
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',']
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Teletype Model 33 ASR', 'ORGANIZATION', (5, 8))
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',']
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Lakeside School', 'ORGANIZATION', (11, 12))
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',', '1970', 'At', 'age', '13', ',', 'he', 'enrolled', 'in', 'the', 'private', 'Lakeside', 'prep', 'school', '.']
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Lakeside', 'ORGANIZATION', (24, 24))
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',']
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',', '1970', 'At', 'age', '13', ',', 'he', 'enrolled', 'in', 'the', 'private', 'Lakeside', 'prep', 'school', '.']
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',', '1970', 'At', 'age', '13', ',', 'he', 'enrolled', 'in', 'the', 'private', 'Lakeside', 'prep', 'school', '.']
+relation is: no_relation, key is ('Teletype Model 33 ASR', 'Paul Allen')
+relation is: no_relation, key is ('Lakeside School', 'Paul Allen')
+relation is: no_relation, key is ('Lakeside', 'Paul Allen')
+
+	Processed 60 / 60 sentences
+index: 60, sentence: [12] [13] When he was in the eighth grade, the Mothers' Club at the school used proceeds from Lakeside School's rummage sale to buy a Telety 
+
+
+	Extracted annotations for  2  out of total  60  sentences
+
+	Relations extracted from this website: 2 (Overall: 2)
+
+================== ALL RELATIONS for org:top_members/employees ( 2 ) ==================
+Confidence: 0.9740791 	| Subject: Microsoft 	| Object: Satya Nadella
+Confidence: 0.7858930 	| Subject: Gates Ventures Technology 	| Object: Melinda
+
+========== Iteration: 1 - Query: Microsoft Satya Nadella ==========
+
+
+URL (1 / 10): https://news.microsoft.com/source/exec/satya-nadella/
+Fetching text from url ...
+Trimming webpage content from 146844 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 60 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+index: 1, sentence: Bill Gates - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Pages for logged out editors learn more Contributions Talk Contents move to sidebar hide (Top) 1 
+
+index: 2, sentence: Early life and education 2 Microsoft Toggle Microsoft subsection 2.1 BASIC 2.2 IBM partnership 2.3 Windows 2.4 Management style 3 Post-Microsoft Toggle Post-Microsoft subsection 3.1 Business ventures and investments 4 Climate change and energy 5 Political positions Toggle Political positions subsection 5.1 Regulation of the software industry 5.2 Donald Trump Facebook ban 5.3 Patents for COVID-19 vaccines 5.4 Cryptocurrencies 6 Philanthropy Toggle Philanthropy subsection 6.1 Bill & Melinda Gates Foundation 6.2 Personal donations 6.3 Charity sports events 7 Books 8 Personal life Toggle Personal life subsection 8.1 Marriage, family and divorce 8.2 Public image 8.3 Religious views 8.4 Wealth 9 Controversies Toggle Controversies subsection 9.1 Antitrust litigation 9.2 Treatment of colleagues and employees 9.3 Relationship with Jeffrey Epstein 10 Recognition 11 Depiction in media Toggle Depiction in media subsection 11.1 Documentary films about Gates 11.2 Feature films 11.3 Video and film clips 11.4 Radio 11.5 Television 12 Books 13 See also 14 Notes 15 References Toggle References subsection 15.1 Bibliography 15.2 Primary sources 16 Further reading 17 External links Toggle the table of contents Bill Gates 171 languages Afrikaans Alemannisch አማርኛ अंगिका Ænglisc العربية Aragonés Արեւմտահայերէն অসমীয়া Asturianu अवधी Azərbaycanca تۆرکجه Basa Bali বাংলা Banjar 閩南語 / Bân-lâm-gú Basa 
+
+tokens: ['Early', 'life', 'and', 'education', '2', 'Microsoft', 'Toggle', 'Microsoft', 'subsection', '2.1', 'BASIC', '2.2', 'IBM', 'partnership', '2.3', 'Windows', '2.4', 'Management', 'style', '3', 'Post', '-']
+tokens: ['Early', 'life', 'and', 'education', '2', 'Microsoft', 'Toggle', 'Microsoft', 'subsection', '2.1', 'BASIC', '2.2', 'IBM', 'partnership', '2.3', 'Windows', '2.4', 'Management', 'style', '3', 'Post', '-']
+tokens: ['Early', 'life', 'and', 'education', '2', 'Microsoft', 'Toggle', 'Microsoft', 'subsection', '2.1', 'BASIC', '2.2', 'IBM', 'partnership', '2.3', 'Windows', '2.4', 'Management', 'style', '3', 'Post', '-']
+index: 3, sentence: Banyumasan Башҡортса 
+
+index: 4, sentence: Беларуская Беларуская (тарашкевіца) Bikol Central Bislama Български Boarisch Bosanski Brezhoneg Català Чӑвашла Čeština ChiTumbuka Cymraeg Dansk الدارجة Deutsch डोटेली ཇོང་ཁ Eesti Ελληνικά Español Esperanto Estremeñu Euskara 
+
+
+	Processed 5 / 60 sentences
+index: 5, sentence: Eʋegbe فارسی Føroyskt Français Frysk Gaeilge Gàidhlig Galego Gĩkũyũ ગુજરાતી गोंयची कोंकणी / Gõychi Konknni 客家語 / Hak-kâ-ngî 한국어 Hausa Հայերեն हिन्दी Hrvatski Ido Igbo Ilokano 
+
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/']
+second ep1: ('Føroyskt Français', 'PERSON', (2, 3)), ep2: ('कोंकणी', 'ORGANIZATION', (11, 11))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/']
+second ep1: ('Gàidhlig Galego Gĩkũyũ', 'PERSON', (6, 8)), ep2: ('कोंकणी', 'ORGANIZATION', (11, 11))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/']
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Gõychi Konknni', 'PERSON', (13, 14))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Hak-kâ-ngî', 'PERSON', (17, 21))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Hrvatski Ido Igbo', 'PERSON', (26, 28))
+tokens: ['Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+relation is: no_relation, key is ('कोंकणी', 'Føroyskt Français')
+relation is: no_relation, key is ('कोंकणी', 'Gàidhlig Galego Gĩkũyũ')
+relation is: no_relation, key is ('कोंकणी', 'Gõychi Konknni')
+relation is: no_relation, key is ('कोंकणी', 'Hak-kâ-ngî')
+relation is: no_relation, key is ('कोंकणी', 'Hrvatski Ido Igbo')
+index: 6, sentence: Bahasa Indonesia Interlingua Ирон Íslenska Italiano עברית Jawa ಕನ್ನಡ 
+
+tokens: ['Bahasa', 'Indonesia', 'Interlingua', 'Ирон', 'Íslenska', 'Italiano', 'עברית', 'Jawa', 'ಕನ್ನಡ']
+second ep1: ('Ирон Íslenska', 'PERSON', (3, 4)), ep2: ('Jawa ಕನ್ನಡ', 'ORGANIZATION', (7, 8))
+relation is: no_relation, key is ('Jawa ಕನ್ನಡ', 'Ирон Íslenska')
+index: 7, sentence: Kapampangan ქართული कॉशुर / کٲشُر Қазақша Kernowek Kiswahili Kurdî Кыргызча ລາວ Latina Latviešu Lëtzebuergesch Lietuvių Ligure Limburgs Lingua Franca Nova La.lojban. 
+
+index: 8, sentence: Lombard Magyar मैथिली Македонски Malagasy മലയാളം 
+
+index: 9, sentence: Malti मराठी მარგალური مصرى مازِرونی Bahasa Melayu ꯃꯤꯇꯩ ꯂꯣꯟ Mirandés Монгол မြန်မာဘာသာ Nederlands नेपाली नेपाल भाषा 日本語 Norsk bokmål Norsk nynorsk Occitan ଓଡ଼ିଆ Oromoo Oʻzbekcha / ўзбекча 
+
+tokens: ['Malti', 'मराठी', 'მარგალური', 'مصرى', 'مازِرونی', 'Bahasa', 'Melayu', 'ꯃꯤꯇꯩ', 'ꯂꯣꯟ', 'Mirandés', 'Монгол', 'မြန်မာဘာသာ', 'Nederlands', 'नेपाली', 'नेपाल', 'भाषा', '日本語', 'Norsk', 'bokmål', 'Norsk', 'nynorsk', 'Occitan', 'ଓଡ଼ିଆ', 'Oromoo', 'Oʻzbekcha', '/']
+
+	Processed 10 / 60 sentences
+index: 10, sentence: ਪੰਜਾਬੀ پنجابی پښتو ភាសាខ្មែរ Plattdüütsch Polski Português Qaraqalpaqsha Română Runa Simi Русский Саха тыла 
+
+index: 11, sentence: संस्कृतम् Sardu Scots Shqip Sicilianu සිංහල Simple English سنڌي Slovenčina Slovenščina Ślůnski Soomaaliga کوردی 
+
+index: 12, sentence: Српски / srpski Srpskohrvatski / српскохрватски Sunda Suomi Svenska Tagalog தமிழ் Taqbaylit Татарча / tatarça တႆး 
+
+tokens: ['Српски', '/', 'srpski', 'Srpskohrvatski', '/', 'српскохрватски', 'Sunda', 'Suomi', 'Svenska', 'Tagalog', 'தமிழ்', 'Taqbaylit', 'Татарча', '/']
+second ep1: ('Srpskohrvatski', 'PERSON', (3, 3)), ep2: ('Sunda Suomi', 'ORGANIZATION', (6, 7))
+relation is: no_relation, key is ('Sunda Suomi', 'Srpskohrvatski')
+index: 13, sentence: తెలుగు 
+
+index: 14, sentence: ไทย Тоҷикӣ Türkçe 
+
+
+	Processed 15 / 60 sentences
+index: 15, sentence: Türkmençe Українська اردو ئۇيغۇرچە / Uyghurche Vèneto Tiếng Việt Volapük Võro 
+
+tokens: ['Türkmençe', 'Українська', 'اردو', 'ئۇيغۇرچە', '/', 'Uyghurche', 'Vèneto', 'Tiếng', 'Việt', 'Volapük', 'Võro']
+index: 16, sentence: Winaray 吴语 ייִדיש 
+
+index: 17, sentence: Yorùbá 粵語 Zazaki Žemaitėška 中文 Batak Mandailing ꠍꠤꠟꠐꠤ Edit links Article Talk English Read View source View history Tools Tools move to sidebar hide 
+
+tokens: ['Yorùbá', '粵語', 'Zazaki', 'Žemaitėška', '中文', 'Batak', 'Mandailing', 'ꠍꠤꠟꠐꠤ', 'Edit', 'links', 'Article', 'Talk', 'English', 'Read', 'View', 'source', 'View', 'history', 'Tools', 'Tools', 'move', 'to', 'sidebar', 'hide']
+second ep1: ('Yorùbá', 'PERSON', (0, 0)), ep2: ('Zazaki Žemaitėška', 'ORGANIZATION', (2, 3))
+tokens: ['Yorùbá', '粵語', 'Zazaki', 'Žemaitėška', '中文', 'Batak', 'Mandailing', 'ꠍꠤꠟꠐꠤ', 'Edit', 'links', 'Article', 'Talk', 'English', 'Read', 'View', 'source', 'View', 'history', 'Tools', 'Tools', 'move', 'to', 'sidebar', 'hide']
+second ep1: ('Yorùbá', 'PERSON', (0, 0)), ep2: ('Batak Mandailing', 'ORGANIZATION', (5, 6))
+tokens: ['Yorùbá', '粵語', 'Zazaki', 'Žemaitėška', '中文', 'Batak', 'Mandailing', 'ꠍꠤꠟꠐꠤ', 'Edit', 'links', 'Article', 'Talk', 'English', 'Read', 'View', 'source', 'View', 'history', 'Tools', 'Tools', 'move', 'to', 'sidebar', 'hide']
+relation is: no_relation, key is ('Zazaki Žemaitėška', 'Yorùbá')
+relation is: no_relation, key is ('Batak Mandailing', 'Yorùbá')
+index: 18, sentence: Actions Read View source View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Download QR code Print/export Download as PDF Printable version In other projects Wikimedia Commons Wikinews Wikiquote Wikisource Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia American businessman and philanthropist (born 1955) 
+
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+index: 19, sentence: This article is about the co-founder of Microsoft. 
+
+
+	Processed 20 / 60 sentences
+index: 20, sentence: For other people with the same name, see Bill Gates (disambiguation). 
+
+index: 21, sentence: Bill Gates Gates in 2023 Born William Henry Gates III. 
+
+tokens: ['Bill', 'Gates', 'Gates', 'in', '2023', 'Born', 'William', 'Henry', 'Gates', 'III', '.']
+index: 22, sentence: (1955-10-28) October 28, 1955 (age69). 
+
+index: 23, sentence: Seattle, Washington, U.S. Education Harvard University (droppedout) Occupations Businessman philanthropist computer programmer writer Yearsactive 1972–present Knownfor Pioneer of the personal computer revolution with Paul Allen Co-founding of Microsoft and Gates Foundation Title See list Chair of the Gates Foundation Chairman and founder of Cascade Investment Chairman and founder of Branded Entertainment Network Chairman and co-founder of TerraPower Founder of Breakthrough Energy Founder of Gates Ventures Technology advisor of Microsoft Spouse Melinda French   (m. 1994; div. 2021)   
+
+tokens: ['U.S.', 'Education', 'Harvard', 'University', '(', 'droppedout', ')', 'Occupations', 'Businessman', 'philanthropist', 'computer', 'programmer', 'writer', 'Yearsactive', '1972', '–']
+first ep1: ('U.S. Education Harvard University', 'ORGANIZATION', (0, 3)), ep2: ('Yearsactive 1972', 'PERSON', (13, 14))
+tokens: ['U.S.', 'Education', 'Harvard', 'University', '(', 'droppedout', ')', 'Occupations', 'Businessman', 'philanthropist', 'computer', 'programmer', 'writer', 'Yearsactive', '1972', '–', 'present', 'Knownfor', 'Pioneer', 'of', 'the', 'personal', 'computer', 'revolution', 'with', 'Paul', 'Allen', 'Co', '-']
+tokens: ['Occupations', 'Businessman', 'philanthropist', 'computer', 'programmer', 'writer', 'Yearsactive', '1972', '–', 'present', 'Knownfor', 'Pioneer', 'of', 'the', 'personal', 'computer', 'revolution', 'with', 'Paul', 'Allen', 'Co', '-']
+second ep1: ('Yearsactive 1972', 'PERSON', (6, 7)), ep2: ('Knownfor Pioneer', 'ORGANIZATION', (10, 11))
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('TerraPower', 'ORGANIZATION', (2, 2)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('Breakthrough Energy', 'ORGANIZATION', (5, 6)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('Gates Ventures Technology', 'ORGANIZATION', (9, 11)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('Microsoft', 'ORGANIZATION', (14, 14)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+second ep1: ('Melinda', 'PERSON', (16, 16)), ep2: ('div', 'ORGANIZATION', (23, 23))
+relation is: no_relation, key is ('U.S. Education Harvard University', 'Yearsactive 1972')
+relation is: no_relation, key is ('Knownfor Pioneer', 'Yearsactive 1972')
+relation is: no_relation, key is ('TerraPower', 'Melinda')
+relation is: no_relation, key is ('Breakthrough Energy', 'Melinda')
+selected: 
+('Gates Ventures Technology', 'Melinda')
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+		Output Confidence: 0.7858930 ; Subject: Gates Ventures Technology ; Object: Melinda ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+relation is: no_relation, key is ('Microsoft', 'Melinda')
+relation is: no_relation, key is ('div', 'Melinda')
+index: 24, sentence: Children 3 Parents Bill Gates Sr. 
+
+
+	Processed 25 / 60 sentences
+index: 25, sentence: Mary Maxwell Awards Knight Commander of the Order of the British Empire (2005) Padma Bhushan (2015) Presidential Medal of Freedom (2016) Grand Cordon of the Order of the Rising Sun (2020) Hilal-e-Pakistan (2022) Website gatesnotes.com Signature This article is part of. 
+
+tokens: ['Mary', 'Maxwell', 'Awards', 'Knight', 'Commander', 'of', 'the', 'Order', 'of', 'the', 'British', 'Empire', '(', '2005', ')', 'Padma', 'Bhushan', '(']
+index: 26, sentence: a series about. 
+
+index: 27, sentence: Bill Gates Personal Awards and honors Philanthropy Political positions Public image Residence Companies Traf-O-Data Microsoft history timeline criticism BENlabs Cascade Investment TerraPower Gates Ventures Charitable organizations Bill & Melinda Gates Foundation Match for Africa 
+
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Philanthropy Political', 'ORGANIZATION', (6, 7))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Microsoft', 'ORGANIZATION', (18, 18))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('BENlabs Cascade', 'ORGANIZATION', (22, 23))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('TerraPower Gates Ventures Charitable', 'ORGANIZATION', (25, 28))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Bill & Melinda Gates Foundation Match', 'ORGANIZATION', (30, 35))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+relation is: no_relation, key is ('Philanthropy Political', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('Microsoft', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('BENlabs Cascade', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('TerraPower Gates Ventures Charitable', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('Bill & Melinda Gates Foundation Match', 'Bill Gates Personal Awards')
+index: 28, sentence: The Giving Pledge OER Project Breakthrough Energy Mission Innovation Writings " An Open Letter to Hobbyists " The Road Ahead Business @ the Speed of Thought How to Avoid a Climate Disaster How to Prevent the Next Pandemic Related Bill Gates' flower fly Codex Leicester Lost on the Grand Banks Paul Allen v t e William Henry Gates III (born October 28, 1955) is an American businessman and philanthropist. 
+
+tokens: ['flower', 'fly', 'Codex', 'Leicester', 'Lost', 'on', 'the', 'Grand', 'Banks', 'Paul', 'Allen', 'v', 't', 'e', 'William', 'Henry', 'Gates', 'III', '(']
+first ep1: ('Codex Leicester Lost', 'ORGANIZATION', (2, 4)), ep2: ('Paul Allen', 'PERSON', (9, 10))
+tokens: ['flower', 'fly', 'Codex', 'Leicester', 'Lost', 'on', 'the', 'Grand', 'Banks', 'Paul', 'Allen', 'v', 't', 'e', 'William', 'Henry', 'Gates', 'III', '(']
+first ep1: ('Codex Leicester Lost', 'ORGANIZATION', (2, 4)), ep2: ('William Henry Gates III', 'PERSON', (14, 17))
+tokens: ['flower', 'fly', 'Codex', 'Leicester', 'Lost', 'on', 'the', 'Grand', 'Banks', 'Paul', 'Allen', 'v', 't', 'e', 'William', 'Henry', 'Gates', 'III', '(']
+relation is: no_relation, key is ('Codex Leicester Lost', 'Paul Allen')
+relation is: no_relation, key is ('Codex Leicester Lost', 'William Henry Gates III')
+index: 29, sentence: A pioneer of the microcomputer revolution of the 1970s and 1980s, he co-founded the software company Microsoft in 1975 with his childhood friend Paul Allen. 
+
+tokens: ['founded', 'the', 'software', 'company', 'Microsoft', 'in', '1975', 'with', 'his', 'childhood', 'friend', 'Paul', 'Allen', '.']
+first ep1: ('Microsoft', 'ORGANIZATION', (4, 4)), ep2: ('Paul Allen', 'PERSON', (11, 12))
+relation is: org:founded_by, key is ('Microsoft', 'Paul Allen')
+
+	Processed 30 / 60 sentences
+index: 30, sentence: Following the company's 1986 initial public offering (IPO), Gates became then the youngest ever billionaire in 1987, at age 31. 
+
+tokens: ['IPO', ')', ',', 'Gates', 'became', 'then', 'the', 'youngest', 'ever', 'billionaire', 'in', '1987', ',']
+first ep1: ('IPO', 'ORGANIZATION', (0, 0)), ep2: ('Gates', 'PERSON', (3, 3))
+relation is: no_relation, key is ('IPO', 'Gates')
+index: 31, sentence: Forbes magazine ranked him as the world's wealthiest person for 18 out of 24 years between 1995 and 2017, including 13 years consecutively from 1995 to 2007. 
+
+index: 32, sentence: He became the first centibillionaire in 1999, when his net worth briefly surpassed $100 billion. 
+
+index: 33, sentence: On the 2024 Forbes list, he was ranked the world's seventh wealthiest person, with an estimated net worth of $128 billion. 
+
+index: 34, sentence: Born and raised in Seattle, Washington, Gates was privately educated at Lakeside School, where he befriended Allen and developed his computing interests. 
+
+tokens: ['Gates', 'was', 'privately', 'educated', 'at', 'Lakeside', 'School', ',']
+tokens: ['Gates', 'was', 'privately', 'educated', 'at', 'Lakeside', 'School', ',', 'where', 'he', 'befriended', 'Allen', 'and', 'developed', 'his', 'computing', 'interests', '.']
+first ep1: ('Gates', 'ORGANIZATION', (0, 0)), ep2: ('Allen', 'PERSON', (11, 11))
+tokens: ['Gates', 'was', 'privately', 'educated', 'at', 'Lakeside', 'School', ',', 'where', 'he', 'befriended', 'Allen', 'and', 'developed', 'his', 'computing', 'interests', '.']
+first ep1: ('Lakeside School', 'ORGANIZATION', (5, 6)), ep2: ('Allen', 'PERSON', (11, 11))
+relation is: no_relation, key is ('Gates', 'Allen')
+relation is: no_relation, key is ('Lakeside School', 'Allen')
+
+	Processed 35 / 60 sentences
+index: 35, sentence: In 1973, he enrolled at Harvard College, where he took classes including Math 55 and graduate level computer science courses, but he dropped out in 1975 to co-found and lead Microsoft. 
+
+tokens: ['he', 'enrolled', 'at', 'Harvard', 'College', ',', 'where', 'he', 'took', 'classes', 'including', 'Math', '55', 'and', 'graduate', 'level', 'computer', 'science', 'courses', ',', 'but', 'he', 'dropped', 'out', 'in', '1975', 'to', 'co', '-', 'found', 'and', 'lead', 'Microsoft', '.']
+index: 36, sentence: He served as its CEO for the next 25 years and also became president and chairman of the board when the company incorporated in 1981. 
+
+index: 37, sentence: Succeeded as CEO by Steve Ballmer in 2000, he transitioned to chief software architect, a position he held until 2008. 
+
+index: 38, sentence: He stepped down as chairman of the board in 2014 and became technology adviser to CEO Satya Nadella and other Microsoft leaders, a position he still holds. 
+
+tokens: ['He', 'stepped', 'down', 'as', 'chairman', 'of', 'the', 'board', 'in', '2014', 'and', 'became', 'technology', 'adviser', 'to', 'CEO', 'Satya', 'Nadella', 'and', 'other', 'Microsoft', 'leaders', ',']
+second ep1: ('Satya Nadella', 'PERSON', (16, 17)), ep2: ('Microsoft', 'ORGANIZATION', (20, 20))
+selected: 
+('Microsoft', 'Satya Nadella')
+
+		=== Extracted Relation ===
+		Input tokens: ['He', 'stepped', 'down', 'as', 'chairman', 'of', 'the', 'board', 'in', '2014', 'and', 'became', 'technology', 'adviser', 'to', 'CEO', 'Satya', 'Nadella', 'and', 'other', 'Microsoft', 'leaders', ',']
+		Output Confidence: 0.9740791 ; Subject: Microsoft ; Object: Satya Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+index: 39, sentence: He resigned from the board in 2020. 
+
+
+	Processed 40 / 60 sentences
+index: 40, sentence: Over time, Gates has reduced his role at Microsoft to focus on his philanthropic work with the Bill & Melinda Gates Foundation, the world's largest private charitable organization, which he and his then-wife Melinda French Gates established in 2000. 
+
+tokens: ['Gates', 'has', 'reduced', 'his', 'role', 'at', 'Microsoft', 'to', 'focus', 'on', 'his', 'philanthropic', 'work', 'with', 'the', 'Bill', '&']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Microsoft', 'ORGANIZATION', (6, 6))
+relation is: no_relation, key is ('Microsoft', 'Gates')
+index: 41, sentence: Focusing on areas including health, education, and poverty alleviation, he became known for his efforts to eradicate transmissible diseases such as tuberculosis, malaria, and polio. 
+
+index: 42, sentence: Gates and French Gates co-chaired the foundation until 2024, when the latter resigned following the couple's divorce; it has since been renamed the Gates Foundation, with Gates as its sole chair. 
+
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-']
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-', 'chaired', 'the', 'foundation', 'until', '2024', ',', 'when', 'the', 'latter', 'resigned', 'following', 'the', 'couple', "'s", 'divorce', ';', 'it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',']
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-', 'chaired', 'the', 'foundation', 'until', '2024', ',', 'when', 'the', 'latter', 'resigned', 'following', 'the', 'couple', "'s", 'divorce', ';', 'it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',']
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-', 'chaired', 'the', 'foundation', 'until', '2024', ',', 'when', 'the', 'latter', 'resigned', 'following', 'the', 'couple', "'s", 'divorce', ';', 'it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',', 'with', 'Gates', 'as', 'its', 'sole', 'chair', '.']
+tokens: ['it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',', 'with', 'Gates', 'as', 'its', 'sole', 'chair', '.']
+index: 43, sentence: Gates is founder and chairman of several other companies, including BEN, Cascade Investment, TerraPower, Gates Ventures, and Breakthrough Energy. 
+
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('BEN, Cascade Investment', 'ORGANIZATION', (11, 14))
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('TerraPower,', 'ORGANIZATION', (16, 17))
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Gates Ventures', 'ORGANIZATION', (18, 19))
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Breakthrough Energy', 'ORGANIZATION', (22, 23))
+tokens: ['including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+tokens: ['including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+tokens: ['including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+tokens: ['TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+tokens: ['Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+relation is: org:founded_by, key is ('BEN, Cascade Investment', 'Gates')
+relation is: org:founded_by, key is ('TerraPower,', 'Gates')
+relation is: org:founded_by, key is ('Gates Ventures', 'Gates')
+relation is: org:founded_by, key is ('Breakthrough Energy', 'Gates')
+index: 44, sentence: In 2010, he and Warren Buffett founded the Giving Pledge, whereby they and other billionaires pledge to give at least half their wealth to philanthropy. 
+
+tokens: ['he', 'and', 'Warren', 'Buffett', 'founded', 'the', 'Giving', 'Pledge', ',']
+second ep1: ('Warren Buffett', 'PERSON', (2, 3)), ep2: ('the Giving Pledge', 'ORGANIZATION', (5, 7))
+relation is: org:founded_by, key is ('the Giving Pledge', 'Warren Buffett')
+
+	Processed 45 / 60 sentences
+index: 45, sentence: Named as one of the 100 most influential people of the 20th century by Time magazine in 1999, he has received numerous other honors and accolades, including a Presidential Medal of Freedom, awarded jointly to him and French Gates in 2016 for their philanthropic work. 
+
+index: 46, sentence: The subject of several documentary films, he published the first of three planned memoirs, Source Code: My Beginnings, in 2025. 
+
+index: 47, sentence: Early life and education William Henry Gates III was born on October 28, 1955, in Seattle, Washington, [1] as the only son of William H. Gates Sr. 
+
+tokens: ['Early', 'life', 'and', 'education', 'William', 'Henry', 'Gates', 'III', 'was', 'born', 'on', 'October', '28', ',', '1955', ',', 'in', 'Seattle', ',', 'Washington', ',', '[', '1', ']', 'as', 'the', 'only', 'son', 'of', 'William', 'H.', 'Gates', 'Sr', '.']
+index: 48, sentence: [a] (1925–2020) and his first wife, Mary Maxwell Gates (1929–1994). 
+
+index: 49, sentence: [2] His ancestry includes English, German, and Irish / Scots-Irish. 
+
+
+	Processed 50 / 60 sentences
+index: 50, sentence: [3] His father was a prominent lawyer, and his mother served on the board of directors of First Interstate BancSystem and United Way of America. 
+
+tokens: ['and', 'his', 'mother', 'served', 'on', 'the', 'board', 'of', 'directors', 'of', 'First', 'Interstate', 'BancSystem', 'and', 'United', 'Way', 'of', 'America', '.']
+index: 51, sentence: Gates's maternal grandfather J. W. Maxwell was a national bank president. 
+
+tokens: ['Gates', "'s", 'maternal', 'grandfather', 'J.', 'W.', 'Maxwell', 'was', 'a', 'national', 'bank', 'president', '.']
+index: 52, sentence: Gates also has an older sister Kristi (Kristianne) and a younger sister Libby. 
+
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')', 'and', 'a', 'younger', 'sister', 'Libby', '.']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')', 'and', 'a', 'younger', 'sister', 'Libby', '.']
+tokens: ['Kristianne', ')', 'and', 'a', 'younger', 'sister', 'Libby', '.']
+index: 53, sentence: He is the fourth of his name in his family but is known as William Gates III or "Trey" (i.e., three) because his father had the "II" suffix. 
+
+tokens: ['He', 'is', 'the', 'fourth', 'of', 'his', 'name', 'in', 'his', 'family', 'but', 'is', 'known', 'as', 'William', 'Gates', 'III', 'or', '"', 'Trey', '"']
+index: 54, sentence: [4] [5] The family lived in the Sand Point area of Seattle in a home that was damaged by a rare tornado when Gates was 7. 
+
+tokens: ['The', 'family', 'lived', 'in', 'the', 'Sand', 'Point', 'area', 'of', 'Seattle', 'in', 'a', 'home', 'that', 'was', 'damaged', 'by', 'a', 'rare', 'tornado', 'when', 'Gates', 'was', '7', '.']
+first ep1: ('Sand Point', 'ORGANIZATION', (5, 6)), ep2: ('Gates', 'PERSON', (21, 21))
+relation is: no_relation, key is ('Sand Point', 'Gates')
+
+	Processed 55 / 60 sentences
+index: 55, sentence: [6] When Gates was young his parents wanted him to pursue a career in law. 
+
+index: 56, sentence: [7] During his childhood, his family regularly attended a church of the Congregational Christian Churches, a Protestant Reformed denomination. 
+
+index: 57, sentence: [8] [9] [10] Gates was small for his age and was bullied as a child. 
+
+index: 58, sentence: [5] The family encouraged competition; one visitor reported that "it didn't matter whether it was hearts or pickleball or swimming to the dock; there was always a reward for winning and there was always a penalty for losing". 
+
+index: 59, sentence: [11] Gates (right) with Paul Allen seated at Teletype Model 33 ASR terminals in Lakeside School, 1970 At age 13, he enrolled in the private Lakeside prep school. 
+
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',']
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Teletype Model 33 ASR', 'ORGANIZATION', (5, 8))
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',']
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Lakeside School', 'ORGANIZATION', (11, 12))
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',', '1970', 'At', 'age', '13', ',', 'he', 'enrolled', 'in', 'the', 'private', 'Lakeside', 'prep', 'school', '.']
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Lakeside', 'ORGANIZATION', (24, 24))
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',']
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',', '1970', 'At', 'age', '13', ',', 'he', 'enrolled', 'in', 'the', 'private', 'Lakeside', 'prep', 'school', '.']
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',', '1970', 'At', 'age', '13', ',', 'he', 'enrolled', 'in', 'the', 'private', 'Lakeside', 'prep', 'school', '.']
+relation is: no_relation, key is ('Teletype Model 33 ASR', 'Paul Allen')
+relation is: no_relation, key is ('Lakeside School', 'Paul Allen')
+relation is: no_relation, key is ('Lakeside', 'Paul Allen')
+
+	Processed 60 / 60 sentences
+index: 60, sentence: [12] [13] When he was in the eighth grade, the Mothers' Club at the school used proceeds from Lakeside School's rummage sale to buy a Telety 
+
+
+	Extracted annotations for  2  out of total  60  sentences
+
+	Relations extracted from this website: 0 (Overall: 2)
+
+================== ALL RELATIONS for org:top_members/employees ( 2 ) ==================
+Confidence: 0.9740791 	| Subject: Microsoft 	| Object: Satya Nadella
+Confidence: 0.7858930 	| Subject: Gates Ventures Technology 	| Object: Melinda
+
+========== Iteration: 2 - Query: Gates Ventures Technology Melinda ==========
+
+
+URL (1 / 10): https://www.pivotalventures.org/
+Fetching text from url ...
+Trimming webpage content from 146844 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 60 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+index: 1, sentence: Bill Gates - Wikipedia Jump to content Main menu Main menu move to sidebar hide Navigation Main page Contents Current events Random article About Wikipedia Contact us Contribute Help Learn to edit Community portal Recent changes Upload file Special pages Search Search Appearance Donate Create account Log in Personal tools Donate Create account Log in Pages for logged out editors learn more Contributions Talk Contents move to sidebar hide (Top) 1 
+
+index: 2, sentence: Early life and education 2 Microsoft Toggle Microsoft subsection 2.1 BASIC 2.2 IBM partnership 2.3 Windows 2.4 Management style 3 Post-Microsoft Toggle Post-Microsoft subsection 3.1 Business ventures and investments 4 Climate change and energy 5 Political positions Toggle Political positions subsection 5.1 Regulation of the software industry 5.2 Donald Trump Facebook ban 5.3 Patents for COVID-19 vaccines 5.4 Cryptocurrencies 6 Philanthropy Toggle Philanthropy subsection 6.1 Bill & Melinda Gates Foundation 6.2 Personal donations 6.3 Charity sports events 7 Books 8 Personal life Toggle Personal life subsection 8.1 Marriage, family and divorce 8.2 Public image 8.3 Religious views 8.4 Wealth 9 Controversies Toggle Controversies subsection 9.1 Antitrust litigation 9.2 Treatment of colleagues and employees 9.3 Relationship with Jeffrey Epstein 10 Recognition 11 Depiction in media Toggle Depiction in media subsection 11.1 Documentary films about Gates 11.2 Feature films 11.3 Video and film clips 11.4 Radio 11.5 Television 12 Books 13 See also 14 Notes 15 References Toggle References subsection 15.1 Bibliography 15.2 Primary sources 16 Further reading 17 External links Toggle the table of contents Bill Gates 171 languages Afrikaans Alemannisch አማርኛ अंगिका Ænglisc العربية Aragonés Արեւմտահայերէն অসমীয়া Asturianu अवधी Azərbaycanca تۆرکجه Basa Bali বাংলা Banjar 閩南語 / Bân-lâm-gú Basa 
+
+tokens: ['Early', 'life', 'and', 'education', '2', 'Microsoft', 'Toggle', 'Microsoft', 'subsection', '2.1', 'BASIC', '2.2', 'IBM', 'partnership', '2.3', 'Windows', '2.4', 'Management', 'style', '3', 'Post', '-']
+tokens: ['Early', 'life', 'and', 'education', '2', 'Microsoft', 'Toggle', 'Microsoft', 'subsection', '2.1', 'BASIC', '2.2', 'IBM', 'partnership', '2.3', 'Windows', '2.4', 'Management', 'style', '3', 'Post', '-']
+tokens: ['Early', 'life', 'and', 'education', '2', 'Microsoft', 'Toggle', 'Microsoft', 'subsection', '2.1', 'BASIC', '2.2', 'IBM', 'partnership', '2.3', 'Windows', '2.4', 'Management', 'style', '3', 'Post', '-']
+index: 3, sentence: Banyumasan Башҡортса 
+
+index: 4, sentence: Беларуская Беларуская (тарашкевіца) Bikol Central Bislama Български Boarisch Bosanski Brezhoneg Català Чӑвашла Čeština ChiTumbuka Cymraeg Dansk الدارجة Deutsch डोटेली ཇོང་ཁ Eesti Ελληνικά Español Esperanto Estremeñu Euskara 
+
+
+	Processed 5 / 60 sentences
+index: 5, sentence: Eʋegbe فارسی Føroyskt Français Frysk Gaeilge Gàidhlig Galego Gĩkũyũ ગુજરાતી गोंयची कोंकणी / Gõychi Konknni 客家語 / Hak-kâ-ngî 한국어 Hausa Հայերեն हिन्दी Hrvatski Ido Igbo Ilokano 
+
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/']
+second ep1: ('Føroyskt Français', 'PERSON', (2, 3)), ep2: ('कोंकणी', 'ORGANIZATION', (11, 11))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/']
+second ep1: ('Gàidhlig Galego Gĩkũyũ', 'PERSON', (6, 8)), ep2: ('कोंकणी', 'ORGANIZATION', (11, 11))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/']
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Gõychi Konknni', 'PERSON', (13, 14))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Hak-kâ-ngî', 'PERSON', (17, 21))
+tokens: ['Eʋegbe', 'فارسی', 'Føroyskt', 'Français', 'Frysk', 'Gaeilge', 'Gàidhlig', 'Galego', 'Gĩkũyũ', 'ગુજરાતી', 'गोंयची', 'कोंकणी', '/', 'Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Hrvatski Ido Igbo', 'PERSON', (26, 28))
+tokens: ['Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Gõychi', 'Konknni', '客家語', '/', 'Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+tokens: ['Hak', '-', 'kâ', '-', 'ngî', '한국어', 'Hausa', 'Հայերեն', 'हिन्दी', 'Hrvatski', 'Ido', 'Igbo', 'Ilokano']
+relation is: no_relation, key is ('कोंकणी', 'Føroyskt Français')
+relation is: no_relation, key is ('कोंकणी', 'Gàidhlig Galego Gĩkũyũ')
+relation is: no_relation, key is ('कोंकणी', 'Gõychi Konknni')
+relation is: no_relation, key is ('कोंकणी', 'Hak-kâ-ngî')
+relation is: no_relation, key is ('कोंकणी', 'Hrvatski Ido Igbo')
+index: 6, sentence: Bahasa Indonesia Interlingua Ирон Íslenska Italiano עברית Jawa ಕನ್ನಡ 
+
+tokens: ['Bahasa', 'Indonesia', 'Interlingua', 'Ирон', 'Íslenska', 'Italiano', 'עברית', 'Jawa', 'ಕನ್ನಡ']
+second ep1: ('Ирон Íslenska', 'PERSON', (3, 4)), ep2: ('Jawa ಕನ್ನಡ', 'ORGANIZATION', (7, 8))
+relation is: no_relation, key is ('Jawa ಕನ್ನಡ', 'Ирон Íslenska')
+index: 7, sentence: Kapampangan ქართული कॉशुर / کٲشُر Қазақша Kernowek Kiswahili Kurdî Кыргызча ລາວ Latina Latviešu Lëtzebuergesch Lietuvių Ligure Limburgs Lingua Franca Nova La.lojban. 
+
+index: 8, sentence: Lombard Magyar मैथिली Македонски Malagasy മലയാളം 
+
+index: 9, sentence: Malti मराठी მარგალური مصرى مازِرونی Bahasa Melayu ꯃꯤꯇꯩ ꯂꯣꯟ Mirandés Монгол မြန်မာဘာသာ Nederlands नेपाली नेपाल भाषा 日本語 Norsk bokmål Norsk nynorsk Occitan ଓଡ଼ିଆ Oromoo Oʻzbekcha / ўзбекча 
+
+tokens: ['Malti', 'मराठी', 'მარგალური', 'مصرى', 'مازِرونی', 'Bahasa', 'Melayu', 'ꯃꯤꯇꯩ', 'ꯂꯣꯟ', 'Mirandés', 'Монгол', 'မြန်မာဘာသာ', 'Nederlands', 'नेपाली', 'नेपाल', 'भाषा', '日本語', 'Norsk', 'bokmål', 'Norsk', 'nynorsk', 'Occitan', 'ଓଡ଼ିଆ', 'Oromoo', 'Oʻzbekcha', '/']
+
+	Processed 10 / 60 sentences
+index: 10, sentence: ਪੰਜਾਬੀ پنجابی پښتو ភាសាខ្មែរ Plattdüütsch Polski Português Qaraqalpaqsha Română Runa Simi Русский Саха тыла 
+
+index: 11, sentence: संस्कृतम् Sardu Scots Shqip Sicilianu සිංහල Simple English سنڌي Slovenčina Slovenščina Ślůnski Soomaaliga کوردی 
+
+index: 12, sentence: Српски / srpski Srpskohrvatski / српскохрватски Sunda Suomi Svenska Tagalog தமிழ் Taqbaylit Татарча / tatarça တႆး 
+
+tokens: ['Српски', '/', 'srpski', 'Srpskohrvatski', '/', 'српскохрватски', 'Sunda', 'Suomi', 'Svenska', 'Tagalog', 'தமிழ்', 'Taqbaylit', 'Татарча', '/']
+second ep1: ('Srpskohrvatski', 'PERSON', (3, 3)), ep2: ('Sunda Suomi', 'ORGANIZATION', (6, 7))
+relation is: no_relation, key is ('Sunda Suomi', 'Srpskohrvatski')
+index: 13, sentence: తెలుగు 
+
+index: 14, sentence: ไทย Тоҷикӣ Türkçe 
+
+
+	Processed 15 / 60 sentences
+index: 15, sentence: Türkmençe Українська اردو ئۇيغۇرچە / Uyghurche Vèneto Tiếng Việt Volapük Võro 
+
+tokens: ['Türkmençe', 'Українська', 'اردو', 'ئۇيغۇرچە', '/', 'Uyghurche', 'Vèneto', 'Tiếng', 'Việt', 'Volapük', 'Võro']
+index: 16, sentence: Winaray 吴语 ייִדיש 
+
+index: 17, sentence: Yorùbá 粵語 Zazaki Žemaitėška 中文 Batak Mandailing ꠍꠤꠟꠐꠤ Edit links Article Talk English Read View source View history Tools Tools move to sidebar hide 
+
+tokens: ['Yorùbá', '粵語', 'Zazaki', 'Žemaitėška', '中文', 'Batak', 'Mandailing', 'ꠍꠤꠟꠐꠤ', 'Edit', 'links', 'Article', 'Talk', 'English', 'Read', 'View', 'source', 'View', 'history', 'Tools', 'Tools', 'move', 'to', 'sidebar', 'hide']
+second ep1: ('Yorùbá', 'PERSON', (0, 0)), ep2: ('Zazaki Žemaitėška', 'ORGANIZATION', (2, 3))
+tokens: ['Yorùbá', '粵語', 'Zazaki', 'Žemaitėška', '中文', 'Batak', 'Mandailing', 'ꠍꠤꠟꠐꠤ', 'Edit', 'links', 'Article', 'Talk', 'English', 'Read', 'View', 'source', 'View', 'history', 'Tools', 'Tools', 'move', 'to', 'sidebar', 'hide']
+second ep1: ('Yorùbá', 'PERSON', (0, 0)), ep2: ('Batak Mandailing', 'ORGANIZATION', (5, 6))
+tokens: ['Yorùbá', '粵語', 'Zazaki', 'Žemaitėška', '中文', 'Batak', 'Mandailing', 'ꠍꠤꠟꠐꠤ', 'Edit', 'links', 'Article', 'Talk', 'English', 'Read', 'View', 'source', 'View', 'history', 'Tools', 'Tools', 'move', 'to', 'sidebar', 'hide']
+relation is: no_relation, key is ('Zazaki Žemaitėška', 'Yorùbá')
+relation is: no_relation, key is ('Batak Mandailing', 'Yorùbá')
+index: 18, sentence: Actions Read View source View history General What links here Related changes Upload file Permanent link Page information Cite this page Get shortened URL Download QR code Print/export Download as PDF Printable version In other projects Wikimedia Commons Wikinews Wikiquote Wikisource Wikidata item Appearance move to sidebar hide From Wikipedia, the free encyclopedia American businessman and philanthropist (born 1955) 
+
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+tokens: ['export', 'Download', 'as', 'PDF', 'Printable', 'version', 'In', 'other', 'projects', 'Wikimedia', 'Commons', 'Wikinews', 'Wikiquote', 'Wikisource', 'Wikidata', 'item', 'Appearance', 'move', 'to', 'sidebar', 'hide', 'From', 'Wikipedia', ',']
+index: 19, sentence: This article is about the co-founder of Microsoft. 
+
+
+	Processed 20 / 60 sentences
+index: 20, sentence: For other people with the same name, see Bill Gates (disambiguation). 
+
+index: 21, sentence: Bill Gates Gates in 2023 Born William Henry Gates III. 
+
+tokens: ['Bill', 'Gates', 'Gates', 'in', '2023', 'Born', 'William', 'Henry', 'Gates', 'III', '.']
+index: 22, sentence: (1955-10-28) October 28, 1955 (age69). 
+
+index: 23, sentence: Seattle, Washington, U.S. Education Harvard University (droppedout) Occupations Businessman philanthropist computer programmer writer Yearsactive 1972–present Knownfor Pioneer of the personal computer revolution with Paul Allen Co-founding of Microsoft and Gates Foundation Title See list Chair of the Gates Foundation Chairman and founder of Cascade Investment Chairman and founder of Branded Entertainment Network Chairman and co-founder of TerraPower Founder of Breakthrough Energy Founder of Gates Ventures Technology advisor of Microsoft Spouse Melinda French   (m. 1994; div. 2021)   
+
+tokens: ['U.S.', 'Education', 'Harvard', 'University', '(', 'droppedout', ')', 'Occupations', 'Businessman', 'philanthropist', 'computer', 'programmer', 'writer', 'Yearsactive', '1972', '–']
+first ep1: ('U.S. Education Harvard University', 'ORGANIZATION', (0, 3)), ep2: ('Yearsactive 1972', 'PERSON', (13, 14))
+tokens: ['U.S.', 'Education', 'Harvard', 'University', '(', 'droppedout', ')', 'Occupations', 'Businessman', 'philanthropist', 'computer', 'programmer', 'writer', 'Yearsactive', '1972', '–', 'present', 'Knownfor', 'Pioneer', 'of', 'the', 'personal', 'computer', 'revolution', 'with', 'Paul', 'Allen', 'Co', '-']
+tokens: ['Occupations', 'Businessman', 'philanthropist', 'computer', 'programmer', 'writer', 'Yearsactive', '1972', '–', 'present', 'Knownfor', 'Pioneer', 'of', 'the', 'personal', 'computer', 'revolution', 'with', 'Paul', 'Allen', 'Co', '-']
+second ep1: ('Yearsactive 1972', 'PERSON', (6, 7)), ep2: ('Knownfor Pioneer', 'ORGANIZATION', (10, 11))
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founding', 'of', 'Microsoft', 'and', 'Gates', 'Foundation', 'Title', 'See', 'list', 'Chair', 'of', 'the', 'Gates', 'Foundation', 'Chairman', 'and', 'founder', 'of', 'Cascade', 'Investment', 'Chairman', 'and', 'founder', 'of', 'Branded', 'Entertainment', 'Network', 'Chairman', 'and', 'co', '-']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('TerraPower', 'ORGANIZATION', (2, 2)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('Breakthrough Energy', 'ORGANIZATION', (5, 6)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('Gates Ventures Technology', 'ORGANIZATION', (9, 11)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+first ep1: ('Microsoft', 'ORGANIZATION', (14, 14)), ep2: ('Melinda', 'PERSON', (16, 16))
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(', 'm.', '1994', ';', 'div', '.']
+second ep1: ('Melinda', 'PERSON', (16, 16)), ep2: ('div', 'ORGANIZATION', (23, 23))
+relation is: no_relation, key is ('U.S. Education Harvard University', 'Yearsactive 1972')
+relation is: no_relation, key is ('Knownfor Pioneer', 'Yearsactive 1972')
+relation is: no_relation, key is ('TerraPower', 'Melinda')
+relation is: no_relation, key is ('Breakthrough Energy', 'Melinda')
+selected: 
+('Gates Ventures Technology', 'Melinda')
+
+		=== Extracted Relation ===
+		Input tokens: ['founder', 'of', 'TerraPower', 'Founder', 'of', 'Breakthrough', 'Energy', 'Founder', 'of', 'Gates', 'Ventures', 'Technology', 'advisor', 'of', 'Microsoft', 'Spouse', 'Melinda', 'French', '  ', '(']
+		Output Confidence: 0.7858930 ; Subject: Gates Ventures Technology ; Object: Melinda ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+relation is: no_relation, key is ('Microsoft', 'Melinda')
+relation is: no_relation, key is ('div', 'Melinda')
+index: 24, sentence: Children 3 Parents Bill Gates Sr. 
+
+
+	Processed 25 / 60 sentences
+index: 25, sentence: Mary Maxwell Awards Knight Commander of the Order of the British Empire (2005) Padma Bhushan (2015) Presidential Medal of Freedom (2016) Grand Cordon of the Order of the Rising Sun (2020) Hilal-e-Pakistan (2022) Website gatesnotes.com Signature This article is part of. 
+
+tokens: ['Mary', 'Maxwell', 'Awards', 'Knight', 'Commander', 'of', 'the', 'Order', 'of', 'the', 'British', 'Empire', '(', '2005', ')', 'Padma', 'Bhushan', '(']
+index: 26, sentence: a series about. 
+
+index: 27, sentence: Bill Gates Personal Awards and honors Philanthropy Political positions Public image Residence Companies Traf-O-Data Microsoft history timeline criticism BENlabs Cascade Investment TerraPower Gates Ventures Charitable organizations Bill & Melinda Gates Foundation Match for Africa 
+
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Philanthropy Political', 'ORGANIZATION', (6, 7))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Microsoft', 'ORGANIZATION', (18, 18))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('BENlabs Cascade', 'ORGANIZATION', (22, 23))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('TerraPower Gates Ventures Charitable', 'ORGANIZATION', (25, 28))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Bill & Melinda Gates Foundation Match', 'ORGANIZATION', (30, 35))
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Bill', 'Gates', 'Personal', 'Awards', 'and', 'honors', 'Philanthropy', 'Political', 'positions', 'Public', 'image', 'Residence', 'Companies', 'Traf', '-', 'O', '-', 'Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+tokens: ['Data', 'Microsoft', 'history', 'timeline', 'criticism', 'BENlabs', 'Cascade', 'Investment', 'TerraPower', 'Gates', 'Ventures', 'Charitable', 'organizations', 'Bill', '&', 'Melinda', 'Gates', 'Foundation', 'Match', 'for', 'Africa']
+relation is: no_relation, key is ('Philanthropy Political', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('Microsoft', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('BENlabs Cascade', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('TerraPower Gates Ventures Charitable', 'Bill Gates Personal Awards')
+relation is: no_relation, key is ('Bill & Melinda Gates Foundation Match', 'Bill Gates Personal Awards')
+index: 28, sentence: The Giving Pledge OER Project Breakthrough Energy Mission Innovation Writings " An Open Letter to Hobbyists " The Road Ahead Business @ the Speed of Thought How to Avoid a Climate Disaster How to Prevent the Next Pandemic Related Bill Gates' flower fly Codex Leicester Lost on the Grand Banks Paul Allen v t e William Henry Gates III (born October 28, 1955) is an American businessman and philanthropist. 
+
+tokens: ['flower', 'fly', 'Codex', 'Leicester', 'Lost', 'on', 'the', 'Grand', 'Banks', 'Paul', 'Allen', 'v', 't', 'e', 'William', 'Henry', 'Gates', 'III', '(']
+first ep1: ('Codex Leicester Lost', 'ORGANIZATION', (2, 4)), ep2: ('Paul Allen', 'PERSON', (9, 10))
+tokens: ['flower', 'fly', 'Codex', 'Leicester', 'Lost', 'on', 'the', 'Grand', 'Banks', 'Paul', 'Allen', 'v', 't', 'e', 'William', 'Henry', 'Gates', 'III', '(']
+first ep1: ('Codex Leicester Lost', 'ORGANIZATION', (2, 4)), ep2: ('William Henry Gates III', 'PERSON', (14, 17))
+tokens: ['flower', 'fly', 'Codex', 'Leicester', 'Lost', 'on', 'the', 'Grand', 'Banks', 'Paul', 'Allen', 'v', 't', 'e', 'William', 'Henry', 'Gates', 'III', '(']
+relation is: no_relation, key is ('Codex Leicester Lost', 'Paul Allen')
+relation is: no_relation, key is ('Codex Leicester Lost', 'William Henry Gates III')
+index: 29, sentence: A pioneer of the microcomputer revolution of the 1970s and 1980s, he co-founded the software company Microsoft in 1975 with his childhood friend Paul Allen. 
+
+tokens: ['founded', 'the', 'software', 'company', 'Microsoft', 'in', '1975', 'with', 'his', 'childhood', 'friend', 'Paul', 'Allen', '.']
+first ep1: ('Microsoft', 'ORGANIZATION', (4, 4)), ep2: ('Paul Allen', 'PERSON', (11, 12))
+relation is: org:founded_by, key is ('Microsoft', 'Paul Allen')
+
+	Processed 30 / 60 sentences
+index: 30, sentence: Following the company's 1986 initial public offering (IPO), Gates became then the youngest ever billionaire in 1987, at age 31. 
+
+tokens: ['IPO', ')', ',', 'Gates', 'became', 'then', 'the', 'youngest', 'ever', 'billionaire', 'in', '1987', ',']
+first ep1: ('IPO', 'ORGANIZATION', (0, 0)), ep2: ('Gates', 'PERSON', (3, 3))
+relation is: no_relation, key is ('IPO', 'Gates')
+index: 31, sentence: Forbes magazine ranked him as the world's wealthiest person for 18 out of 24 years between 1995 and 2017, including 13 years consecutively from 1995 to 2007. 
+
+index: 32, sentence: He became the first centibillionaire in 1999, when his net worth briefly surpassed $100 billion. 
+
+index: 33, sentence: On the 2024 Forbes list, he was ranked the world's seventh wealthiest person, with an estimated net worth of $128 billion. 
+
+index: 34, sentence: Born and raised in Seattle, Washington, Gates was privately educated at Lakeside School, where he befriended Allen and developed his computing interests. 
+
+tokens: ['Gates', 'was', 'privately', 'educated', 'at', 'Lakeside', 'School', ',']
+tokens: ['Gates', 'was', 'privately', 'educated', 'at', 'Lakeside', 'School', ',', 'where', 'he', 'befriended', 'Allen', 'and', 'developed', 'his', 'computing', 'interests', '.']
+first ep1: ('Gates', 'ORGANIZATION', (0, 0)), ep2: ('Allen', 'PERSON', (11, 11))
+tokens: ['Gates', 'was', 'privately', 'educated', 'at', 'Lakeside', 'School', ',', 'where', 'he', 'befriended', 'Allen', 'and', 'developed', 'his', 'computing', 'interests', '.']
+first ep1: ('Lakeside School', 'ORGANIZATION', (5, 6)), ep2: ('Allen', 'PERSON', (11, 11))
+relation is: no_relation, key is ('Gates', 'Allen')
+relation is: no_relation, key is ('Lakeside School', 'Allen')
+
+	Processed 35 / 60 sentences
+index: 35, sentence: In 1973, he enrolled at Harvard College, where he took classes including Math 55 and graduate level computer science courses, but he dropped out in 1975 to co-found and lead Microsoft. 
+
+tokens: ['he', 'enrolled', 'at', 'Harvard', 'College', ',', 'where', 'he', 'took', 'classes', 'including', 'Math', '55', 'and', 'graduate', 'level', 'computer', 'science', 'courses', ',', 'but', 'he', 'dropped', 'out', 'in', '1975', 'to', 'co', '-', 'found', 'and', 'lead', 'Microsoft', '.']
+index: 36, sentence: He served as its CEO for the next 25 years and also became president and chairman of the board when the company incorporated in 1981. 
+
+index: 37, sentence: Succeeded as CEO by Steve Ballmer in 2000, he transitioned to chief software architect, a position he held until 2008. 
+
+index: 38, sentence: He stepped down as chairman of the board in 2014 and became technology adviser to CEO Satya Nadella and other Microsoft leaders, a position he still holds. 
+
+tokens: ['He', 'stepped', 'down', 'as', 'chairman', 'of', 'the', 'board', 'in', '2014', 'and', 'became', 'technology', 'adviser', 'to', 'CEO', 'Satya', 'Nadella', 'and', 'other', 'Microsoft', 'leaders', ',']
+second ep1: ('Satya Nadella', 'PERSON', (16, 17)), ep2: ('Microsoft', 'ORGANIZATION', (20, 20))
+selected: 
+('Microsoft', 'Satya Nadella')
+
+		=== Extracted Relation ===
+		Input tokens: ['He', 'stepped', 'down', 'as', 'chairman', 'of', 'the', 'board', 'in', '2014', 'and', 'became', 'technology', 'adviser', 'to', 'CEO', 'Satya', 'Nadella', 'and', 'other', 'Microsoft', 'leaders', ',']
+		Output Confidence: 0.9740791 ; Subject: Microsoft ; Object: Satya Nadella ;
+		Duplicate with lower confidence than existing record. Ignoring this.
+		==========
+index: 39, sentence: He resigned from the board in 2020. 
+
+
+	Processed 40 / 60 sentences
+index: 40, sentence: Over time, Gates has reduced his role at Microsoft to focus on his philanthropic work with the Bill & Melinda Gates Foundation, the world's largest private charitable organization, which he and his then-wife Melinda French Gates established in 2000. 
+
+tokens: ['Gates', 'has', 'reduced', 'his', 'role', 'at', 'Microsoft', 'to', 'focus', 'on', 'his', 'philanthropic', 'work', 'with', 'the', 'Bill', '&']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Microsoft', 'ORGANIZATION', (6, 6))
+relation is: no_relation, key is ('Microsoft', 'Gates')
+index: 41, sentence: Focusing on areas including health, education, and poverty alleviation, he became known for his efforts to eradicate transmissible diseases such as tuberculosis, malaria, and polio. 
+
+index: 42, sentence: Gates and French Gates co-chaired the foundation until 2024, when the latter resigned following the couple's divorce; it has since been renamed the Gates Foundation, with Gates as its sole chair. 
+
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-']
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-', 'chaired', 'the', 'foundation', 'until', '2024', ',', 'when', 'the', 'latter', 'resigned', 'following', 'the', 'couple', "'s", 'divorce', ';', 'it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',']
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-', 'chaired', 'the', 'foundation', 'until', '2024', ',', 'when', 'the', 'latter', 'resigned', 'following', 'the', 'couple', "'s", 'divorce', ';', 'it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',']
+tokens: ['Gates', 'and', 'French', 'Gates', 'co', '-', 'chaired', 'the', 'foundation', 'until', '2024', ',', 'when', 'the', 'latter', 'resigned', 'following', 'the', 'couple', "'s", 'divorce', ';', 'it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',', 'with', 'Gates', 'as', 'its', 'sole', 'chair', '.']
+tokens: ['it', 'has', 'since', 'been', 'renamed', 'the', 'Gates', 'Foundation', ',', 'with', 'Gates', 'as', 'its', 'sole', 'chair', '.']
+index: 43, sentence: Gates is founder and chairman of several other companies, including BEN, Cascade Investment, TerraPower, Gates Ventures, and Breakthrough Energy. 
+
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('BEN, Cascade Investment', 'ORGANIZATION', (11, 14))
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('TerraPower,', 'ORGANIZATION', (16, 17))
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Gates Ventures', 'ORGANIZATION', (18, 19))
+tokens: ['Gates', 'is', 'founder', 'and', 'chairman', 'of', 'several', 'other', 'companies', ',', 'including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Breakthrough Energy', 'ORGANIZATION', (22, 23))
+tokens: ['including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+tokens: ['including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',']
+tokens: ['including', 'BEN', ',', 'Cascade', 'Investment', ',', 'TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+tokens: ['TerraPower', ',', 'Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+tokens: ['Gates', 'Ventures', ',', 'and', 'Breakthrough', 'Energy', '.']
+relation is: org:founded_by, key is ('BEN, Cascade Investment', 'Gates')
+relation is: org:founded_by, key is ('TerraPower,', 'Gates')
+relation is: org:founded_by, key is ('Gates Ventures', 'Gates')
+relation is: org:founded_by, key is ('Breakthrough Energy', 'Gates')
+index: 44, sentence: In 2010, he and Warren Buffett founded the Giving Pledge, whereby they and other billionaires pledge to give at least half their wealth to philanthropy. 
+
+tokens: ['he', 'and', 'Warren', 'Buffett', 'founded', 'the', 'Giving', 'Pledge', ',']
+second ep1: ('Warren Buffett', 'PERSON', (2, 3)), ep2: ('the Giving Pledge', 'ORGANIZATION', (5, 7))
+relation is: org:founded_by, key is ('the Giving Pledge', 'Warren Buffett')
+
+	Processed 45 / 60 sentences
+index: 45, sentence: Named as one of the 100 most influential people of the 20th century by Time magazine in 1999, he has received numerous other honors and accolades, including a Presidential Medal of Freedom, awarded jointly to him and French Gates in 2016 for their philanthropic work. 
+
+index: 46, sentence: The subject of several documentary films, he published the first of three planned memoirs, Source Code: My Beginnings, in 2025. 
+
+index: 47, sentence: Early life and education William Henry Gates III was born on October 28, 1955, in Seattle, Washington, [1] as the only son of William H. Gates Sr. 
+
+tokens: ['Early', 'life', 'and', 'education', 'William', 'Henry', 'Gates', 'III', 'was', 'born', 'on', 'October', '28', ',', '1955', ',', 'in', 'Seattle', ',', 'Washington', ',', '[', '1', ']', 'as', 'the', 'only', 'son', 'of', 'William', 'H.', 'Gates', 'Sr', '.']
+index: 48, sentence: [a] (1925–2020) and his first wife, Mary Maxwell Gates (1929–1994). 
+
+index: 49, sentence: [2] His ancestry includes English, German, and Irish / Scots-Irish. 
+
+
+	Processed 50 / 60 sentences
+index: 50, sentence: [3] His father was a prominent lawyer, and his mother served on the board of directors of First Interstate BancSystem and United Way of America. 
+
+tokens: ['and', 'his', 'mother', 'served', 'on', 'the', 'board', 'of', 'directors', 'of', 'First', 'Interstate', 'BancSystem', 'and', 'United', 'Way', 'of', 'America', '.']
+index: 51, sentence: Gates's maternal grandfather J. W. Maxwell was a national bank president. 
+
+tokens: ['Gates', "'s", 'maternal', 'grandfather', 'J.', 'W.', 'Maxwell', 'was', 'a', 'national', 'bank', 'president', '.']
+index: 52, sentence: Gates also has an older sister Kristi (Kristianne) and a younger sister Libby. 
+
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')', 'and', 'a', 'younger', 'sister', 'Libby', '.']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')']
+tokens: ['Gates', 'also', 'has', 'an', 'older', 'sister', 'Kristi', '(', 'Kristianne', ')', 'and', 'a', 'younger', 'sister', 'Libby', '.']
+tokens: ['Kristianne', ')', 'and', 'a', 'younger', 'sister', 'Libby', '.']
+index: 53, sentence: He is the fourth of his name in his family but is known as William Gates III or "Trey" (i.e., three) because his father had the "II" suffix. 
+
+tokens: ['He', 'is', 'the', 'fourth', 'of', 'his', 'name', 'in', 'his', 'family', 'but', 'is', 'known', 'as', 'William', 'Gates', 'III', 'or', '"', 'Trey', '"']
+index: 54, sentence: [4] [5] The family lived in the Sand Point area of Seattle in a home that was damaged by a rare tornado when Gates was 7. 
+
+tokens: ['The', 'family', 'lived', 'in', 'the', 'Sand', 'Point', 'area', 'of', 'Seattle', 'in', 'a', 'home', 'that', 'was', 'damaged', 'by', 'a', 'rare', 'tornado', 'when', 'Gates', 'was', '7', '.']
+first ep1: ('Sand Point', 'ORGANIZATION', (5, 6)), ep2: ('Gates', 'PERSON', (21, 21))
+relation is: no_relation, key is ('Sand Point', 'Gates')
+
+	Processed 55 / 60 sentences
+index: 55, sentence: [6] When Gates was young his parents wanted him to pursue a career in law. 
+
+index: 56, sentence: [7] During his childhood, his family regularly attended a church of the Congregational Christian Churches, a Protestant Reformed denomination. 
+
+index: 57, sentence: [8] [9] [10] Gates was small for his age and was bullied as a child. 
+
+index: 58, sentence: [5] The family encouraged competition; one visitor reported that "it didn't matter whether it was hearts or pickleball or swimming to the dock; there was always a reward for winning and there was always a penalty for losing". 
+
+index: 59, sentence: [11] Gates (right) with Paul Allen seated at Teletype Model 33 ASR terminals in Lakeside School, 1970 At age 13, he enrolled in the private Lakeside prep school. 
+
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',']
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Teletype Model 33 ASR', 'ORGANIZATION', (5, 8))
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',']
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Lakeside School', 'ORGANIZATION', (11, 12))
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',', '1970', 'At', 'age', '13', ',', 'he', 'enrolled', 'in', 'the', 'private', 'Lakeside', 'prep', 'school', '.']
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Lakeside', 'ORGANIZATION', (24, 24))
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',']
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',', '1970', 'At', 'age', '13', ',', 'he', 'enrolled', 'in', 'the', 'private', 'Lakeside', 'prep', 'school', '.']
+tokens: ['with', 'Paul', 'Allen', 'seated', 'at', 'Teletype', 'Model', '33', 'ASR', 'terminals', 'in', 'Lakeside', 'School', ',', '1970', 'At', 'age', '13', ',', 'he', 'enrolled', 'in', 'the', 'private', 'Lakeside', 'prep', 'school', '.']
+relation is: no_relation, key is ('Teletype Model 33 ASR', 'Paul Allen')
+relation is: no_relation, key is ('Lakeside School', 'Paul Allen')
+relation is: no_relation, key is ('Lakeside', 'Paul Allen')
+
+	Processed 60 / 60 sentences
+index: 60, sentence: [12] [13] When he was in the eighth grade, the Mothers' Club at the school used proceeds from Lakeside School's rummage sale to buy a Telety 
+
+
+	Extracted annotations for  2  out of total  60  sentences
+
+	Relations extracted from this website: 0 (Overall: 2)
+
+================== ALL RELATIONS for org:top_members/employees ( 2 ) ==================
+Confidence: 0.9740791 	| Subject: Microsoft 	| Object: Satya Nadella
+Confidence: 0.7858930 	| Subject: Gates Ventures Technology 	| Object: Melinda
+No new unused tuples available. Stopping.

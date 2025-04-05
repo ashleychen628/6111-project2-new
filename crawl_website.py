@@ -53,19 +53,35 @@ def download_and_clean_html(url):
         #     if text:
         #         # print(text)
         #         collected_text.append(text)
+        # for tag in soup.find_all(['li', 'td', 'tr']):
+        #     segment = tag.get_text(" ", strip=True)
+        #     if segment:
+        #         segments.append(segment)
+
         # print(collected_text)
         text = soup.get_text(separator=' ', strip=True)
-        text = " ".join(collected_text)
         text = text.replace('\xa0', '')
-        ZERO_WIDTH_CHARACTERS = ['\u200b', '\u200c', '\u200d', '\u2060', '\ufeff']
-        for zwc in ZERO_WIDTH_CHARACTERS:
-            text = text.replace(zwc, '')
+        # ZERO_WIDTH_CHARACTERS = ['\u200b', '\u200c', '\u200d', '\u2060', '\ufeff']
+        # for zwc in ZERO_WIDTH_CHARACTERS:
+        #     text = text.replace(zwc, '')
         text = re.sub(r'\s+([.,;:!?])', r'\1', text)
         text = re.sub(r'\(\s+', '(', text)
         text = re.sub(r'\s+\)', ')', text)
-        text = re.sub(r'\[\s+', '[', text)    # remove space after opening square bracket
-        text = re.sub(r'\s+\]', ']', text)    # remove space before closing square bracket
 
+        # Remove space before and after opening bracket [
+        text = re.sub(r'\s+\[', '[', text)  # space before [ 
+        text = re.sub(r'\[\s+', '[', text)  # space after [ yes
+
+        # Remove space before and after closing bracket ]
+        text = re.sub(r'\s+\]', ']', text)  # space before ] yes
+        # text = re.sub(r'\]\s+', ']', text)  # space after ] no
+
+        # Remove spaces between adjacent brackets like ] [
+        text = re.sub(r'\]\s+\[', '][', text)
+
+        for char in ['\u200b', '\u200c', '\u200d', '\xa0', '\ufeff']:
+            text = text.replace(char, '')
+        text = text.strip() 
 
         lines = text.splitlines()
         non_blank_lines = [line.strip() for line in lines if line.strip()]
