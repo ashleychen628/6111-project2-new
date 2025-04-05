@@ -1,0 +1,307 @@
+Loading pre-trained spanBERT from ./pretrained_spanbert
+____
+Parameters:
+Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+Engine key      = 84f98f408aba949e8
+Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+Method          = -gemini
+Relation        = 3
+Threshold       = 0.7
+Query           = megan rapinoe redding
+# of Tuples     = 2
+Loading necessary libraries; This should take a minute or so ...)
+
+
+========== Iteration: 0 - Query: megan rapinoe redding ==========
+
+
+URL (1 / 10): https://www.sfgate.com/sports/article/how-megan-rapinoe-remembered-hometown-redding-18190858.php
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (2 / 10): https://en.wikipedia.org/wiki/Megan_Rapinoe
+Fetching text from url ...
+Trimming webpage content from 123929 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 64 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 64 sentences
+
+	Processed 10 / 64 sentences
+
+		=== Extracted Relation ===
+		Sentence: Megan Rapinoe Rapinoe with the U.S. national team in 2019 Personal information Full name Megan Anna Rapinoe[1 ]
+		Subject: Megan Rapinoe Rapinoe ; Object: U.S. ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Megan Rapinoe Rapinoe with the U.S. national team in 2019 Personal information Full name Megan Anna Rapinoe[1 ]
+		Subject: Megan Anna Rapinoe ; Object: U.S. ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 15 / 64 sentences
+
+	Processed 20 / 64 sentences
+
+	Processed 25 / 64 sentences
+
+		=== Extracted Relation ===
+		Sentence: Rapinoe co - captained the national team alongside Carli Lloyd and Alex Morgan from 2018 to 2020.[5][6 ] She previously played for the Chicago Red Stars , Philadelphia Independence ,
+		Subject: Rapinoe ; Object: Philadelphia Independence ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 30 / 64 sentences
+
+	Processed 35 / 64 sentences
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding ,
+		Subject: Rapinoe ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding , California ,
+		Subject: Rapinoe ; Object: California ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding , California , with her parents , Jim and Denise ,
+		Subject: Jim ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding , California , with her parents , Jim and Denise ,
+		Subject: Denise ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding , California , with her parents , Jim and Denise , and five siblings , including her fraternal twin Rachael Rapinoe .
+		Subject: Rachael Rapinoe ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: California , with her parents , Jim and Denise ,
+		Subject: Denise ; Object: California ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 40 / 64 sentences
+
+	Processed 45 / 64 sentences
+
+	Processed 50 / 64 sentences
+
+	Processed 55 / 64 sentences
+
+	Processed 60 / 64 sentences
+	Extracted annotations for  7  out of total  64  sentences 
+
+	Relations extracted from this website: 9 (Overall: 9) 
+
+
+URL (3 / 10): https://www.mercurynews.com/2019/07/06/womens-world-cup-hometown-star-out-of-step-in-californias-trump-country/
+Fetching text from url ...
+Trimming webpage content from 19979 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 58 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 58 sentences
+
+		=== Extracted Relation ===
+		Sentence: Hometown star stirs mixed feelings in California ’s Trump country Megan Rapinoe is captain of the U.S. World Cup team but not everyone in Redding likes what she has to say Share this :
+		Subject: Megan Rapinoe ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: U.S. women 's national team winger Megan Rapinoe grew up in Redding .
+		Subject: Megan Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Jim Rapinoe the father of U.S. women 's national team winger Megan Rapinoe poses for a photograph on the soccer field named after his daughter at the California Soccer Park in Redding ,
+		Subject: Megan Rapinoe ; Object: U.S. ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 10 / 58 sentences
+
+		=== Extracted Relation ===
+		Sentence: celebrates Alex Morgan 's ( 13 ) second goal of the game during the 66th minute of the game against France Wednesday July 25 , 2012 at legendary Hampden Park in Glasgow , Scotland .
+		Subject: Alex Morgan ; Object: Scotland ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Jim Rapinoe the father of U.S. women 's national team winger Megan Rapinoe poses for a photograph along 15 Rapinoe Way named for his daughter near the California Soccer Park in Redding , Calif. ,
+		Subject: Jim Rapinoe ; Object: Calif. ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Jim Rapinoe the father of U.S. women 's national team winger Megan Rapinoe poses for a photograph along 15 Rapinoe Way named for his daughter near the California Soccer Park in Redding ,
+		Subject: Megan Rapinoe ; Object: California ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 15 / 58 sentences
+
+		=== Extracted Relation ===
+		Sentence: and United States forward Megan Rapinoe (
+		Subject: Megan Rapinoe ; Object: United States ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: A street sign 15 Rapinoe Way named after U.S. women 's national team winger Megan Rapinoe is photographed near the California Soccer Park in Redding ,
+		Subject: Megan Rapinoe ; Object: U.S. ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence: A street sign 15 Rapinoe Way named after U.S. women 's national team winger Megan Rapinoe is photographed near the California Soccer Park in Redding , Calif. ,
+		Subject: Rapinoe ; Object: Calif. ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: A street sign 15 Rapinoe Way named after U.S. women 's national team winger Megan Rapinoe is photographed near the California Soccer Park in Redding ,
+		Subject: Megan Rapinoe ; Object: U.S. ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence: A street sign 15 Rapinoe Way named after U.S. women 's national team winger Megan Rapinoe is photographed near the California Soccer Park in Redding ,
+		Subject: Megan Rapinoe ; Object: California ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 20 / 58 sentences
+
+		=== Extracted Relation ===
+		Sentence: United States midfielder Samantha Mewis (
+		Subject: Samantha Mewis ; Object: United States ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: U.S. women 's national team winger Megan Rapinoe grew up in Redding .
+		Subject: Megan Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 25 / 58 sentences
+
+		=== Extracted Relation ===
+		Sentence: U.S. women 's national team winger Megan Rapino grew up in Redding .
+		Subject: Megan Rapino ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 30 / 58 sentences
+
+		=== Extracted Relation ===
+		Sentence: A plaque honoring U.S. women 's national team winger Megan Rapinoe hangs on the Shasta County Sports Hall of Fame wall at the field house of the Big League Dreams sports park in Redding , Calif. ,
+		Subject: Megan Rapinoe ; Object: Calif. ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Rapinoe grew up in Redding .
+		Subject: Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 35 / 58 sentences
+
+		=== Extracted Relation ===
+		Sentence: gifted to Kenny Breedlove owner of Shameless O'Leery 's by the mother of U.S. women 's Megan Rapinoe hangs with other soccer scarfs on wall at the bar and grill in Redding ,
+		Subject: Kenny Breedlove ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Rapinoe grew up in Redding .
+		Subject: Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Joanne Rice , left , and Noralene , who did not wish to give her last , both of Redding ,
+		Subject: Joanne Rice ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Joanne Rice , left , and Noralene , who did not wish to give her last , both of Redding , attend the Redding Freedom Festival Fourth of July celebration at the Redding Civic Auditorium in Redding ,
+		Subject: Joanne Rice ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence: and Noralene , who did not wish to give her last , both of Redding ,
+		Subject: Noralene ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: and Noralene , who did not wish to give her last , both of Redding , attend the Redding Freedom Festival Fourth of July celebration at the Redding Civic Auditorium in Redding ,
+		Subject: Noralene ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence: and Noralene , who did not wish to give her last , both of Redding , attend the Redding Freedom Festival Fourth of July celebration at the Redding Civic Auditorium in Redding , Calif. ,
+		Subject: Noralene ; Object: Calif. ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 40 / 58 sentences
+
+	Processed 45 / 58 sentences
+
+		=== Extracted Relation ===
+		Sentence: A plaque honoring U.S. women ’s national team winger Megan Rapinoe hangs on the Shasta County Sports Hall of Fame wall at the field house of the Big League Dreams sports park in Redding , Calif. ,
+		Subject: Megan Rapinoe ; Object: Calif. ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Rapinoe grew up in Redding .
+		Subject: Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 50 / 58 sentences
+
+	Processed 55 / 58 sentences
+	Extracted annotations for  14  out of total  58  sentences 
+
+	Relations extracted from this website: 14 (Overall: 25) 
+
+
+URL (4 / 10): https://www.thedailybeast.com/the-mystical-megachurch-ruling-over-world-cup-soccer-star-megan-rapinoes-hometown/
+Fetching text from url ...
+Trimming webpage content from 15749 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 66 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 66 sentences
+
+		=== Extracted Relation ===
+		Sentence: Rapinoe grew up in the small logging town of Redding ,
+		Subject: Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========

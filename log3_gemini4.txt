@@ -1,0 +1,200 @@
+Loading pre-trained spanBERT from ./pretrained_spanbert
+____
+Parameters:
+Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+Engine key      = 84f98f408aba949e8
+Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+Method          = -gemini
+Relation        = 3
+Threshold       = 0.7
+Query           = megan rapinoe redding
+# of Tuples     = 2
+Loading necessary libraries; This should take a minute or so ...)
+
+
+========== Iteration: 0 - Query: megan rapinoe redding ==========
+
+
+URL (1 / 10): https://www.sfgate.com/sports/article/how-megan-rapinoe-remembered-hometown-redding-18190858.php
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (2 / 10): https://en.wikipedia.org/wiki/Megan_Rapinoe
+Fetching text from url ...
+Trimming webpage content from 123929 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 64 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 64 sentences
+
+	Processed 10 / 64 sentences
+
+		=== Extracted Relation ===
+		Sentence: Megan Rapinoe Rapinoe with the U.S. national team in 2019 Personal information Full name Megan Anna Rapinoe[1]
+		Subject: Megan Rapinoe Rapinoe ; Object: U.S. ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Megan Rapinoe Rapinoe with the U.S. national team in 2019 Personal information Full name Megan Anna Rapinoe[1]
+		Subject: Megan Anna Rapinoe ; Object: U.S. ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 15 / 64 sentences
+
+	Processed 20 / 64 sentences
+
+	Processed 25 / 64 sentences
+
+		=== Extracted Relation ===
+		Sentence: Rapinoe co-captained the national team alongside Carli Lloyd and Alex Morgan from 2018 to 2020.[5][6] She previously played for the Chicago Red Stars, Philadelphia Independence, and magicJack in Women's Professional Soccer (WPS), as well as Lyon Women in France's Division 1 Féminine.
+		Subject: Rapinoe ; Object: Philadelphia Independence ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 30 / 64 sentences
+
+	Processed 35 / 64 sentences
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding, California, with her parents, Jim and Denise, and five siblings, including her fraternal twin Rachael Rapinoe.
+		Subject: Rapinoe ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding, California, with her parents, Jim and Denise, and five siblings, including her fraternal twin Rachael Rapinoe.
+		Subject: Rapinoe ; Object: California ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding, California, with her parents, Jim and Denise, and five siblings, including her fraternal twin Rachael Rapinoe.
+		Subject: Jim ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding, California, with her parents, Jim and Denise, and five siblings, including her fraternal twin Rachael Rapinoe.
+		Subject: Denise ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding, California, with her parents, Jim and Denise, and five siblings, including her fraternal twin Rachael Rapinoe.
+		Subject: Rachael Rapinoe ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding, California, with her parents, Jim and Denise, and five siblings, including her fraternal twin Rachael Rapinoe.
+		Subject: Jim ; Object: California ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding, California, with her parents, Jim and Denise, and five siblings, including her fraternal twin Rachael Rapinoe.
+		Subject: Denise ; Object: California ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: Early life Rapinoe grew up in Redding, California, with her parents, Jim and Denise, and five siblings, including her fraternal twin Rachael Rapinoe.
+		Subject: Rachael Rapinoe ; Object: California ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 40 / 64 sentences
+
+	Processed 45 / 64 sentences
+
+	Processed 50 / 64 sentences
+
+	Processed 55 / 64 sentences
+
+	Processed 60 / 64 sentences
+	Extracted annotations for  3  out of total  64  sentences 
+
+	Relations extracted from this website: 11 (Overall: 11) 
+
+
+URL (3 / 10): https://www.mercurynews.com/2019/07/06/womens-world-cup-hometown-star-out-of-step-in-californias-trump-country/
+Fetching text from url ...
+Trimming webpage content from 19898 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 60 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 60 sentences
+
+		=== Extracted Relation ===
+		Sentence: Megan Rapinoe of the USA looks on during the USA Training Session at Lyon Training Center on July 01, 2019 in Lyon, France.
+		Subject: Megan Rapinoe ; Object: USA ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: U.S. women's national team winger Megan Rapinoe grew up in Redding.  
+		Subject: Megan Rapinoe ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 10 / 60 sentences
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group) Jim Rapinoe the father of U.S. women's national team winger Megan Rapinoe poses for a photograph on the soccer field named after his daughter at the California Soccer Park in Redding, Calif., on Thursday, July 4, 2019.
+		Subject: Jim Rapinoe ; Object: California ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group) Jim Rapinoe the father of U.S. women's national team winger Megan Rapinoe poses for a photograph on the soccer field named after his daughter at the California Soccer Park in Redding, Calif., on Thursday, July 4, 2019.
+		Subject: Megan Rapinoe ; Object: Calif. ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 15 / 60 sentences
+
+	Processed 20 / 60 sentences
+
+		=== Extracted Relation ===
+		Sentence: A street sign 15 Rapinoe Way named after U.S. women's national team winger Megan Rapinoe is photographed near the California Soccer Park in Redding, Calif., on Thursday, July 4, 2019.
+		Subject: Megan Rapinoe ; Object: U.S. ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: (Randy Vazquez/Bay Area News Group) Soccer memorabilia decorates a wall at Shameless O'Leery's in Redding, Calif., on Thursday, July 4, 2019.
+		Subject: Randy Vazquez ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: U.S. women's national team winger Megan Rapinoe grew up in Redding.  
+		Subject: Megan Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========
+
+	Processed 25 / 60 sentences
+
+		=== Extracted Relation ===
+		Sentence: U.S. women's national team winger Megan Rapino grew up in Redding.  
+		Subject: Megan Rapino ; Object: Redding ;
+		Adding to set of extracted relations
+		==========
+
+	Processed 30 / 60 sentences
+
+	Processed 35 / 60 sentences
+
+		=== Extracted Relation ===
+		Sentence: Rapinoe grew up in Redding.  
+		Subject: Rapinoe ; Object: Redding ;
+		Duplicate. Ignoring this.
+		==========
+
+		=== Extracted Relation ===
+		Sentence: (Anda Chu/Bay Area News Group) A 2011 U.S. women's national team World Cup scarf, top, gifted to Kenny Breedlove owner of Shameless O'Leery's by the mother of U.S. women's Megan Rapinoe hangs with other soccer scarfs on wall at the bar and grill in Redding, Calif., on Thursday, July 4, 2019.
+		Subject: Kenny Breedlove ; Object: Redding ;

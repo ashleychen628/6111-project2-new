@@ -6,7 +6,7 @@ Engine key      = 84f98f408aba949e8
 Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
 Method          = -gemini
 Relation        = 2
-Threshold       = 0.7
+Threshold       = 0.0
 Query           = bill gates microsoft
 # of Tuples     = 10
 Loading necessary libraries; This should take a minute or so ...)
@@ -17,7 +17,7 @@ Loading necessary libraries; This should take a minute or so ...)
 
 URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
 Fetching text from url ...
-Trimming webpage content from 146503 to 10000 characters
+Trimming webpage content from 146501 to 10000 characters
 Webpage length (num characters): 10000
 Annotating the webpage using spacy...
 Extracted 56 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
@@ -41,6 +41,12 @@ Extracted 56 sentences. Processing each sentence one by one to check for presenc
 		=== Extracted Relation ===
 		Sentence: Bill Gates Personal Awards and honors Philanthropy Political positions Public image Residence Companies Traf-O-Data Microsoft history timeline criticism BENlabs Cascade Investment TerraPower Gates Ventures Charitable organizations Bill & Melinda Gates Foundation Match for Africa
 		Subject: Bill Gates ; Object: TerraPower Gates Ventures Charitable ;
+		Adding to set of extracted relations
+		==========
+
+		=== Extracted Relation ===
+		Sentence: The Giving Pledge OER Project Breakthrough Energy Mission Innovation Writings " An Open Letter to Hobbyists " The Road Ahead Business @ the Speed of Thought How to Avoid a Climate Disaster How to Prevent the Next Pandemic Related Bill Gates' flower fly Codex Leicester Lost on the Grand Banks Paul Allen v t e William Henry Gates III (born October 28, 1955) is an American businessman and philanthropist.
+		Subject: William Henry Gates III ; Object: Codex Leicester ;
 		Adding to set of extracted relations
 		==========
 
@@ -109,20 +115,14 @@ Extracted 56 sentences. Processing each sentence one by one to check for presenc
 		Subject: Paul Allen ; Object: Lakeside School ;
 		Adding to set of extracted relations
 		==========
-	Extracted annotations for  7  out of total  56  sentences 
+	Extracted annotations for  8  out of total  56  sentences 
 
-	Relations extracted from this website: 11 (Overall: 11) 
+	Relations extracted from this website: 12 (Overall: 12) 
 
 
 URL (2 / 10): https://www.instagram.com/thisisbillgates/?hl=en
 Fetching text from url ...
-Webpage length (num characters): 9
-Annotating the webpage using spacy...
-Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Extracted annotations for  0  out of total  1  sentences 
-
-	Relations extracted from this website: 0 (Overall: 0) 
-
+Unable to fetch URL. Skipping...
 
 URL (3 / 10): https://www.linkedin.com/in/williamhgates
 Fetching text from url ...
@@ -138,31 +138,19 @@ Unable to fetch URL. Skipping...
 
 URL (6 / 10): https://www.facebook.com/BillGates/
 Fetching text from url ...
-Webpage length (num characters): 587
+Webpage length (num characters): 10
 Annotating the webpage using spacy...
-Extracted 7 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-
-	Processed 5 / 7 sentences
-	Extracted annotations for  0  out of total  7  sentences 
+Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Extracted annotations for  0  out of total  1  sentences 
 
 	Relations extracted from this website: 0 (Overall: 0) 
 
 
-URL (7 / 10): https://www.youtube.com/watch?v=H1PgccykclM
-Fetching text from url ...
-Webpage length (num characters): 218
-Annotating the webpage using spacy...
-Extracted 3 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
-	Extracted annotations for  0  out of total  3  sentences 
-
-	Relations extracted from this website: 0 (Overall: 0) 
-
-
-URL (8 / 10): https://news.microsoft.com/2020/03/13/microsoft-announces-change-to-its-board-of-directors/
+URL (7 / 10): https://news.microsoft.com/2020/03/13/microsoft-announces-change-to-its-board-of-directors/
 Fetching text from url ...
 Unable to fetch URL. Skipping...
 
-URL (9 / 10): https://www.youtube.com/billgates
+URL (8 / 10): https://www.youtube.com/billgates
 Fetching text from url ...
 Webpage length (num characters): 185
 Annotating the webpage using spacy...
@@ -172,13 +160,32 @@ Extracted 3 sentences. Processing each sentence one by one to check for presence
 	Relations extracted from this website: 0 (Overall: 0) 
 
 
-URL (10 / 10): https://news.microsoft.com/2006/06/15/microsoft-announces-plans-for-july-2008-transition-for-bill-gates/
+URL (9 / 10): https://www.microsoft.com/
 Fetching text from url ...
-Unable to fetch URL. Skipping...
+Webpage length (num characters): 2098
+Annotating the webpage using spacy...
+Extracted 7 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
 
-================== ALL RELATIONS for per:employee_of ( 11 ) ==================
+	Processed 5 / 7 sentences
+	Extracted annotations for  0  out of total  7  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (10 / 10): https://answers.microsoft.com/en-us/windows/forum/all/a-short-letter-to-bill-gates/59fdd4d0-6330-40da-9e66-fa6c29836454
+Fetching text from url ...
+Webpage length (num characters): 11
+Annotating the webpage using spacy...
+Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Extracted annotations for  0  out of total  1  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+================== ALL RELATIONS for per:employee_of ( 12 ) ==================
 Subject: Bill Gates 	| Object: Microsoft
 Subject: Bill Gates 	| Object: TerraPower Gates Ventures Charitable
+Subject: William Henry Gates III 	| Object: Codex Leicester
 Subject: Paul Allen 	| Object: Microsoft
 Subject: Satya Nadella 	| Object: Microsoft
 Subject: Gates 	| Object: Microsoft

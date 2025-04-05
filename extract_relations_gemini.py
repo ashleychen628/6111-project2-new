@@ -73,16 +73,17 @@ RELATION_DESCRIPTIONS = {
 }
 
 class ExtractRelationsGemini:
-    def __init__(self, r, t, google_gemini_api_key, seen_keys):
+    def __init__(self, r, t, google_gemini_api_key, seen_keys, chosen_tuples):
         self.relation = r
         self.threshold = t
         self.google_gemini_api_key = google_gemini_api_key
         self.candidate_pairs = []
-        self.chosen_tuples = []
+        self.chosen_tuples = chosen_tuples
         self.relation_map = {}
         self.seen_sentence = set()
         self.seen_keys = seen_keys
         self.possible_tuples_num = 0
+        self.duplicate = 0
 
         
         relation_map = {
@@ -97,7 +98,7 @@ class ExtractRelationsGemini:
             1: "attended school(s) at",
             2: "work for",
             3: "live in",
-            4: "was top member employee(s) of"
+            4: "is (a) senior employee at"
         }
         self.relation_str = relation_string[r]
 
@@ -132,7 +133,6 @@ class ExtractRelationsGemini:
             if (idx + 1) % 5 == 0:
                 print(f"\n\tProcessed {idx + 1} / {len(sentences)} sentences")
             
-            # print(f"index: {idx + 1}, sentence: {sentence} \n")
             ents = get_entities(sentence, self.entities_of_interest[self.relation])
             
             # create entity pairs
@@ -164,10 +164,8 @@ class ExtractRelationsGemini:
 
                 elif self.relation == 4:  # Top_Member_Employees
                     if (subj[1], obj[1]) == ("ORGANIZATION", "PERSON"):
-                        print(f"first ep1: {ep[1]}, ep2: {ep[2]}")
                         self.candidate_pairs.append({"tokens": tokens, "subj": subj, "obj": obj})
                     elif (obj[1], subj[1]) == ("ORGANIZATION", "PERSON"):
-                        print(f"second ep1: {ep[1]}, ep2: {ep[2]}")
                         self.candidate_pairs.append({"tokens": tokens, "subj": obj, "obj": subj})
             
             if len(self.candidate_pairs) == 0:
@@ -176,8 +174,6 @@ class ExtractRelationsGemini:
                 for ex in self.candidate_pairs:
                     subj, obj = ex['subj'], ex['obj']
                     tokens = ex['tokens']
-                    sentence = " ".join(tokens)
-                    # print(f"ashley: {subj[0]} is {subj[1]}, obj: {obj[0]} is {obj[1]}")
                     relation_answer = self.call_gemini_api(sentence, subj, obj, tokens)
 
                     if relation_answer and 'subject' in relation_answer and 'object' in relation_answer:
@@ -194,21 +190,22 @@ class ExtractRelationsGemini:
                                 self.seen_sentence.add(sentence)
                                 extracted_annotations += 1
 
-                            self.chosen_tuples.append({
+                            self.chosen_tuples[key] = {
                                 "subject": subj,
                                 "object": obj,
                                 "confidence": 1,
                                 "key": key
-                            })
+                            }
                             self.seen_keys.add(key)
                             print(f"\t\tAdding to set of extracted relations")
                         else:
+                            self.duplicate += 1
                             print(f"\t\tDuplicate. Ignoring this.")
 
                         print("\t\t==========")
 
         print(f"\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences \n")
-        print(f"\tRelations extracted from this website: {len(self.chosen_tuples)} (Overall: {self.possible_tuples_num}) \n")
+        print(f"\tRelations extracted from this website: {(self.possible_tuples_num - self.duplicate)} (Overall: {self.possible_tuples_num}) \n")
         return self.chosen_tuples, self.seen_keys
     
 
@@ -224,13 +221,10 @@ class ExtractRelationsGemini:
         obj_type = obj[1].lower()
 
         req_subject, req_object = self.relation_requirements[self.relation_name]
-        # print(f"subj_name: {subj_name}, obj_name: {obj_name}")
-        # print(f"subj_type: {subj_type}, obj_type: {obj_type}")
-        # print(f"req_subject:{req_subject}, req_object: {req_object}")
+
         if(subj_type == req_subject and (obj_type in req_object if isinstance(req_object, list) else obj_type == req_object)):
             palm.configure(api_key=self.google_gemini_api_key)
-            # print("chosen")
-            # print(f"subject is: {subj_name} of type {subj_type}, object is: {obj_name} of type {obj_type}")
+           
             # If the object is a list, join them into a string
             if isinstance(req_object, list):
                 req_object_str = " or ".join(req_object)
@@ -248,6 +242,7 @@ class ExtractRelationsGemini:
                 f'between the subject name: {subj_name} of type {subj_type} and '
                 f'the object name: {obj_name} of type {req_object_str}.\n'
                 f'Such that "{subj_name} {self.relation_str} {obj_name}" can be referred from this sentence. \n'
+                'You must extract the relation based solely on the content of the provided sentence.'
                 f'You should answer strictly in the following JSON format:\n\n'
                 '{\n'
                 '  "subject": "<subject name>",\n '
@@ -274,7 +269,7 @@ class ExtractRelationsGemini:
                     top_k=32
                 )
                 response = model.generate_content(prompt, generation_config=generation_config)
-                # print(response.text)
+          
                 # Try to parse the response
                 json_match = re.search(r"\{.*?\}", response.text, re.DOTALL)
                 if not json_match:
@@ -284,9 +279,7 @@ class ExtractRelationsGemini:
                     result = json.loads(json_match.group())
                 except json.JSONDecodeError:
                     return None
-                # print(result)
-                # Validate the result
-                # if result:
+
                 return result
                 
             except Exception as e:

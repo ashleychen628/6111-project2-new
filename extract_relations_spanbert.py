@@ -6,11 +6,11 @@ spanbert = SpanBERT("./pretrained_spanbert")
 nlp = spacy.load("en_core_web_lg") 
 
 class ExtractRelationsSpanbert:
-    def __init__(self, r, t, seen_keys):
+    def __init__(self, r, t, seen_keys, chosen_tuples):
         self.relation = r
         self.threshold = t
         self.candidate_pairs = []
-        self.chosen_tuples = {}
+        self.chosen_tuples = chosen_tuples
         self.relation_map = {}
         self.seen_keys = seen_keys
         self.seen_token_spans = set()
@@ -40,7 +40,7 @@ class ExtractRelationsSpanbert:
         print("Annotating the webpage using spacy...")
 
         sentences = list(doc.sents)
-        # print(sentences)
+
         extracted_annotations = 0
 
         print(f"Extracted {len(list(doc.sents))} sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...")
@@ -49,7 +49,7 @@ class ExtractRelationsSpanbert:
             self.candidate_pairs = []
             if (idx + 1) % 5 == 0:
                 print(f"\n\tProcessed {idx + 1} / {len(sentences)} sentences")
-            # print(f"index: {idx + 1}, sentence: {sentence} \n")
+           
             ents = get_entities(sentence, self.entities_of_interest[self.relation])
             
             # create entity pairs
@@ -114,9 +114,9 @@ class ExtractRelationsSpanbert:
                         print(f"\t\tInput tokens: {tokens}")
                         print(f"\t\tOutput Confidence: {confidence:.7f} ; Subject: {subj[0]} ; Object: {obj[0]} ;")
 
-                        token_tuple = tuple(tokens)
-                        if token_tuple not in self.seen_token_spans:
-                            self.seen_token_spans.add(token_tuple)
+                        # token_tuple = tuple(tokens)
+                        if sentence not in self.seen_token_spans:
+                            self.seen_token_spans.add(sentence)
                             extracted_annotations += 1
 
                         if confidence >= self.threshold:
@@ -142,6 +142,6 @@ class ExtractRelationsSpanbert:
         print(f"\n\tExtracted annotations for  {extracted_annotations}  out of total  {len(sentences)}  sentences")
         print(f"\n\tRelations extracted from this website: {self.overall - self.duplicate_count} (Overall: {self.overall})")
 
-        return_tuples = list(self.chosen_tuples.values())
+        # return_tuples = list(self.chosen_tuples.values())
 
-        return return_tuples, self.seen_keys
+        return self.chosen_tuples, self.seen_keys

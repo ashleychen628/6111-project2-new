@@ -18,8 +18,7 @@ def download_and_clean_html(url):
         return ""
     
     if response.status_code == 200:
-        # print(response.text)
-        # print('\n')
+
         soup = BeautifulSoup(response.text, "html.parser")
 
         # Replace all <br> tags with a literal period + space
@@ -34,36 +33,8 @@ def download_and_clean_html(url):
             logging.warning(f"No matching tags found in {url}")
             return ""
 
-        # all_tags = soup.find_all(True)  # Find all tags, not just text nodes
-        # END_PUNCTUATION = ('.', '!', '?', '…', '‽')
-
-        # collected_text = []
-
-        # for tag in all_tags:
-        #     tag_name = tag.name
-        #     print(f'tag name: {tag_name}')
-        #     text = tag.get_text(separator=' ', strip=True)
-        #     print(text)
-        #     print('\n')
-        #     # Add period if it's a list item or table cell and missing punctuation
-        #     if tag_name in ['li']:
-        #         if text and not text.endswith(END_PUNCTUATION):
-        #             text += '. '
-        #             # print(text)
-        #     if text:
-        #         # print(text)
-        #         collected_text.append(text)
-        # for tag in soup.find_all(['li', 'td', 'tr']):
-        #     segment = tag.get_text(" ", strip=True)
-        #     if segment:
-        #         segments.append(segment)
-
-        # print(collected_text)
         text = soup.get_text(separator=' ', strip=True)
         text = text.replace('\xa0', '')
-        # ZERO_WIDTH_CHARACTERS = ['\u200b', '\u200c', '\u200d', '\u2060', '\ufeff']
-        # for zwc in ZERO_WIDTH_CHARACTERS:
-        #     text = text.replace(zwc, '')
         text = re.sub(r'\s+([.,;:!?])', r'\1', text)
         text = re.sub(r'\(\s+', '(', text)
         text = re.sub(r'\s+\)', ')', text)

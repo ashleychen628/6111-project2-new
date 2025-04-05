@@ -1,0 +1,156 @@
+Loading pre-trained spanBERT from ./pretrained_spanbert
+____
+Parameters:
+Client key      = AIzaSyCeF-LloN0i8IJe0HZ8gDLnRTmxSjDpKvw
+Engine key      = 84f98f408aba949e8
+Gemini key      = AIzaSyBBtuMNtsm3bQ-5nlV21PCJ89xZHTRvwao
+Method          = -gemini
+Relation        = 4
+Threshold       = 0.7
+Query           = microsoft bill gates
+# of Tuples     = 10
+Loading necessary libraries; This should take a minute or so ...)
+
+
+========== Iteration: 0 - Query: microsoft bill gates ==========
+
+
+URL (1 / 10): https://en.wikipedia.org/wiki/Bill_Gates
+Fetching text from url ...
+Trimming webpage content from 146503 to 10000 characters
+Webpage length (num characters): 10000
+Annotating the webpage using spacy...
+Extracted 56 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 56 sentences
+second ep1: ('Føroyskt Français', 'PERSON', (2, 3)), ep2: ('कोंकणी', 'ORGANIZATION', (11, 11))
+second ep1: ('Gàidhlig Galego Gĩkũyũ', 'PERSON', (6, 8)), ep2: ('कोंकणी', 'ORGANIZATION', (11, 11))
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Gõychi Konknni', 'PERSON', (13, 14))
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Hak-kâ-ngî', 'PERSON', (17, 21))
+first ep1: ('कोंकणी', 'ORGANIZATION', (11, 11)), ep2: ('Hrvatski Ido Igbo', 'PERSON', (26, 28))
+second ep1: ('Ирон Íslenska', 'PERSON', (3, 4)), ep2: ('Jawa ಕನ್ನಡ', 'ORGANIZATION', (7, 8))
+
+	Processed 10 / 56 sentences
+second ep1: ('Srpskohrvatski', 'PERSON', (3, 3)), ep2: ('Sunda Suomi', 'ORGANIZATION', (6, 7))
+
+	Processed 15 / 56 sentences
+second ep1: ('Yorùbá', 'PERSON', (0, 0)), ep2: ('Zazaki Žemaitėška', 'ORGANIZATION', (2, 3))
+second ep1: ('Yorùbá', 'PERSON', (0, 0)), ep2: ('Batak Mandailing', 'ORGANIZATION', (5, 6))
+
+	Processed 20 / 56 sentences
+first ep1: ('U.S. Education Harvard University', 'ORGANIZATION', (0, 3)), ep2: ('Yearsactive 1972', 'PERSON', (13, 14))
+second ep1: ('Yearsactive 1972', 'PERSON', (6, 7)), ep2: ('Knownfor Pioneer', 'ORGANIZATION', (10, 11))
+first ep1: ('TerraPower', 'ORGANIZATION', (2, 2)), ep2: ('Melinda', 'PERSON', (16, 16))
+first ep1: ('Breakthrough Energy', 'ORGANIZATION', (5, 6)), ep2: ('Melinda', 'PERSON', (16, 16))
+first ep1: ('Gates Ventures Technology', 'ORGANIZATION', (9, 11)), ep2: ('Melinda', 'PERSON', (16, 16))
+first ep1: ('Microsoft', 'ORGANIZATION', (14, 14)), ep2: ('Melinda', 'PERSON', (16, 16))
+second ep1: ('Melinda', 'PERSON', (16, 16)), ep2: ('div', 'ORGANIZATION', (23, 23))
+
+	Processed 25 / 56 sentences
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Philanthropy Political', 'ORGANIZATION', (6, 7))
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Microsoft', 'ORGANIZATION', (18, 18))
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('BENlabs Cascade', 'ORGANIZATION', (22, 23))
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('TerraPower Gates Ventures Charitable', 'ORGANIZATION', (25, 28))
+second ep1: ('Bill Gates Personal Awards', 'PERSON', (0, 3)), ep2: ('Bill & Melinda Gates Foundation Match', 'ORGANIZATION', (30, 35))
+first ep1: ('Codex Leicester Lost', 'ORGANIZATION', (2, 4)), ep2: ('Paul Allen', 'PERSON', (9, 10))
+first ep1: ('Codex Leicester Lost', 'ORGANIZATION', (2, 4)), ep2: ('William Henry Gates III', 'PERSON', (14, 17))
+first ep1: ('Microsoft', 'ORGANIZATION', (4, 4)), ep2: ('Paul Allen', 'PERSON', (11, 12))
+
+	Processed 30 / 56 sentences
+first ep1: ('IPO', 'ORGANIZATION', (0, 0)), ep2: ('Gates', 'PERSON', (3, 3))
+first ep1: ('Gates', 'ORGANIZATION', (0, 0)), ep2: ('Allen', 'PERSON', (11, 11))
+first ep1: ('Lakeside School', 'ORGANIZATION', (5, 6)), ep2: ('Allen', 'PERSON', (11, 11))
+
+	Processed 35 / 56 sentences
+second ep1: ('Satya Nadella', 'PERSON', (16, 17)), ep2: ('Microsoft', 'ORGANIZATION', (20, 20))
+
+	Processed 40 / 56 sentences
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Microsoft', 'ORGANIZATION', (6, 6))
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('BEN, Cascade Investment', 'ORGANIZATION', (11, 14))
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('TerraPower,', 'ORGANIZATION', (16, 17))
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Gates Ventures', 'ORGANIZATION', (18, 19))
+second ep1: ('Gates', 'PERSON', (0, 0)), ep2: ('Breakthrough Energy', 'ORGANIZATION', (22, 23))
+second ep1: ('Warren Buffett', 'PERSON', (2, 3)), ep2: ('the Giving Pledge', 'ORGANIZATION', (5, 7))
+
+	Processed 45 / 56 sentences
+second ep1: ('William H. Gates Sr.[a', 'PERSON', (5, 8)), ep2: ('Irish / Scots-Irish.[3', 'ORGANIZATION', (32, 36))
+second ep1: ('Mary Maxwell Gates', 'PERSON', (0, 2)), ep2: ('Irish / Scots-Irish.[3', 'ORGANIZATION', (14, 18))
+
+	Processed 50 / 56 sentences
+first ep1: ('Sand Point', 'ORGANIZATION', (5, 6)), ep2: ('Gates', 'PERSON', (21, 21))
+first ep1: ('Sand Point', 'ORGANIZATION', (5, 6)), ep2: ('Gates', 'PERSON', (26, 26))
+
+	Processed 55 / 56 sentences
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Teletype Model 33 ASR', 'ORGANIZATION', (5, 8))
+second ep1: ('Paul Allen', 'PERSON', (1, 2)), ep2: ('Lakeside School', 'ORGANIZATION', (11, 12))
+	Extracted annotations for  0  out of total  56  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (2 / 10): https://www.instagram.com/thisisbillgates/?hl=en
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (3 / 10): https://www.gatesnotes.com/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (4 / 10): https://www.facebook.com/BillGates/
+Fetching text from url ...
+Webpage length (num characters): 587
+Annotating the webpage using spacy...
+Extracted 7 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 7 sentences
+	Extracted annotations for  0  out of total  7  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (5 / 10): https://x.com/billgates
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (6 / 10): https://www.linkedin.com/in/williamhgates
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (7 / 10): https://news.microsoft.com/2020/03/13/microsoft-announces-change-to-its-board-of-directors/
+Fetching text from url ...
+Unable to fetch URL. Skipping...
+
+URL (8 / 10): https://www.youtube.com/user/thegatesnotes
+Fetching text from url ...
+Webpage length (num characters): 185
+Annotating the webpage using spacy...
+Extracted 3 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Extracted annotations for  0  out of total  3  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (9 / 10): https://www.microsoft.com/
+Fetching text from url ...
+Webpage length (num characters): 2098
+Annotating the webpage using spacy...
+Extracted 7 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+
+	Processed 5 / 7 sentences
+	Extracted annotations for  0  out of total  7  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+URL (10 / 10): https://answers.microsoft.com/en-us/windows/forum/all/a-short-letter-to-bill-gates/59fdd4d0-6330-40da-9e66-fa6c29836454
+Fetching text from url ...
+Webpage length (num characters): 11
+Annotating the webpage using spacy...
+Extracted 1 sentences. Processing each sentence one by one to check for presence of right pair of named entity types; if so, will run the second pipeline ...
+	Extracted annotations for  0  out of total  1  sentences 
+
+	Relations extracted from this website: 0 (Overall: 0) 
+
+
+================== ALL RELATIONS for org:top_members/employees ( 0 ) ==================
+No new unused tuples available. Stopping.
