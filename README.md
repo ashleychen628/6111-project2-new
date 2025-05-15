@@ -3,7 +3,6 @@
 # Query Expansion with Relevance Feedback
 
 #### Names: Danyao Chen
-#### UNI: dc3861
 
 ## **Project Overview**
 This project implements a relation extraction system that identifies structured facts from unstructured natural language text on the web. Specifically, it focuses on extracting high-confidence relations of the following types:
